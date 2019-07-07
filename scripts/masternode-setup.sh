@@ -1,15 +1,15 @@
 #!/bin/bash
 
 TMP_FOLDER=$(mktemp -d)
-CONFIG_FILE='Ignition.conf'
-CONFIGFOLDER='/root/.Ignition'
-COIN_DAEMON='ignitiond'
-COIN_CLI='ignitiond'
+CONFIG_FILE='MoneyByte.conf'
+CONFIGFOLDER='/root/.MoneyByte'
+COIN_DAEMON='moneybyted'
+COIN_CLI='moneybyted'
 COIN_PATH='/usr/local/bin/'
-COIN_REPO='https://github.com/ignitioncoin/ignitioncoin.git'
-#COIN_TGZ='http://www.mastermasternode.com/ignitioncoin/XXX.zip'
+COIN_REPO='https://github.com/moneybytecoin/moneybytecoin.git'
+#COIN_TGZ='http://www.mastermasternode.com/moneybytecoin/XXX.zip'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
-COIN_NAME='Ignition'
+COIN_NAME='MoneyByte'
 COIN_PORT=44144
 RPC_PORT=44155
 
@@ -29,7 +29,7 @@ purgeOldInstallation() {
     #kill wallet daemon
     systemctl stop $COIN_NAME.service > /dev/null 2>&1
     sudo killall $COIN_DAEMON > /dev/null 2>&1
-    # TODO - Make Backup of Wallet.dat, Ignition.conf, and masternode.conf
+    # TODO - Make Backup of Wallet.dat, MoneyByte.conf, and masternode.conf
 	# Save Key
 	OLDKEY=$(awk -F'=' '/masternodeprivkey/ {print $2}' $CONFIGFOLDER/$CONFIG_FILE 2> /dev/null)
 	if [ "$?" -eq "0" ]; then

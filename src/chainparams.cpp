@@ -71,7 +71,7 @@ public:
 		// Build the genesis block. Note that the output of the genesis coinbase cannot
 		// be spent as it did not originally exist in the database.
 
-		const char* pszTimestamp = "Here 18 Dec 2017 we start the Ignition";
+		const char* pszTimestamp = "Here July _ 2019 we start the MoneyByte";
 		std::vector<CTxIn> vin;
 		vin.resize(1);
 		vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -83,37 +83,64 @@ public:
 		genesis.hashPrevBlock = 0;
 		genesis.hashMerkleRoot = genesis.BuildMerkleTree();
 		genesis.nVersion = 1;
-		genesis.nTime = 1513634048; //
+		genesis.nTime = 1513634048;
 		genesis.nBits = 520159231;
 		genesis.nNonce = 47950;
 
 
 
 		hashGenesisBlock = genesis.GetHash();
+		consensus.hashGenesisBlock = uint256S("0x");
+		                std::cout << std::string("Begin calculating Mainnet Genesis Block:\n");
+		                if (true && (genesis.GetHash() != consensus.hashGenesisBlock)) {
+		                    LogPrintf("Calculating Mainnet Genesis Block:\n");
+		                    arith_uint256 hashTarget = arith_uint256().SetCompact(genesis.nBits);
+		                    uint256 hash;
+		                    genesis.nNonce = 0;
+		                    while (UintToArith256(genesis.GetHash()) > hashTarget)
+		                    {
+		                        ++genesis.nNonce;
+		                        if (genesis.nNonce == 0)
+		                        {
+		                            LogPrintf("NONCE WRAPPED, incrementing time");
+		                            std::cout << std::string("NONCE WRAPPED, incrementing time:\n");
+		                            ++genesis.nTime;
+		                        }
+		                        if (genesis.nNonce % 10000 == 0)
+		                        {
+		                            LogPrintf("Mainnet: nonce %08u: hash = %s \n", genesis.nNonce, genesis.GetHash().ToString().c_str());
+		                        }
+		                    }
+		                    std::cout << "Mainnet ---\n";
+		                    std::cout << "  nonce: " << genesis.nNonce <<  "\n";
+		                    std::cout << "   time: " << genesis.nTime << "\n";
+		                    std::cout << "   hash: " << genesis.GetHash().ToString().c_str() << "\n";
+		                    std::cout << "   merklehash: "  << genesis.hashMerkleRoot.ToString().c_str() << "\n";
+		                }
+		                std::cout << std::string("Finished calculating Mainnet Genesis Block:\n");
+		assert(genesis.hashMerkleRoot == uint256("0x"));
+		assert(hashGenesisBlock == uint256("0x"));
 
-		assert(genesis.hashMerkleRoot == uint256("0x2d960352c0162362a744b23a639a657fc8050ffba450f49a634166d7e4790b58"));
-		assert(hashGenesisBlock == uint256("0x000088660811c8469e191c629657e36b6d339b9b76ce494cd9f957d59552bb3c"));
 
-
-		base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 103); // i
+		base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 50); // i
 		base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 39); // G
 		base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 138); // x
 		base58Prefixes[STEALTH_ADDRESS] = std::vector<unsigned char>(1, 76); // X
 		base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x88)(0x06)(0x2D).convert_to_container<std::vector<unsigned char> >();
 		base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
 
-		vSeeds.push_back(CDNSSeedData("america", "america.ignitioncoin.org"));
-		vSeeds.push_back(CDNSSeedData("europ", "europ.ignitioncoin.org"));
-		vSeeds.push_back(CDNSSeedData("asia",  "asia.ignitioncoin.org"));
-		vSeeds.push_back(CDNSSeedData("explorer",  "explorer.ignitioncoin.org"));
+		vSeeds.push_back(CDNSSeedData("", ""));
+		vSeeds.push_back(CDNSSeedData("", ""));
+		vSeeds.push_back(CDNSSeedData("",  ""));
+		vSeeds.push_back(CDNSSeedData("",  ""));
 		convertSeeds(vFixedSeeds, pnSeed, ARRAYLEN(pnSeed), nDefaultPort);
 
 		nPoolMaxTransactions = 3;
 		//strSporkKey = "046f78dcf911fbd61910136f7f0f8d90578f68d0b3ac973b5040fb7afb501b5939f39b108b0569dca71488f5bbf498d92e4d1194f6f941307ffd95f75e76869f0e";
 		//strMasternodePaymentsPubKey = "046f78dcf911fbd61910136f7f0f8d90578f68d0b3ac973b5040fb7afb501b5939f39b108b0569dca71488f5bbf498d92e4d1194f6f941307ffd95f75e76869f0e";
-		strDarksendPoolDummyAddress = "i7FBJNGDmEsU5wx2m3xw85N8kRgCqA8S7L";
+		strDarksendPoolDummyAddress = "";
 		nLastPOWBlock = nForkTwo + 200;
-		nPOSStartBlock = 1;
+		nPOSStartBlock = 100;
 	}
 
 
@@ -155,7 +182,7 @@ public:
 		genesis.nBits = 520159231;
 		genesis.nNonce = 47950;
 
-		assert(hashGenesisBlock == uint256("0x000088660811c8469e191c629657e36b6d339b9b76ce494cd9f957d59552bb3c"));
+		assert(hashGenesisBlock == uint256("0x"));
 
 		vFixedSeeds.clear();
 		vSeeds.clear();

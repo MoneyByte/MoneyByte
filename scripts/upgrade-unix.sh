@@ -18,12 +18,12 @@ readYesNo()
 
 # Options
 SOURCES_PATH_DEFAULT=$HOME
-SOURCES_PATH="$SOURCES_PATH_DEFAULT/ignitioncoin"
-BACKUP_PATH_DEFAULT=$HOME/ignitionbackup
+SOURCES_PATH="$SOURCES_PATH_DEFAULT/moneybytecoin"
+BACKUP_PATH_DEFAULT=$HOME/moneybytebackup
 BACKUP_PATH=$BACKUP_PATH_DEFAULT
-REPO="https://github.com/ignitioncoin/ignitioncoin"
+REPO="https://github.com/moneybytecoin/moneybytecoin"
 BRANCH="master"
-SWAP_FILE="$HOME/ignitioncoin-swap"
+SWAP_FILE="$HOME/moneybytecoin-swap"
 
 # Useful variables
 RED='\033[0;31m'
@@ -51,12 +51,12 @@ if [ -d "../.git" ]; then
 	echo -e "\n${GREEN}Script executed from the repository${NC}"
 	SOURCES_PATH="$(dirname "$(pwd)")"
 	# Delete previous binary
-	if [ -f "$SOURCES_PATH/bin/ignitiond" ]; then
-		rm -f $SOURCES_PATH/bin/ignitiond
+	if [ -f "$SOURCES_PATH/bin/moneybyted" ]; then
+		rm -f $SOURCES_PATH/bin/moneybyted
 		echo -e "${BLUE}Removed old binary in $SOURCES_PATH/bin/${NC}"
 	fi
-	if [ -f "../bin/ignitiond" ]; then
-      rm ../bin/ignitiond
+	if [ -f "../bin/moneybyted" ]; then
+      rm ../bin/moneybyted
       echo "Removed old binary in ../bin/"
     fi
 else
@@ -65,7 +65,7 @@ else
 
 	# Ask for the install path
 	read -e -p "${BLUE_READ}Install to directory [$SOURCES_PATH_DEFAULT]: ${NC_READ}" SOURCES_PATH
-	SOURCES_PATH="${SOURCES_PATH:-$SOURCES_PATH_DEFAULT}/ignitioncoin"
+	SOURCES_PATH="${SOURCES_PATH:-$SOURCES_PATH_DEFAULT}/moneybytecoin"
 	# Replace ~ with $HOME if needed
 	SOURCES_PATH="${SOURCES_PATH/[~]/$HOME}"
 
@@ -87,10 +87,10 @@ fi
 
 # Kill and remove existing daemons
 echo -e "\n${GREEN}Removing existing daemons${NC}"
-sudo killall -9 ignitiond
-if [ -f "/usr/local/bin/ignitiond" ]; then
-  sudo rm -f /usr/local/bin/ignitiond
-  echo -e "${BLUE}Removed ignitiond in /usr/local/bin/ - To be replaced with new version${NC}"
+sudo killall -9 moneybyted
+if [ -f "/usr/local/bin/moneybyted" ]; then
+  sudo rm -f /usr/local/bin/moneybyted
+  echo -e "${BLUE}Removed moneybyted in /usr/local/bin/ - To be replaced with new version${NC}"
 fi
 
 # Go to the scripts directory
@@ -109,7 +109,7 @@ echo -e "\n${GREEN}Cleaning repo${NC}"
 ./clean.sh
 
 if [ ! -e checkswap.sh ] ; then
-    wget https://raw.githubusercontent.com/ignitioncoin/ignitioncoin/master/scripts/checkswap.sh
+    wget https://raw.githubusercontent.com/moneybytecoin/moneybytecoin/master/scripts/checkswap.sh
 fi
 ./checkswap.sh
 
@@ -118,8 +118,8 @@ echo -e "\n${GREEN}Building daemon${NC}"
 cd $SOURCES_PATH/src
 make -j$NB_CORES -f makefile.unix
 
-if [ ! -f $SOURCES_PATH/bin/ignitiond ]; then
-	echo -e "\n${RED}ERROR: ignitiond binary could not be created${NC}"
+if [ ! -f $SOURCES_PATH/bin/moneybyted ]; then
+	echo -e "\n${RED}ERROR: moneybyted binary could not be created${NC}"
 	exit -2
 fi
 
@@ -141,12 +141,12 @@ fi
 
 # Install
 echo -e "\n${GREEN}Installing daemon in /usr/local/bin/${NC}"
-sudo cp $SOURCES_PATH/bin/ignitiond /usr/local/bin/
-sudo strip /usr/local/bin/ignitiond
+sudo cp $SOURCES_PATH/bin/moneybyted /usr/local/bin/
+sudo strip /usr/local/bin/moneybyted
 
 # Backup data dir
-if [ -d "$HOME/.Ignition/" ]; then
-	echo -e "\n${GREEN}Backing up ~/Ignition (including wallet.dat)${NC}"
+if [ -d "$HOME/.MoneyByte/" ]; then
+	echo -e "\n${GREEN}Backing up ~/MoneyByte (including wallet.dat)${NC}"
 
 	# Ask for the install path
 	read -e -p "${BLUE_READ}Backup directory [$BACKUP_PATH_DEFAULT]: ${NC_READ}" BACKUP_PATH
@@ -167,7 +167,7 @@ if [ -d "$HOME/.Ignition/" ]; then
 		exit -1
 	fi
 
-	cd $HOME/.Ignition/  
+	cd $HOME/.MoneyByte/  
 	rm -rf smsgStore
 	rm -rf smsgDB
 	rm -f *.log
@@ -181,5 +181,5 @@ if [ -d "$HOME/.Ignition/" ]; then
 fi
 
 # Done
-echo -e "\n${GREEN}Upgrade Complete - You can now run ignitiond or fill out the config file in ~/Ignition${NC}"
+echo -e "\n${GREEN}Upgrade Complete - You can now run moneybyted or fill out the config file in ~/MoneyByte${NC}"
 

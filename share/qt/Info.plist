@@ -3,27 +3,27 @@
 <plist version="0.9">
 <dict>
 	<key>CFBundleIconFile</key>
-	<string>Ignition.icns</string>
+	<string>MoneyByte.icns</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleGetInfoString</key>
-	<string>Ignition-Qt</string>
+	<string>MoneyByte-Qt</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleExecutable</key>
-	<string>Ignition-Qt</string>
+	<string>MoneyByte-Qt</string>
 	<key>CFBundleIdentifier</key>
-	<string>co.Ignition.Ignition-Qt</string>
+	<string>co.MoneyByte.MoneyByte-Qt</string>
         <key>CFBundleURLTypes</key>
         <array>
           <dict>
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>CFBundleURLName</key>
-            <string>co.Ignition.IgnitionPayment</string>
+            <string>co.MoneyByte.MoneyBytePayment</string>
             <key>CFBundleURLSchemes</key>
             <array>
-              <string>Ignition</string>
+              <string>MoneyByte</string>
             </array>
           </dict>
         </array>

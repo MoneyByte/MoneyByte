@@ -7,7 +7,7 @@ Algorithm). We hope this will increase decentralization even more.
 
 3/ There are many scripts added to the `reporoot/scripts` folder of the repo. These scripts can do a lot of things,
 check their name for a good start to what they do - and if you have any questions on how to use them, visit discord
-chat here: https://discord.io/Ignition
+chat here: https://discord.io/MoneyByte
 
 4/ If you upgrade after the fork height (225,000th block), you *must* re-sync the blockchain data by deleting it (while
 keeping your wallet.dat & configurations backed up).

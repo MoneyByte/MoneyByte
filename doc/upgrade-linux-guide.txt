@@ -1,29 +1,29 @@
 :::: Upgrading on Ubuntu / Debian Linux Distributions ::::
 
-Your default data directory is ~/.Ignition - This folder contains your wallet*, the chain data, and your configuration files
+Your default data directory is ~/.MoneyByte - This folder contains your wallet*, the chain data, and your configuration files
 To backup and clean this folder, do this:
-`cd ~/.Ignition`
+`cd ~/.MoneyByte`
 
 You will now be in the data directory. From here, you want to copy out your wallet and important files.
 First, make a backup folder,
-`mkdir ~/ignitionbackup`
+`mkdir ~/moneybytebackup`
 
 Then, copy the important files to your backup:
-`cp wallet.dat ~/ignitionbackup && cp *.conf ~/ignitionbackup`
+`cp wallet.dat ~/moneybytebackup && cp *.conf ~/moneybytebackup`
 
 Now, you can delete the data directory,
-`cd ~/ && rm -r ~/.Ignition`
+`cd ~/ && rm -r ~/.MoneyByte`
 
-The folder that contained your data is now deleted. Now, you can compile IgnitionCoin like usual,
-`mkdir ~/ignitioncoinsource && cd ~/ignitioncoinsource && git clone https://github.com/ignitioncoin/ignitioncoin && cd ignitioncoin/src && make -f makefile.unix`
+The folder that contained your data is now deleted. Now, you can compile MoneyByteCoin like usual,
+`mkdir ~/moneybytecoinsource && cd ~/moneybytecoinsource && git clone https://github.com/moneybytecoin/moneybytecoin && cd moneybytecoin/src && make -f makefile.unix`
 
-Then, you want to copy your compiled ignitiond from ~/ignitioncoinsource/ignitioncoin/bin to /usr/local/bin, make sure you remove it if it was already there first, by doing:
-`sudo rm /usr/local/bin/ignitiond && cp ~/ignitioncoinsource/ignitioncoin/bin/ignitiond /usr/local/bin`
+Then, you want to copy your compiled moneybyted from ~/moneybytecoinsource/moneybytecoin/bin to /usr/local/bin, make sure you remove it if it was already there first, by doing:
+`sudo rm /usr/local/bin/moneybyted && cp ~/moneybytecoinsource/moneybytecoin/bin/moneybyted /usr/local/bin`
 
-Once it is compiled and installed, you can then restore the data directory. Run ignitiond to initialize the directory,
-`ignitiond`
+Once it is compiled and installed, you can then restore the data directory. Run moneybyted to initialize the directory,
+`moneybyted`
 
 Then, copy the backed up wallet and configuration files into the new data directory, with:
-`cp ~/ignitionbackup/* ~/.Ignition`
+`cp ~/moneybytebackup/* ~/.MoneyByte`
 
-Now, run ignitiond again, and your all set , with old wallet and configurations. Just wait for sync and your upgraded!
+Now, run moneybyted again, and your all set , with old wallet and configurations. Just wait for sync and your upgraded!

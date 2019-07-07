@@ -3,22 +3,22 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Ignition</source>
-        <translation>Tietoa Ignitionista</translation>
+        <source>About MoneyByte</source>
+        <translation>Tietoa MoneyByteista</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Ignition&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Ignition&lt;/b&gt;-asiakasohjelman versio</translation>
+        <source>&lt;b&gt;MoneyByte&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;MoneyByte&lt;/b&gt;-asiakasohjelman versio</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2017-2018 The Ignition developers</source>
+Copyright © 2017-2018 The MoneyByte developers</source>
         <translation>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2017-2018 The Ignition developers</translation>
+Copyright © 2017-2018 The MoneyByte developers</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -66,8 +66,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your Ignition addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Nämä ovat Ignition-osoitteesi rahansiirtojen vastaanottoa varten. Jos haluat, voit antaa jokaiselle lähettäjälle oman osoitteen jotta voit pitää kirjaa sinulle rahaa siirtäneistä henkilöistä.</translation>
+        <source>These are your MoneyByte addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Nämä ovat MoneyByte-osoitteesi rahansiirtojen vastaanottoa varten. Jos haluat, voit antaa jokaiselle lähettäjälle oman osoitteen jotta voit pitää kirjaa sinulle rahaa siirtäneistä henkilöistä.</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -81,8 +81,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a Ignition address</source>
-        <translation>Allekirjoita viesti osoittaaksesi Ignition-osoitteesi omistajuus</translation>
+        <source>Sign a message to prove you own a MoneyByte address</source>
+        <translation>Allekirjoita viesti osoittaaksesi MoneyByte-osoitteesi omistajuus</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -96,8 +96,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified Ignition address</source>
-        <translation>Vahvista viesti varmistaaksesi että kyseinen Ignition-osoitteesi on allekirjoittanut sen</translation>
+        <source>Verify a message to ensure it was signed with a specified MoneyByte address</source>
+        <translation>Vahvista viesti varmistaaksesi että kyseinen MoneyByte-osoitteesi on allekirjoittanut sen</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -264,8 +264,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="+82"/>
-        <source>Ignition will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Ignition-ohjelma sulkee itsensä päättääkseen salauksen luonnin. Muista, että lompakon salaaminen ei täysin turvaa kolikoitasi haittaohjelmien aiheuttamien varkauksien uhalta.</translation>
+        <source>MoneyByte will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>MoneyByte-ohjelma sulkee itsensä päättääkseen salauksen luonnin. Muista, että lompakon salaaminen ei täysin turvaa kolikoitasi haittaohjelmien aiheuttamien varkauksien uhalta.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -358,8 +358,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Ignition</source>
-        <translation>Näytä tietoja Ignitionista</translation>
+        <source>Show information about MoneyByte</source>
+        <translation>Näytä tietoja MoneyByteista</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -398,12 +398,12 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="-55"/>
-        <source>Send coins to a Ignition address</source>
-        <translation>Lähetä varoja Ignition-osoitteeseen</translation>
+        <source>Send coins to a MoneyByte address</source>
+        <translation>Lähetä varoja MoneyByte-osoitteeseen</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>Modify configuration options for Ignition</source>
+        <source>Modify configuration options for MoneyByte</source>
         <translation>Mukauta asiakasohjelman asetuksia</translation>
     </message>
     <message>
@@ -444,8 +444,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     <message>
         <location line="-214"/>
         <location line="+551"/>
-        <source>Ignition</source>
-        <translation>Ignition</translation>
+        <source>MoneyByte</source>
+        <translation>MoneyByte</translation>
     </message>
     <message>
         <location line="-551"/>
@@ -454,8 +454,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="+193"/>
-        <source>&amp;About Ignition</source>
-        <translation>&amp;Tietoa Ignitionista</translation>
+        <source>&amp;About MoneyByte</source>
+        <translation>&amp;Tietoa MoneyByteista</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -506,13 +506,13 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     <message>
         <location line="+0"/>
         <location line="+58"/>
-        <source>Ignition client</source>
-        <translation>Ignition-asiakasohjelma</translation>
+        <source>MoneyByte client</source>
+        <translation>MoneyByte-asiakasohjelma</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to Ignition network</source>
-        <translation><numerusform>%n aktiivinen yhteys Ignition-verkkoon</numerusform><numerusform>%n aktiivista yhteyttä Ignition-verkkoon</numerusform></translation>
+        <source>%n active connection(s) to MoneyByte network</source>
+        <translation><numerusform>%n aktiivinen yhteys MoneyByte-verkkoon</numerusform><numerusform>%n aktiivista yhteyttä MoneyByte-verkkoon</numerusform></translation>
     </message>
     <message>
         <location line="+488"/>
@@ -605,8 +605,8 @@ Osoite: %4</translation>
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Ignition address or malformed URI parameters.</source>
-        <translation>URI-merkkijonoa ei voida jäsentää! Tämä voi johtua väärästä Ignition-osoitteesta tai väärässä muodossa olevista URI-parametreistä.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid MoneyByte address or malformed URI parameters.</source>
+        <translation>URI-merkkijonoa ei voida jäsentää! Tämä voi johtua väärästä MoneyByte-osoitteesta tai väärässä muodossa olevista URI-parametreistä.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -728,8 +728,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. Ignition can no longer continue safely and will quit.</source>
-        <translation>Virhe kohdattu. Ignition-asiakasohjelma ei voi enää jatkaa turvallisesti ja se suljetaan.</translation>
+        <source>A fatal error occurred. MoneyByte can no longer continue safely and will quit.</source>
+        <translation>Virhe kohdattu. MoneyByte-asiakasohjelma ei voi enää jatkaa turvallisesti ja se suljetaan.</translation>
     </message>
 </context>
 <context>
@@ -1062,8 +1062,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Ignition address.</source>
-        <translation>Syöttämäsi osoite &quot;%1&quot; ei ole hyväksytty Ignition-osoite.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid MoneyByte address.</source>
+        <translation>Syöttämäsi osoite &quot;%1&quot; ei ole hyväksytty MoneyByte-osoite.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1081,8 +1081,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
-        <source>Ignition-Qt</source>
-        <translation>Ignition-Qt</translation>
+        <source>MoneyByte-Qt</source>
+        <translation>MoneyByte-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1154,13 +1154,13 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Ignition after logging in to the system.</source>
-        <translation>Käynnistä Ignition-asiakasohjelma automaattisesti kun olet kirjautunut järjestelmään.</translation>
+        <source>Automatically start MoneyByte after logging in to the system.</source>
+        <translation>Käynnistä MoneyByte-asiakasohjelma automaattisesti kun olet kirjautunut järjestelmään.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Ignition on system login</source>
-        <translation>%Käynnistä Ignition-asiakasohjelma kirjautuessasi</translation>
+        <source>&amp;Start MoneyByte on system login</source>
+        <translation>%Käynnistä MoneyByte-asiakasohjelma kirjautuessasi</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1169,8 +1169,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Ignition client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Avaa Ignition-asiakkaalle automaattisesti portti reitittimestä. Tämä toimii vain, kun reitittimesi tukee UPnP:tä ja se on aktivoituna.</translation>
+        <source>Automatically open the MoneyByte client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Avaa MoneyByte-asiakkaalle automaattisesti portti reitittimestä. Tämä toimii vain, kun reitittimesi tukee UPnP:tä ja se on aktivoituna.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1179,8 +1179,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Ignition network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Yhdistä Ignition-verkkoon SOCKS-välityspalvelimen lävitse. (esim. yhdistettäessä Tor:n kautta).</translation>
+        <source>Connect to the MoneyByte network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Yhdistä MoneyByte-verkkoon SOCKS-välityspalvelimen lävitse. (esim. yhdistettäessä Tor:n kautta).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1254,8 +1254,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Ignition.</source>
-        <translation>Käyttöliittymän kieli voidaan valita tästä. Tämä asetus tulee voimaan vasta Ignition-asiakasohjelman uudelleenkäynnistyksen jälkeen.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting MoneyByte.</source>
+        <translation>Käyttöliittymän kieli voidaan valita tästä. Tämä asetus tulee voimaan vasta MoneyByte-asiakasohjelman uudelleenkäynnistyksen jälkeen.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1321,8 +1321,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Ignition.</source>
-        <translation>Tämä asetus tulee voimaan vasta Ignition-asiakasohjelman uudelleenkäynnistyksen jälkeen.</translation>
+        <source>This setting will take effect after restarting MoneyByte.</source>
+        <translation>Tämä asetus tulee voimaan vasta MoneyByte-asiakasohjelman uudelleenkäynnistyksen jälkeen.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1340,8 +1340,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location line="+46"/>
         <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Ignition network after a connection is established, but this process has not completed yet.</source>
-        <translation>Näytettävät tiedot voivat olla vanhentuneet. Lompakkosi synkronoituu automaattisesti Ignition-verkon kanssa kun yhteys on muodostettu, mutta tätä prosessia ei ole viety vielä päätökseen.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the MoneyByte network after a connection is established, but this process has not completed yet.</source>
+        <translation>Näytettävät tiedot voivat olla vanhentuneet. Lompakkosi synkronoituu automaattisesti MoneyByte-verkon kanssa kun yhteys on muodostettu, mutta tätä prosessia ei ole viety vielä päätökseen.</translation>
     </message>
     <message>
         <location line="-173"/>
@@ -1582,8 +1582,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Ignition-Qt help message to get a list with possible Ignition command-line options.</source>
-        <translation>Näytä Ignition-Qt:n avustusohje saadaksesi listan käytettävistä Ignitionin komentokehotteen määritteistä.</translation>
+        <source>Show the MoneyByte-Qt help message to get a list with possible MoneyByte command-line options.</source>
+        <translation>Näytä MoneyByte-Qt:n avustusohje saadaksesi listan käytettävistä MoneyBytein komentokehotteen määritteistä.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1602,13 +1602,13 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>Ignition - Debug window</source>
-        <translation>Ignition - Debug-ikkuna</translation>
+        <source>MoneyByte - Debug window</source>
+        <translation>MoneyByte - Debug-ikkuna</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Ignition Core</source>
-        <translation>Ignitionin ydin</translation>
+        <source>MoneyByte Core</source>
+        <translation>MoneyBytein ydin</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1617,8 +1617,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Ignition debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Avaa Ignition-asiakasohjelman debug-lokitiedosto nykyisestä hakemistostaan. Tämä voi kestää muutaman sekunnin avattaessa suuria lokitiedostoja.</translation>
+        <source>Open the MoneyByte debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Avaa MoneyByte-asiakasohjelman debug-lokitiedosto nykyisestä hakemistostaan. Tämä voi kestää muutaman sekunnin avattaessa suuria lokitiedostoja.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1627,8 +1627,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the Ignition RPC console.</source>
-        <translation>Tervetuloa Ignitionin RPC-konsoliin.</translation>
+        <source>Welcome to the MoneyByte RPC console.</source>
+        <translation>Tervetuloa MoneyBytein RPC-konsoliin.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1688,7 +1688,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <location line="+5"/>
         <location line="+5"/>
         <source>Send Coins</source>
-        <translation>Lähetä Ignitioneja</translation>
+        <translation>Lähetä MoneyByteeja</translation>
     </message>
     <message>
         <location line="+76"/>
@@ -1736,8 +1736,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <location line="+86"/>
         <location line="+86"/>
         <location line="+32"/>
-        <source>0.00 IC</source>
-        <translation>123.456 IC {0.00 ?}</translation>
+        <source>0.00 MON</source>
+        <translation>123.456 MON {0.00 ?}</translation>
     </message>
     <message>
         <location line="-191"/>
@@ -1806,8 +1806,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>123.456 IC</source>
-        <translation>123.456 IC</translation>
+        <source>123.456 MON</source>
+        <translation>123.456 MON</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -1821,8 +1821,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a Ignition address (e.g. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Syötä Ignition-osoite (esim. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a MoneyByte address (e.g. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Syötä MoneyByte-osoite (esim. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1921,8 +1921,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+247"/>
-        <source>WARNING: Invalid Ignition address</source>
-        <translation>VAROITUS: Epäkelpo Ignition-osoite</translation>
+        <source>WARNING: Invalid MoneyByte address</source>
+        <translation>VAROITUS: Epäkelpo MoneyByte-osoite</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1995,8 +1995,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Ignition address (e.g. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Syötä Ignition-osoite (esim. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a MoneyByte address (e.g. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Syötä MoneyByte-osoite (esim. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
 </context>
 <context>
@@ -2056,8 +2056,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Ignition address</source>
-        <translation>Allekirjoita viesti vahvistaaksesi, että omistat tämän Ignition-osoitteen</translation>
+        <source>Sign the message to prove you own this MoneyByte address</source>
+        <translation>Allekirjoita viesti vahvistaaksesi, että omistat tämän MoneyByte-osoitteen</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2088,8 +2088,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Ignition address</source>
-        <translation>Vahvista viesti varmistaaksesi että se on allekirjoitettu kyseisellä Ignition-osoitteella</translation>
+        <source>Verify the message to ensure it was signed with the specified MoneyByte address</source>
+        <translation>Vahvista viesti varmistaaksesi että se on allekirjoitettu kyseisellä MoneyByte-osoitteella</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2099,8 +2099,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Ignition address (e.g. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Syötä Ignition-osoite (esim. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a MoneyByte address (e.g. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Syötä MoneyByte-osoite (esim. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2109,8 +2109,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Ignition signature</source>
-        <translation>Syötä Ignition-allekirjoitus</translation>
+        <source>Enter MoneyByte signature</source>
+        <translation>Syötä MoneyByte-allekirjoitus</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2688,8 +2688,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+173"/>
-        <source>Ignition version</source>
-        <translation>Ignitionin versio</translation>
+        <source>MoneyByte version</source>
+        <translation>MoneyBytein versio</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2698,8 +2698,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or Ignitiond</source>
-        <translation>Syötä komento kohteeseen -server tai Ignitiond</translation>
+        <source>Send command to -server or MoneyByted</source>
+        <translation>Syötä komento kohteeseen -server tai MoneyByted</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2718,13 +2718,13 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: Ignition.conf)</source>
-        <translation>Määritä asetustiedosto (oletus: Ignition.conf)</translation>
+        <source>Specify configuration file (default: MoneyByte.conf)</source>
+        <translation>Määritä asetustiedosto (oletus: MoneyByte.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: Ignitiond.pid)</source>
-        <translation>Määritä prosessitiedosto (oletus: Ignition.pid)</translation>
+        <source>Specify pid file (default: MoneyByted.pid)</source>
+        <translation>Määritä prosessitiedosto (oletus: MoneyByte.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2741,13 +2741,13 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=ICrpc
+rpcuser=MONrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Ignition Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;MoneyByte Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2853,8 +2853,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Ignition Alert&quot; admin@foo
     </message>
     <message>
         <location line="-103"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Ignition will not work properly.</source>
-        <translation>Varoitus: Tarkista, että tietokoneesi aika ja päivämäärä ovat oikeassa! Jos kellosi on väärässä, Ignition ei toimi oikein.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong MoneyByte will not work properly.</source>
+        <translation>Varoitus: Tarkista, että tietokoneesi aika ja päivämäärä ovat oikeassa! Jos kellosi on väärässä, MoneyByte ei toimi oikein.</translation>
     </message>
     <message>
         <location line="+132"/>
@@ -3160,8 +3160,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Ignition Alert&quot; admin@foo
     </message>
     <message>
         <location line="+10"/>
-        <source>Initialization sanity check failed. Ignition is shutting down.</source>
-        <translation>Käyttöönottotarkistus epäonnistui. Ignition-asiakasohjelma suljetaan.</translation>
+        <source>Initialization sanity check failed. MoneyByte is shutting down.</source>
+        <translation>Käyttöönottotarkistus epäonnistui. MoneyByte-asiakasohjelma suljetaan.</translation>
     </message>
     <message>
         <location line="+50"/>
@@ -3225,13 +3225,13 @@ for example: alertnotify=echo %%s | mail -s &quot;Ignition Alert&quot; admin@foo
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Ignition</source>
-        <translation>Virhe ladattaessa wallet.dat-tiedostoa: Lompakko tarvitsee uudemman version Ignition-asiakasohjelmasta</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of MoneyByte</source>
+        <translation>Virhe ladattaessa wallet.dat-tiedostoa: Lompakko tarvitsee uudemman version MoneyByte-asiakasohjelmasta</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Ignition to complete</source>
-        <translation>Lompakko on kirjoitettava uudelleen: käynnistä Ignition-asiakasohjelma uudelleen päättääksesi toiminnon</translation>
+        <source>Wallet needed to be rewritten: restart MoneyByte to complete</source>
+        <translation>Lompakko on kirjoitettava uudelleen: käynnistä MoneyByte-asiakasohjelma uudelleen päättääksesi toiminnon</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3295,8 +3295,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Ignition Alert&quot; admin@foo
     </message>
     <message>
         <location line="+125"/>
-        <source>Unable to bind to %s on this computer. Ignition is probably already running.</source>
-        <translation>Ei voitu liittää %s tällä tietokoneella. Ignition-asiakasohjelma on jo ehkä päällä.</translation>
+        <source>Unable to bind to %s on this computer. MoneyByte is probably already running.</source>
+        <translation>Ei voitu liittää %s tällä tietokoneella. MoneyByte-asiakasohjelma on jo ehkä päällä.</translation>
     </message>
     <message>
         <location line="-101"/>
@@ -3335,7 +3335,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Ignition Alert&quot; admin@foo
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Ignition is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. MoneyByte is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>

@@ -53,7 +53,7 @@ public:
     QString clientName() const;
     QString formatClientStartupTime() const;
 
-    //! Get and set the content of the Ignition.conf file
+    //! Get and set the content of the MoneyByte.conf file
     QString getConfigFileContent() const;
     void setConfigFileContent(const QString &content);
 

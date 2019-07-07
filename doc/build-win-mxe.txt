@@ -1,5 +1,5 @@
 Copyright (c) 2009-2012 Bitcoin Developers
-Copyright (c) 2017-2018 IgnitionCoin Developers
+Copyright (c) 2017-2018 MoneyByteCoin Developers
 Distributed under the MIT/X11 software license, see the accompanying
 file license.txt or http://www.opensource.org/licenses/mit-license.php.
 This product includes software developed by the OpenSSL Project for use in
@@ -14,7 +14,7 @@ WINDOWS MXE CROSS-COMPILING BUILD NOTES
 Basics
 ------
 
-IgnitionCoin can be cross-compiled for Windows using MXE.
+MoneyByteCoin can be cross-compiled for Windows using MXE.
 The following guide is the reference of MXE cross-compiling: https://bitcointalk.org/index.php?topic=1080289.0
 
 
@@ -34,7 +34,7 @@ The default path for the MXE environment is /mnt/mxe-build. You can change this 
 Build
 -----
 
-The script scripts/build-win-mxe.sh can be used to build IgnitionCoin using MXE.
+The script scripts/build-win-mxe.sh can be used to build MoneyByteCoin using MXE.
 If you changed the path of the MXE environment, you will also need to change the MXE_PATH variable in the build script.
 
 

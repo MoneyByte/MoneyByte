@@ -1,9 +1,9 @@
-Building Ignition
+Building MoneyByte
 
-See doc/readme-qt.rst for instructions on building Ignition QT,
+See doc/readme-qt.rst for instructions on building MoneyByte QT,
 the intended-for-end-users, nice-graphical-interface, reference
-implementation of Ignition.
+implementation of MoneyByte.
 
-See doc/build-*.txt for instructions on building Ignitiond,
+See doc/build-*.txt for instructions on building MoneyByted,
 the intended-for-services, no-graphical-interface, reference
-implementation of Ignition.
+implementation of MoneyByte.

@@ -52,12 +52,12 @@ bool AppInit(int argc, char* argv[])
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
             // First part of help message is specific to bitcoind / RPC client
-            std::string strUsage = _("Ignition version") + " " + FormatFullVersion() + "\n\n" +
+            std::string strUsage = _("MoneyByte version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
-                  "  Ignitiond [options]                     " + "\n" +
-                  "  Ignitiond [options] <command> [params]  " + _("Send command to -server or Ignitiond") + "\n" +
-                  "  Ignitiond [options] help                " + _("List commands") + "\n" +
-                  "  Ignitiond [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  MoneyByted [options]                     " + "\n" +
+                  "  MoneyByted [options] <command> [params]  " + _("Send command to -server or MoneyByted") + "\n" +
+                  "  MoneyByted [options] help                " + _("List commands") + "\n" +
+                  "  MoneyByted [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessage();
 
@@ -67,7 +67,7 @@ bool AppInit(int argc, char* argv[])
 
         // Command-line RPC
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "Ignition:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "MoneyByte:"))
                 fCommandLine = true;
 
         if (fCommandLine)

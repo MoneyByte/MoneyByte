@@ -13,7 +13,7 @@ NC='\033[0m'
 NC_READ=$'\e[0m'
 
 if [ ! -e checkswap.sh ] ; then
-    wget https://raw.githubusercontent.com/ignitioncoin/ignitioncoin/master/scripts/checkswap.sh
+    wget https://raw.githubusercontent.com/moneybytecoin/moneybytecoin/master/scripts/checkswap.sh
 fi
 ./checkswap.sh
 
@@ -33,8 +33,8 @@ i686-w64-mingw32.static-qmake-qt5 \
 	BDB_LIB_PATH=$MXE_LIB_PATH \
 	MINIUPNPC_INCLUDE_PATH=$MXE_INCLUDE_PATH \
 	MINIUPNPC_LIB_PATH=$MXE_LIB_PATH \
-	QMAKE_LRELEASE=$MXE_PATH/usr/i686-w64-mingw32.static/qt5/bin/lrelease Ignition.pro
+	QMAKE_LRELEASE=$MXE_PATH/usr/i686-w64-mingw32.static/qt5/bin/lrelease MoneyByte.pro
 
 make -j$NB_CORES -f Makefile.Release
 
-echo -e "\n${GREEN}Build Complete - Ignition-qt.exe is in the \"release\" folder${NC}"
+echo -e "\n${GREEN}Build Complete - MoneyByte-qt.exe is in the \"release\" folder${NC}"

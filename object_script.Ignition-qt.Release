@@ -115,7 +115,7 @@ INPUT(
 ./build/mrichtextedit.o
 ./build/tradingdialog.o
 ./build/rpcsmessage.o
-./build/ignition-qt_plugin_import.o
+./build/moneybyte-qt_plugin_import.o
 ./build/qrc_bitcoin.o
 ./build/moc_bitcoingui.o
 ./build/moc_transactiontablemodel.o

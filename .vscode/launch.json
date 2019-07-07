@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Ignition-qt",
+            "name": "MoneyByte-qt",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/Ignition-qt",
+            "program": "${workspaceFolder}/MoneyByte-qt",
             "args": ["-addnode=127.0.0.1:7890"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -25,10 +25,10 @@
             ]
         },
         {
-            "name": "Ignition-qt TESTNET NEOSCRYPT",
+            "name": "MoneyByte-qt TESTNET NEOSCRYPT",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/Ignition-qt",
+            "program": "${workspaceFolder}/MoneyByte-qt",
             "args": ["--datadir=/home/jere/ic-data/testnet-neoscrypt"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

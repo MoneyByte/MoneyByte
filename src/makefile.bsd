@@ -112,7 +112,7 @@ ifeq (${USE_WALLET}, 1)
         obj/walletdb.o
 endif
 
-all: Ignitiond
+all: MoneyByted
 	@echo "\nBuild successful!"
 
 LIBS += $(CURDIR)/leveldb/libleveldb.a $(CURDIR)/leveldb/libmemenv.a
@@ -139,11 +139,11 @@ obj/neoscrypt.o: neoscrypt.c
 obj/neoscrypt_asm.o: neoscrypt_asm.S
 	$(CC) -c -DSHA256 -DASM -DOPT -o $@ $^
 
-Ignitiond: $(OBJS:obj/%=obj/%)
+MoneyByted: $(OBJS:obj/%=obj/%)
 	$(LINK) $(xCXXFLAGS) -o $@ $^ $(xLDFLAGS) $(LIBS)
 
 clean:
-	-rm -f Ignitiond
+	-rm -f MoneyByted
 	-rm -f obj/*.o
 	-rm -f obj/*.P
 	-rm -f obj/build.h

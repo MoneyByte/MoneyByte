@@ -13,15 +13,15 @@ BOOST_SUFFIX?=-mgw49-mt-s-1_57
 
 INCLUDEPATHS= \
  -I"$(CURDIR)" \
- -I"d:/project/Ignition/include/boost-1_57" \
- -I"d:/project/Ignition/include/miniupnpc" \
- -I"d:/project/Ignition/include" \
- -I"d:/project/Ignition"
+ -I"d:/project/MoneyByte/include/boost-1_57" \
+ -I"d:/project/MoneyByte/include/miniupnpc" \
+ -I"d:/project/MoneyByte/include" \
+ -I"d:/project/MoneyByte"
 
 LIBPATHS= \
  -L"$(CURDIR)/leveldb" \
- -L"d:/project/Ignition/lib" \
- -L"d:/project/Ignition"
+ -L"d:/project/MoneyByte/lib" \
+ -L"d:/project/MoneyByte"
 
 LIBS= \
  -l leveldb \
@@ -130,7 +130,7 @@ ifeq (${USE_WALLET}, 1)
         obj/walletdb.o
 endif
 
-all: Ignitiond.exe
+all: MoneyByted.exe
 	@echo "\nBuild successful!"
 
 LIBS += $(CURDIR)/leveldb/libleveldb.a $(CURDIR)/leveldb/libmemenv.a -l shlwapi
@@ -153,12 +153,12 @@ obj/neoscrypt.o: neoscrypt.c
 obj/neoscrypt_asm.o: neoscrypt_asm.S
 	$(CC) -c -DSHA256 -DASM -DOPT -o $@ $<
 
-Ignitiond.exe: $(OBJS:obj/%=obj/%)
+MoneyByted.exe: $(OBJS:obj/%=obj/%)
 	$(CXX) $(CFLAGS) $(LDFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
 clean:
 	-rm -f obj/*.o
-	-rm -f Ignitiond.exe
+	-rm -f MoneyByted.exe
 	-rm -f obj/build.h
 	cd leveldb && TARGET_OS=NATIVE_WINDOWS $(MAKE) clean && cd ..
 

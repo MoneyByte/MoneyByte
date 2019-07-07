@@ -38,7 +38,7 @@
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
-         <string>Ignition Network</string>
+         <string>MoneyByte Network</string>
         </attribute>
         <layout class="QGridLayout" name="gridLayout">
          <item row="1" column="0">
@@ -98,7 +98,7 @@
            <item>
             <widget class="QLabel" name="label_2">
              <property name="text">
-              <string>Ignition Node Count:</string>
+              <string>MoneyByte Node Count:</string>
              </property>
             </widget>
            </item>

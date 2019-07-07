@@ -7,9 +7,9 @@ BLUE='\033[0;34m'
 NC='\033[0m'
 
 # Backup data dir
-echo -e "${GREEN}Wiping cache in ~/Ignition${NC}"
-if [ -d "$HOME/.Ignition/" ]; then
-	cd $HOME/.Ignition/  
+echo -e "${GREEN}Wiping cache in ~/MoneyByte${NC}"
+if [ -d "$HOME/.MoneyByte/" ]; then
+	cd $HOME/.MoneyByte/  
 	rm -rf smsgStore
 	rm -rf smsgDB
 	rm -f *.log
@@ -21,6 +21,6 @@ if [ -d "$HOME/.Ignition/" ]; then
 	rm -f mncache.dat
 	echo -e "${BLUE}Done!${NC}"
 else
-	echo -e "\n${RED}~/Ignition does not exist!${NC}"
+	echo -e "\n${RED}~/MoneyByte does not exist!${NC}"
 fi
 

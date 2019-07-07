@@ -19,7 +19,7 @@ sudo chmod ogu+rw $MXE_BASEPATH
 
 # # Clone MXE repo
 echo -e "\n${GREEN}Cloning MXE${NC}"
-git clone -b build-ic https://github.com/ignitioncoin/mxe.git $MXE_BASEPATH/mxe
+git clone -b build-ic https://github.com/moneybytecoin/mxe.git $MXE_BASEPATH/mxe
 
 # Number of cores
 NB_CORES=`nproc`

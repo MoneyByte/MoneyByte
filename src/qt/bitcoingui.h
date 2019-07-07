@@ -243,7 +243,7 @@ private slots:
     /** Show progress dialog e.g. for verifychain */
     void showProgress(const QString &title, int nProgress);
 
-    /** Edit the Ignition.conf file */
+    /** Edit the MoneyByte.conf file */
     void editConfig();
     void editConfigExt();
     /** Open the data directory */

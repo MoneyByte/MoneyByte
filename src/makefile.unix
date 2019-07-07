@@ -141,14 +141,14 @@ endif
 
 BIN = ../bin
 
-all: ignitiond
-	@echo "\nBuild successful! The ignitiond binary can be found in the \"bin\" folder."
+all: moneybyted
+	@echo "\nBuild successful! The moneybyted binary can be found in the \"bin\" folder."
 
 # build secp256k1
 DEFS += $(addprefix -I,$(CURDIR)/secp256k1/include)
 secp256k1/src/libsecp256k1_la-secp256k1.o:
 	@echo "Building Secp256k1 ..."; cd secp256k1; chmod 755 *; ./autogen.sh; ./configure --enable-module-recovery; make; cd ..;
-ignitiond: secp256k1/src/libsecp256k1_la-secp256k1.o
+moneybyted: secp256k1/src/libsecp256k1_la-secp256k1.o
 
 # build leveldb
 LIBS += $(CURDIR)/leveldb/libleveldb.a $(CURDIR)/leveldb/libmemenv.a
@@ -190,13 +190,13 @@ obj/%.o: %.c
 	      -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
 	  rm -f $(@:%.o=%.d)
 
-ignitiond: $(OBJS:obj/%=obj/%)
+moneybyted: $(OBJS:obj/%=obj/%)
 	$(LINK) $(xCXXFLAGS) -o $(BIN)/$@ $^ $(xLDFLAGS) $(LIBS)
 
 $(shell mkdir -p $(BIN))
 
 clean:
-	-rm -f $(BIN)/ignitiond
+	-rm -f $(BIN)/moneybyted
 	-rm -f obj/*.o
 	-rm -f obj/*.P
 	-rm -f obj/build.h

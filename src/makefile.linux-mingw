@@ -132,7 +132,7 @@ ifeq (${USE_WALLET}, 1)
         obj/walletdb.o
 endif
 
-all: Ignitiond.exe
+all: MoneyByted.exe
 	@echo "\nBuild successful!"
 
 LIBS += $(CURDIR)/leveldb/libleveldb.a $(CURDIR)/leveldb/libmemenv.a
@@ -152,13 +152,13 @@ obj/neoscrypt.o: neoscrypt.c
 obj/neoscrypt_asm.o: neoscrypt_asm.S
 	$(CC) -c -DSHA256 -DASM -DOPT -o $@ $<
 
-Ignitiond.exe: $(OBJS:obj/%=obj/%)
+MoneyByted.exe: $(OBJS:obj/%=obj/%)
 	$(CXX) $(CFLAGS) $(LDFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS) -lshlwapi
-	$(STRIP) Ignitiond.exe
+	$(STRIP) MoneyByted.exe
 
 clean:
 	-rm -f obj/*.o
-	-rm -f Ignitiond.exe
+	-rm -f MoneyByted.exe
 	-rm -f obj/build.h
 	cd leveldb && TARGET_OS=OS_WINDOWS_CROSSCOMPILE $(MAKE) clean && cd ..
 

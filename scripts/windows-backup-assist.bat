@@ -1,6 +1,6 @@
-taskkill /F /IM Ignition-qt.exe
-mkdir "%USERPROFILE%"\Desktop\ignitionbackup
-cd "%USERPROFILE%"\Ignition\
+taskkill /F /IM MoneyByte-qt.exe
+mkdir "%USERPROFILE%"\Desktop\moneybytebackup
+cd "%USERPROFILE%"\MoneyByte\
 del -r smsgStore
 del -r smsgDB
 del *.log
@@ -10,4 +10,4 @@ del -r database
 del -r txleveldb
 del peers.dat
 del mncache.dat
-xcopy /E .\* "%USERPROFILE%"\Desktop\ignitionbackup
+xcopy /E .\* "%USERPROFILE%"\Desktop\moneybytebackup

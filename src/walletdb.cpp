@@ -368,7 +368,7 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
         {
             string strAddress;
             ssKey >> strAddress;
-            ssValue >> pwallet->mapAddressBook[CIgnitioncoinAddress(strAddress).Get()];
+            ssValue >> pwallet->mapAddressBook[CMoneyBytecoinAddress(strAddress).Get()];
         }
         else if (strType == "tx")
         {
@@ -738,7 +738,7 @@ DBErrors CWalletDB::LoadWallet(CWallet* pwallet)
 void ThreadFlushWalletDB(const string& strFile)
 {
     // Make this thread recognisable as the wallet flushing thread
-    RenameThread("Ignition-wallet");
+    RenameThread("MoneyByte-wallet");
 
     static bool fOneThread;
     if (fOneThread)

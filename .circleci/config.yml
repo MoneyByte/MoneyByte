@@ -1,4 +1,4 @@
-# Ignition CircleCI 2.0 configuration file
+# MoneyByte CircleCI 2.0 configuration file
 
 version: 2
 jobs:
@@ -7,7 +7,7 @@ jobs:
       # Ubuntu 16.04 base image
       - image: ubuntu:16.04
         
-    working_directory: ignition/src/github.com/ignitioncoin/ignitioncoin
+    working_directory: moneybyte/src/github.com/moneybytecoin/moneybytecoin
 
     steps:
     # Dependencies & setup
@@ -28,7 +28,7 @@ jobs:
           mkdir ~/logs/daemon
           mkdir ~/logs/qt
           mkdir ~/bins/ubuntu-16.04
-          mkdir ~/.Ignition
+          mkdir ~/.MoneyByte
 
     # Builds & tests
     - checkout
@@ -41,26 +41,26 @@ jobs:
         name: Test daemon
         command: |
           cd bin
-          printf "rpcuser=ICrpc\nrpcpassword=x1y2z3\n" > ~/.Ignition/Ignition.conf
-          ./ignitiond --datadir=/root/.Ignition -daemon && sleep 5s
-          ./ignitiond --datadir=/root/.Ignition getinfo |& tee -a ~/logs/daemon/daemon-test.log
-          ./ignitiond --datadir=/root/.Ignition stop |& tee -a ~/logs/daemon/daemon-test.log
+          printf "rpcuser=MONrpc\nrpcpassword=x1y2z3\n" > ~/.MoneyByte/MoneyByte.conf
+          ./moneybyted --datadir=/root/.MoneyByte -daemon && sleep 5s
+          ./moneybyted --datadir=/root/.MoneyByte getinfo |& tee -a ~/logs/daemon/daemon-test.log
+          ./moneybyted --datadir=/root/.MoneyByte stop |& tee -a ~/logs/daemon/daemon-test.log
     
     - run:
         name: Build QT
         command: |
-          qmake USE_UPNP=1 Ignition.pro |& tee ~/logs/qt/qt-qmake.log
+          qmake USE_UPNP=1 MoneyByte.pro |& tee ~/logs/qt/qt-qmake.log
           make -j6 |& tee ~/logs/qt/qt-make.log
 
       # Log & bin artifacts
     - store_artifacts:
         path: ~/logs/daemon/daemon-make.log
     - store_artifacts:
-        path: ~/.Ignition/debug.log
+        path: ~/.MoneyByte/debug.log
         destination: /root/logs/daemon/debug.log
     - store_artifacts:
-        path: bin/ignitiond
-        destination: /root/bins/ubuntu-16.04/ignitiond
+        path: bin/moneybyted
+        destination: /root/bins/ubuntu-16.04/moneybyted
 
     - store_artifacts: 
         path: ~/logs/daemon/daemon-test.log
@@ -69,5 +69,5 @@ jobs:
     - store_artifacts:
         path: ~/logs/qt/qt-make.log
     - store_artifacts:
-        path: Ignition-qt
-        destination: /root/bins/ubuntu-16.04/Ignition-qt
+        path: MoneyByte-qt
+        destination: /root/bins/ubuntu-16.04/MoneyByte-qt

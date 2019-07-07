@@ -1,5 +1,5 @@
 Copyright (c) 2009-2012 Bitcoin Developers  
-Copyright (c) 2017-2018 Ignition Developers  
+Copyright (c) 2017-2018 MoneyByte Developers  
 Distributed under the MIT/X11 software license, see the accompanying  
 file license.txt or http://www.opensource.org/licenses/mit-license.php.  
 This product includes software developed by the OpenSSL Project for use in  
@@ -88,13 +88,13 @@ sudo ln -s /usr/local/BerkeleyDB.4.8/lib/libdb_cxx-4.8.so /usr/lib/libdb_cxx-4.8
 ## Build daemon
 Skip this if you only want the QT build
 ```
-git clone https://github.com/ignitioncoin/ignitioncoin
+git clone https://github.com/moneybytecoin/moneybytecoin
 cd src
 make -f makefile.unix xCPUARCH=arm CPPFLAGS="-I/usr/local/BerkeleyDB.4.8/include -O2" LDFLAGS="-L/usr/local/BerkeleyDB.4.8/lib"
 ```
 ## Build QT
 ```
-git clone https://github.com/ignitioncoin/ignitioncoin
+git clone https://github.com/moneybytecoin/moneybytecoin
 qmake INCLUDEPATH="/usr/local/BerkeleyDB.4.8/include" LIBS="-L/usr/local/BerkeleyDB.4.8/lib" xCPUARCH=arm
 make
 ```

@@ -3,22 +3,22 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Ignition</source>
-        <translation>O Ignitione</translation>
+        <source>About MoneyByte</source>
+        <translation>O MoneyBytee</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Ignition&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Ignition&lt;/b&gt; verzia</translation>
+        <source>&lt;b&gt;MoneyByte&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;MoneyByte&lt;/b&gt; verzia</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2017-2018 The Ignition developers</source>
+Copyright © 2017-2018 The MoneyByte developers</source>
         <translation>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2017-2018 The Ignition developers</translation>
+Copyright © 2017-2018 The MoneyByte developers</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -65,8 +65,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your Ignition addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Toto sú vaše Ignition adresy pre príjem platieb. Možno budete chcieť dať inú každému odosielateľovi, aby ste mohli sledovať, kto Vám platí.</translation>
+        <source>These are your MoneyByte addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Toto sú vaše MoneyByte adresy pre príjem platieb. Možno budete chcieť dať inú každému odosielateľovi, aby ste mohli sledovať, kto Vám platí.</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -80,8 +80,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a Ignition address</source>
-        <translation>Podpísať správu ako dôkaz, že vlastníte túto Ignition adresu</translation>
+        <source>Sign a message to prove you own a MoneyByte address</source>
+        <translation>Podpísať správu ako dôkaz, že vlastníte túto MoneyByte adresu</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -95,8 +95,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified Ignition address</source>
-        <translation>Overte správu, aby ste zabezpečili, že bola podpísaná s určitou Ignition adresou</translation>
+        <source>Verify a message to ensure it was signed with a specified MoneyByte address</source>
+        <translation>Overte správu, aby ste zabezpečili, že bola podpísaná s určitou MoneyByte adresou</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -263,8 +263,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+82"/>
-        <source>Ignition will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Ignition sa teraz zavrie aby dokončil proces zašifrovania. Nezabudnite, že zašifrovanie vašej peňaženky nemôže plne chrániť vaše mince pred krádežou malwarom, ktorý napadol váš počítač.</translation>
+        <source>MoneyByte will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>MoneyByte sa teraz zavrie aby dokončil proces zašifrovania. Nezabudnite, že zašifrovanie vašej peňaženky nemôže plne chrániť vaše mince pred krádežou malwarom, ktorý napadol váš počítač.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -357,8 +357,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Ignition</source>
-        <translation>Zobraziť informácie o Ignition</translation>
+        <source>Show information about MoneyByte</source>
+        <translation>Zobraziť informácie o MoneyByte</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -397,13 +397,13 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="-55"/>
-        <source>Send coins to a Ignition address</source>
-        <translation>Poslať mince na Ignition adresu</translation>
+        <source>Send coins to a MoneyByte address</source>
+        <translation>Poslať mince na MoneyByte adresu</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>Modify configuration options for Ignition</source>
-        <translation>Upraviť možnosti konfigurácie pre Ignition</translation>
+        <source>Modify configuration options for MoneyByte</source>
+        <translation>Upraviť možnosti konfigurácie pre MoneyByte</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -443,8 +443,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     <message>
         <location line="-214"/>
         <location line="+551"/>
-        <source>Ignition</source>
-        <translation>Ignition</translation>
+        <source>MoneyByte</source>
+        <translation>MoneyByte</translation>
     </message>
     <message>
         <location line="-551"/>
@@ -453,8 +453,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+193"/>
-        <source>&amp;About Ignition</source>
-        <translation>&amp;O Ignition</translation>
+        <source>&amp;About MoneyByte</source>
+        <translation>&amp;O MoneyByte</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -505,13 +505,13 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     <message>
         <location line="+0"/>
         <location line="+58"/>
-        <source>Ignition client</source>
-        <translation>Ignition klient</translation>
+        <source>MoneyByte client</source>
+        <translation>MoneyByte klient</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to Ignition network</source>
-        <translation><numerusform>%n aktívne spojenie s Ignition sieťov</numerusform><numerusform>%n aktívnych spojení s Ignition sieťov</numerusform><numerusform>%n aktívnych spojení s Ignition sieťou</numerusform></translation>
+        <source>%n active connection(s) to MoneyByte network</source>
+        <translation><numerusform>%n aktívne spojenie s MoneyByte sieťov</numerusform><numerusform>%n aktívnych spojení s MoneyByte sieťov</numerusform><numerusform>%n aktívnych spojení s MoneyByte sieťou</numerusform></translation>
     </message>
     <message>
         <location line="+488"/>
@@ -604,8 +604,8 @@ Adresa: %4</translation>
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Ignition address or malformed URI parameters.</source>
-        <translation>URI nemožno analyzovať! Toto môže byť spôsobené neplatnou Ignition adresu alebo chybnými URI parametrami.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid MoneyByte address or malformed URI parameters.</source>
+        <translation>URI nemožno analyzovať! Toto môže byť spôsobené neplatnou MoneyByte adresu alebo chybnými URI parametrami.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -727,8 +727,8 @@ Adresa: %4</translation>
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. Ignition can no longer continue safely and will quit.</source>
-        <translation>Došlo k závažnej chybe. Ignition už nemôže pokračovať bezpečne a bude ukončený.</translation>
+        <source>A fatal error occurred. MoneyByte can no longer continue safely and will quit.</source>
+        <translation>Došlo k závažnej chybe. MoneyByte už nemôže pokračovať bezpečne a bude ukončený.</translation>
     </message>
 </context>
 <context>
@@ -1061,8 +1061,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Ignition address.</source>
-        <translation>Zadaná adresa &quot;%1&quot; nie je platnou Ignition adresou.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid MoneyByte address.</source>
+        <translation>Zadaná adresa &quot;%1&quot; nie je platnou MoneyByte adresou.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1080,8 +1080,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <message>
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
-        <source>Ignition-Qt</source>
-        <translation>Ignition-Qt</translation>
+        <source>MoneyByte-Qt</source>
+        <translation>MoneyByte-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1153,13 +1153,13 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Ignition after logging in to the system.</source>
-        <translation>Automaticky spustiť Ignition po prihlásení sa do systému.</translation>
+        <source>Automatically start MoneyByte after logging in to the system.</source>
+        <translation>Automaticky spustiť MoneyByte po prihlásení sa do systému.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Ignition on system login</source>
-        <translation>&amp;Spustiť Ignition pri prihlásení do systému</translation>
+        <source>&amp;Start MoneyByte on system login</source>
+        <translation>&amp;Spustiť MoneyByte pri prihlásení do systému</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1168,8 +1168,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Ignition client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automaticky otvoriť port klienta Ignition na routeri. To funguje iba vtedy, ak váš router podporuje UPnP a je povolené.</translation>
+        <source>Automatically open the MoneyByte client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automaticky otvoriť port klienta MoneyByte na routeri. To funguje iba vtedy, ak váš router podporuje UPnP a je povolené.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1178,8 +1178,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Ignition network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Pripojenie k sieti Ignition cez SOCKS proxy server (napr. pri pripojení cez Tor).</translation>
+        <source>Connect to the MoneyByte network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Pripojenie k sieti MoneyByte cez SOCKS proxy server (napr. pri pripojení cez Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1253,8 +1253,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Ignition.</source>
-        <translation>Tu môžete nastaviť jazyk používateľského rozhrania. Toto nastavenie sa prejaví až po reštartovaní Ignition.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting MoneyByte.</source>
+        <translation>Tu môžete nastaviť jazyk používateľského rozhrania. Toto nastavenie sa prejaví až po reštartovaní MoneyByte.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1320,8 +1320,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Ignition.</source>
-        <translation>Toto nastavenie sa prejaví až po reštartovaní Ignition.</translation>
+        <source>This setting will take effect after restarting MoneyByte.</source>
+        <translation>Toto nastavenie sa prejaví až po reštartovaní MoneyByte.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1339,8 +1339,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <message>
         <location line="+46"/>
         <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Ignition network after a connection is established, but this process has not completed yet.</source>
-        <translation>Zobrazené informácie môžu byť zastaralé. Vaša peňaženka sa automaticky synchronizuje so sieťou Ignition po nadviazaní spojenia, ale tento proces nie je ešte dokončený.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the MoneyByte network after a connection is established, but this process has not completed yet.</source>
+        <translation>Zobrazené informácie môžu byť zastaralé. Vaša peňaženka sa automaticky synchronizuje so sieťou MoneyByte po nadviazaní spojenia, ale tento proces nie je ešte dokončený.</translation>
     </message>
     <message>
         <location line="-173"/>
@@ -1414,7 +1414,7 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
         <source>Cannot start transfer: click-to-pay handler</source>
-        <translation>Ignition sa nedá spustiť: click-to-pay handler</translation>
+        <translation>MoneyByte sa nedá spustiť: click-to-pay handler</translation>
     </message>
 </context>
 <context>
@@ -1581,8 +1581,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Ignition-Qt help message to get a list with possible Ignition command-line options.</source>
-        <translation>Zobraziť Ignition-Qt nápovedu k získaniu zoznamu pre možnosti  príkazového riadku Ignition.</translation>
+        <source>Show the MoneyByte-Qt help message to get a list with possible MoneyByte command-line options.</source>
+        <translation>Zobraziť MoneyByte-Qt nápovedu k získaniu zoznamu pre možnosti  príkazového riadku MoneyByte.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1601,13 +1601,13 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>Ignition - Debug window</source>
-        <translation>Ignition - Ladiace okno</translation>
+        <source>MoneyByte - Debug window</source>
+        <translation>MoneyByte - Ladiace okno</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Ignition Core</source>
-        <translation>Jadro Ignition</translation>
+        <source>MoneyByte Core</source>
+        <translation>Jadro MoneyByte</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1616,8 +1616,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Ignition debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Otvorte Ignition súbor denníku ladenia z aktuálneho adresára dát. To môže trvať niekoľko sekúnd pre veľké súbory denníka.</translation>
+        <source>Open the MoneyByte debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Otvorte MoneyByte súbor denníku ladenia z aktuálneho adresára dát. To môže trvať niekoľko sekúnd pre veľké súbory denníka.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1626,8 +1626,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the Ignition RPC console.</source>
-        <translation>Vitajte v konzole Ignition RPC.</translation>
+        <source>Welcome to the MoneyByte RPC console.</source>
+        <translation>Vitajte v konzole MoneyByte RPC.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1735,8 +1735,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
         <location line="+86"/>
         <location line="+86"/>
         <location line="+32"/>
-        <source>0.00 IC</source>
-        <translation>123.456 IC {0.00 ?}</translation>
+        <source>0.00 MON</source>
+        <translation>123.456 MON {0.00 ?}</translation>
     </message>
     <message>
         <location line="-191"/>
@@ -1805,8 +1805,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>123.456 IC</source>
-        <translation>123.456 IC</translation>
+        <source>123.456 MON</source>
+        <translation>123.456 MON</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -1820,8 +1820,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a Ignition address (e.g. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Zadajte Ignition adresu (napr. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a MoneyByte address (e.g. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Zadajte MoneyByte adresu (napr. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1920,8 +1920,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+247"/>
-        <source>WARNING: Invalid Ignition address</source>
-        <translation>UPOZORNENIE: Neplatná Ignition adresa</translation>
+        <source>WARNING: Invalid MoneyByte address</source>
+        <translation>UPOZORNENIE: Neplatná MoneyByte adresa</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1994,8 +1994,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Ignition address (e.g. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Zadajte Ignition adresu (napr. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a MoneyByte address (e.g. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Zadajte MoneyByte adresu (napr. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
 </context>
 <context>
@@ -2055,8 +2055,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Ignition address</source>
-        <translation>Podpísať správu ako dôkaz, že vlastníte túto Ignition adresu</translation>
+        <source>Sign the message to prove you own this MoneyByte address</source>
+        <translation>Podpísať správu ako dôkaz, že vlastníte túto MoneyByte adresu</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2087,8 +2087,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Ignition address</source>
-        <translation>Overte správu, aby ste sa ubezpečili, že bola podpísaná s danou Ignition adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified MoneyByte address</source>
+        <translation>Overte správu, aby ste sa ubezpečili, že bola podpísaná s danou MoneyByte adresou</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2098,8 +2098,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Ignition address (e.g. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Zadajte Ignition adresu (napr. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a MoneyByte address (e.g. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Zadajte MoneyByte adresu (napr. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2108,8 +2108,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Ignition signature</source>
-        <translation>Zadajte Ignition podpis</translation>
+        <source>Enter MoneyByte signature</source>
+        <translation>Zadajte MoneyByte podpis</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2687,8 +2687,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+173"/>
-        <source>Ignition version</source>
-        <translation>Ignition verzia</translation>
+        <source>MoneyByte version</source>
+        <translation>MoneyByte verzia</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2697,8 +2697,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or Ignitiond</source>
-        <translation>Pošli príkaz na -server alebo Ignitiond</translation>
+        <source>Send command to -server or MoneyByted</source>
+        <translation>Pošli príkaz na -server alebo MoneyByted</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2717,13 +2717,13 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: Ignition.conf)</source>
-        <translation>Zadajte konfiguračný súbor (predvolené: Ignition.conf)</translation>
+        <source>Specify configuration file (default: MoneyByte.conf)</source>
+        <translation>Zadajte konfiguračný súbor (predvolené: MoneyByte.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: Ignitiond.pid)</source>
-        <translation>Zadajte pid súbor (predvolené: Ignitiond.pid)</translation>
+        <source>Specify pid file (default: MoneyByted.pid)</source>
+        <translation>Zadajte pid súbor (predvolené: MoneyByted.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2740,24 +2740,24 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=ICrpc
+rpcuser=MONrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Ignition Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;MoneyByte Alert&quot; admin@foo.com
 </source>
         <translation>%s, musíte nastaviť rpcpassword v konfiguračnom súbore:
 %s
 Doporučuje sa použiť nasledovné náhodne heslo:
-rpcuser=ICrpc
+rpcuser=MONrpc
 rpcpassword=%s
 (toto heslo si nemusíte pamätať)
 Užívateľské meno a heslo NESMIE byť rovnaké.
 Ak súbor neexistuje, vytvorte ho s právami &quot;môže čítať iba vlastník&quot;.
 Odporúča sa tiež nastaviť &quot;alertnotify&quot;, takže budete upozornení na problémy,
-napríklad: alertnotify=echo %%s | mail -s &quot;Ignition upozornenie&quot; admin@foo.com
+napríklad: alertnotify=echo %%s | mail -s &quot;MoneyByte upozornenie&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -2862,8 +2862,8 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Ignition upozornenie&quot; admi
     </message>
     <message>
         <location line="-103"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Ignition will not work properly.</source>
-        <translation>Upozornenie: Skontrolujte, že dátum a čas počítača sú správne! Ak je Váš čas nesprávny Ignition nebude pracovať správne.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong MoneyByte will not work properly.</source>
+        <translation>Upozornenie: Skontrolujte, že dátum a čas počítača sú správne! Ak je Váš čas nesprávny MoneyByte nebude pracovať správne.</translation>
     </message>
     <message>
         <location line="+132"/>
@@ -3169,8 +3169,8 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Ignition upozornenie&quot; admi
     </message>
     <message>
         <location line="+10"/>
-        <source>Initialization sanity check failed. Ignition is shutting down.</source>
-        <translation>Úvodné kontrolné testy zlyhali. Ignition sa teraz zatvori.</translation>
+        <source>Initialization sanity check failed. MoneyByte is shutting down.</source>
+        <translation>Úvodné kontrolné testy zlyhali. MoneyByte sa teraz zatvori.</translation>
     </message>
     <message>
         <location line="+50"/>
@@ -3234,13 +3234,13 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Ignition upozornenie&quot; admi
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Ignition</source>
-        <translation>Chyba pri načítaní wallet.dat: Peňaženka vyžaduje novšiu verziu Ignition</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of MoneyByte</source>
+        <translation>Chyba pri načítaní wallet.dat: Peňaženka vyžaduje novšiu verziu MoneyByte</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Ignition to complete</source>
-        <translation>Peňaženka potrebuje byť prepísaná: reštartujte Ignition k dokončeniu</translation>
+        <source>Wallet needed to be rewritten: restart MoneyByte to complete</source>
+        <translation>Peňaženka potrebuje byť prepísaná: reštartujte MoneyByte k dokončeniu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3304,8 +3304,8 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Ignition upozornenie&quot; admi
     </message>
     <message>
         <location line="+125"/>
-        <source>Unable to bind to %s on this computer. Ignition is probably already running.</source>
-        <translation>Nemôžem sa pripojiť na %s na tomto počítači. Ignition je pravdepodobne už beží.</translation>
+        <source>Unable to bind to %s on this computer. MoneyByte is probably already running.</source>
+        <translation>Nemôžem sa pripojiť na %s na tomto počítači. MoneyByte je pravdepodobne už beží.</translation>
     </message>
     <message>
         <location line="-101"/>
@@ -3344,8 +3344,8 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Ignition upozornenie&quot; admi
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Ignition is probably already running.</source>
-        <translation>Nedá sa zamknúť dátová zložka %s. Ignition je pravdepodobne už spustený</translation>
+        <source>Cannot obtain a lock on data directory %s. MoneyByte is probably already running.</source>
+        <translation>Nedá sa zamknúť dátová zložka %s. MoneyByte je pravdepodobne už spustený</translation>
     </message>
     <message>
         <location line="+4"/>

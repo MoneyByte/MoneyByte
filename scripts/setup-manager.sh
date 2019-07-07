@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
 TMP_FOLDER=$(mktemp -d)
-CONFIG_FILE='Ignition.conf'
-CONFIG_FOLDER='"$HOME"/.Ignition'
-BACKUP_FOLDER="$HOME/IgnitionBackups"
-COIN_DAEMON='ignitiond'
+CONFIG_FILE='MoneyByte.conf'
+CONFIG_FOLDER='"$HOME"/.MoneyByte'
+BACKUP_FOLDER="$HOME/MoneyByteBackups"
+COIN_DAEMON='moneybyted'
 COIN_PATH='/usr/bin/'
-COIN_REPO='https://github.com/ignitioncoin/ignitioncoin.git'
-#COIN_TGZ='http://github.com/ignitioncoin/ignitioncoin/releases/XXX.zip'
+COIN_REPO='https://github.com/moneybytecoin/moneybytecoin.git'
+#COIN_TGZ='http://github.com/moneybytecoin/moneybytecoin/releases/XXX.zip'
 #COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
-COIN_NAME='Ignition'
+COIN_NAME='MoneyByte'
 COIN_PORT=44144
 RPC_PORT=44155
 NODEIP=$(curl -s4 icanhazip.com)
@@ -30,7 +30,7 @@ purgeOldInstallation() {
     sudo killall $COIN_DAEMON > /dev/null 2>&1
     today="$( date +"%Y%m%d" )"
     #Create a backups folder inside users home directory
-    test -d ~/IgnitionBackups && echo "Backups folder exists, skipping directory creation..." || mkdir ~/IgnitionBackups
+    test -d ~/MoneyByteBackups && echo "Backups folder exists, skipping directory creation..." || mkdir ~/MoneyByteBackups
     iteration=0
     while test -d "$BACKUP_FOLDER/$today$suffix"; do
         (( ++iteration ))
@@ -40,7 +40,7 @@ purgeOldInstallation() {
     echo "Placing Backup Files into $BACKUP_FOLDER/$foldername"
     mkdir $BACKUP_FOLDER/$foldername
     mv $CONFIG_FOLDER/masternode.conf $BACKUP_FOLDER/$foldername
-    mv $CONFIG_FOLDER/Ignition.conf $BACKUP_FOLDER/$foldername
+    mv $CONFIG_FOLDER/MoneyByte.conf $BACKUP_FOLDER/$foldername
     mv $CONFIG_FOLDER/wallet.dat $BACKUP_FOLDER/$foldername
     #remove old ufw port allow
     sudo ufw delete allow $COIN_PORT/tcp > /dev/null 2>&1
@@ -108,10 +108,10 @@ function update_config() {
   echo -e "${BLUE}================================================================================================================================"
   echo -e "${GREEN}Important: To complete the Masternode setup, you must set up your controller wallet"
   echo -e "${BLUE}================================================================================================================================${NC}"
-  echo -e "${PURPLE}Please follow this guide to setup the controller wallet, then return here to input your the genkey output: https://github.com/ignitioncoin/ignitioncoin/wiki/Setup-Manager---Masternode-Asisstant-Setup-Script-Guide${NC}"
+  echo -e "${PURPLE}Please follow this guide to setup the controller wallet, then return here to input your the genkey output: https://github.com/moneybytecoin/moneybytecoin/wiki/Setup-Manager---Masternode-Asisstant-Setup-Script-Guide${NC}"
   echo -e "${BLUE}================================================================================================================================${NC}"
   read -p "${PURPLE}Please enter the ${NC}${GREEN}genkey${NC}:" COINKEY
-  systemctl stop ignition
+  systemctl stop moneybyte
   sed -i 's/daemon=1/daemon=0/' $CONFIG_FOLDER/$CONFIG_FILE
   grep -Fxq "masternode=1" $CONFIG_FOLDER/$CONFIG_FILE
   if [ $? -eq 0 ]; then
@@ -131,7 +131,7 @@ masternodeaddr=$NODEIP:$COIN_PORT
 #Addnodes
 #addnode=123.456.78.9:44144
 EOF
-systemctl start ignition
+systemctl start moneybyte
 }
 
 function enable_firewall() {
@@ -191,7 +191,7 @@ function prepare_system() {
         ./install-dependencies.sh
     else
         echo "Downloading latest install-dependencies script."
-        wget https://raw.githubusercontent.com/ignitioncoin/ignitioncoin/master/scripts/install-dependencies.sh
+        wget https://raw.githubusercontent.com/moneybytecoin/moneybytecoin/master/scripts/install-dependencies.sh
         chmod +x install-dependencies.sh
         ./install-dependencies.sh
     fi
@@ -215,13 +215,13 @@ function important_information() {
     echo -e "${GREEN}Stop:${NC}${RED}systemctl stop $COIN_NAME.service${NC}"
     echo -e "${GREEN}VPS_IP:${NC}${GREEN}$NODEIP:$COIN_PORT${NC}"
     echo -e "${BLUE}================================================================================================================================"
-    echo -e "${CYAN}Follow twitter to stay updated.  https://twitter.com/IgnitionCoin${NC}"
+    echo -e "${CYAN}Follow twitter to stay updated.  https://twitter.com/MoneyByteCoin${NC}"
     echo -e "${BLUE}================================================================================================================================${NC}"
     echo -e "${CYAN}Ensure Node is fully SYNCED with BLOCKCHAIN before starting your Node :).${NC}"
     echo -e "${BLUE}================================================================================================================================${NC}"
     echo -e "${GREEN}Usage Commands.${NC}"
-    echo -e "${GREEN}ignitiond masternode status${NC}"
-    echo -e "${GREEN}ignitiond getinfo${NC}"
+    echo -e "${GREEN}moneybyted masternode status${NC}"
+    echo -e "${GREEN}moneybyted getinfo${NC}"
     echo -e "${BLUE}================================================================================================================================${NC}"
     echo -e "${NC}"
 }
@@ -229,13 +229,13 @@ function important_information() {
 function setup_node() {
   get_ip
   update_config
-  systemctl restart ignition
+  systemctl restart moneybyte
 }
 
-function install_ignition() {
-    echo "You chose to install the Ignition Node"
-    echo "Checking for Ignition installation"
-    if [ -e /usr/bin/ignitiond ] || [ -e /usr/local/bin/ignitiond ]; then
+function install_moneybyte() {
+    echo "You chose to install the MoneyByte Node"
+    echo "Checking for MoneyByte installation"
+    if [ -e /usr/bin/moneybyted ] || [ -e /usr/local/bin/moneybyted ]; then
         purgeOldInstallation
     else
         echo "No installation found. Proceeding with install..."
@@ -245,30 +245,30 @@ function install_ignition() {
     echo "Would you like to download and compile from source? y/n: "
     read compilefromsource
     if [ "$compilefromsource" = "y" ] || [ "$compilefromsource" = "Y" ] ; then
-        if [ -e ../Ignition.pro ]; then
+        if [ -e ../MoneyByte.pro ]; then
             echo "Compiling Source Code"
             chmod +x build-unix.sh
             ./build-unix.sh
-            mv ../bin/ignitiond /usr/bin
+            mv ../bin/moneybyted /usr/bin
         else
             echo "Cloning github repository.."
-            git clone https://github.com/ignitioncoin/ignitioncoin
-            chmod +x ./ignitioncoin/scripts
-            ./ignitioncoin/scripts/build-unix.sh
-            mv ./ignitioncoin/bin/ignitiond /usr/bin
-            if [ -e "$HOME"/ignition-swap ]; then
+            git clone https://github.com/moneybytecoin/moneybytecoin
+            chmod +x ./moneybytecoin/scripts
+            ./moneybytecoin/scripts/build-unix.sh
+            mv ./moneybytecoin/bin/moneybyted /usr/bin
+            if [ -e "$HOME"/moneybyte-swap ]; then
                 echo "Removing temporary swap file"
-                swapoff "$HOME"/ignition-swap
-                rm "$HOME"/ignition-swap
+                swapoff "$HOME"/moneybyte-swap
+                rm "$HOME"/moneybyte-swap
             fi
         fi
     else
         echo "Download Executable Binary For Install"
         mkdir ./tmp
         cd tmp
-        wget https://github.com/$(wget https://github.com/ignitioncoin/ignitioncoin/releases/latest -O - | egrep '/.*/.*/.*tar.gz' -o)
+        wget https://github.com/$(wget https://github.com/moneybytecoin/moneybytecoin/releases/latest -O - | egrep '/.*/.*/.*tar.gz' -o)
         tar -xvf *.tar.gz
-        mv ./ignitiond /usr/bin
+        mv ./moneybyted /usr/bin
         cd ..
         rm -r ./tmp
     fi
@@ -279,15 +279,15 @@ function install_ignition() {
 }
 
 function compile_linux_daemon() {
-    echo "You chose to compile the Ignition CLI Daemon/Wallet"
+    echo "You chose to compile the MoneyByte CLI Daemon/Wallet"
     checks
     prepare_system
-    if [ ! -e ../Ignition.pro ] ; then
-        echo "Cloning Ignition Coin github repository to this directory."
-        git clone https://github.com/ignitioncoin/ignitioncoin
-        ./ignitioncoin/scripts/build-unix.sh
+    if [ ! -e ../MoneyByte.pro ] ; then
+        echo "Cloning MoneyByte Coin github repository to this directory."
+        git clone https://github.com/moneybytecoin/moneybytecoin
+        ./moneybytecoin/scripts/build-unix.sh
         clear
-        echo "Compile is complete, you can find the binary file in ./ignitioncoin/bin/"
+        echo "Compile is complete, you can find the binary file in ./moneybytecoin/bin/"
     else
         echo "Compiling Source Code"
         ./build-unix.sh
@@ -300,12 +300,12 @@ function compile_linux_gui() {
     echo "You chose to compile the linux GUI wallet"
     checks
     prepare_system
-    if [ ! -e ../Ignition.pro ] ; then
-        echo "Cloning Ignition Coin Github Repository"
-        git clone https://github.com/ignitioncoin/ignitioncoin
-        ./ignitioncoin/scripts/build-unix.sh --with-gui
+    if [ ! -e ../MoneyByte.pro ] ; then
+        echo "Cloning MoneyByte Coin Github Repository"
+        git clone https://github.com/moneybytecoin/moneybytecoin
+        ./moneybytecoin/scripts/build-unix.sh --with-gui
         clear
-        echo "Compile is complete, you can find the binary file in ./ignitioncoin/bin/"
+        echo "Compile is complete, you can find the binary file in ./moneybytecoin/bin/"
     else
         echo "Compiling Source Code"
         ./build-unix.sh --with-gui
@@ -318,13 +318,13 @@ function compile_windows_exe() {
     echo "You chose to compile windows executables"
     checks
     prepare_system
-    if [ ! -e ../Ignition.pro ] ; then
-        echo "Cloning Ignition Coin Github Repository"
-        git clone https://github.com/ignitioncoin/ignitioncoin
-        chmod +x ./ignitioncoin/scripts/*
-        ./ignitioncoin/scripts/clean.sh
-        ./ignitioncoin/scripts/configure-mxe.sh
-        ./ignitioncoin/scripts/build-win-mxe.sh
+    if [ ! -e ../MoneyByte.pro ] ; then
+        echo "Cloning MoneyByte Coin Github Repository"
+        git clone https://github.com/moneybytecoin/moneybytecoin
+        chmod +x ./moneybytecoin/scripts/*
+        ./moneybytecoin/scripts/clean.sh
+        ./moneybytecoin/scripts/configure-mxe.sh
+        ./moneybytecoin/scripts/build-win-mxe.sh
     else
         echo "Compiling Source Code"
         chmod +x ./*
@@ -336,22 +336,22 @@ function compile_windows_exe() {
 
 function setup_masternode() {
     echo "You chose to setup a masternode"
-    if [ -e /usr/bin/ignitiond ] || [ -e /usr/local/bin/ignitiond ]; then
-        read -p "There is already an installation of Ignition Coin. Did you want to use the currently installed software, or install the latest software? Y/n:" yn
+    if [ -e /usr/bin/moneybyted ] || [ -e /usr/local/bin/moneybyted ]; then
+        read -p "There is already an installation of MoneyByte Coin. Did you want to use the currently installed software, or install the latest software? Y/n:" yn
         case $yn in
-            [Yy]* ) install_ignition; setup_node; important_information;;
+            [Yy]* ) install_moneybyte; setup_node; important_information;;
             [Nn]* ) backup_node_data; setup_node; important_information;;
             * ) echo "Sorry, did not understand your command, please enter Y/n";;
         esac
     else
-        install_ignition
+        install_moneybyte
         setup_node
         important_information
     fi
 }
 
 function install_dependencies_only() {
-    echo "You chose to install Ignition dependencies only"
+    echo "You chose to install MoneyByte dependencies only"
     prepare_system
 }
 
@@ -359,7 +359,7 @@ function backup_node_data() {
     echo "You chose to backup your wallet and settings files"
     today="$( date +"%Y%m%d" )"
     #Create a backups folder inside users home directory
-    test -d ~/IgnitionBackups && echo "Backups folder exists" || mkdir ~/IgnitionBackups
+    test -d ~/MoneyByteBackups && echo "Backups folder exists" || mkdir ~/MoneyByteBackups
     iteration=0
     while test -d "$BACKUP_FOLDER/$today$suffix"; do
         (( ++iteration ))
@@ -369,12 +369,12 @@ function backup_node_data() {
     echo "Placing Backup Files into $BACKUP_FOLDER/$foldername"
     mkdir $BACKUP_FOLDER/$foldername
     cp $CONFIG_FOLDER/masternode.conf $BACKUP_FOLDER/$foldername
-    cp $CONFIG_FOLDER/Ignition.conf $BACKUP_FOLDER/$foldername
+    cp $CONFIG_FOLDER/MoneyByte.conf $BACKUP_FOLDER/$foldername
     cp $CONFIG_FOLDER/wallet.dat $BACKUP_FOLDER/$foldername
 }
 
 function uninstall() {
-    read -p "You chose to uninstall Ignition, would you like to continue? y/n:" yn
+    read -p "You chose to uninstall MoneyByte, would you like to continue? y/n:" yn
     case $yn in
         [Yy]* ) purgeOldInstallation;;
         [Nn]* ) exit;;
@@ -407,17 +407,17 @@ fi
 
 echo "Welcome to the interactive setup manager. Please select an option:"
 echo "========================================================="
-echo "[1] - Install Ignition node (will uninstall/upgrade existing installation)"
+echo "[1] - Install MoneyByte node (will uninstall/upgrade existing installation)"
 echo "[2] - Compile only (will compile linux daemon, linux GUI, or windows GUI - no install)"
-echo "[3] - Prepare masternode (will install Ignition Node if needed)"
+echo "[3] - Prepare masternode (will install MoneyByte Node if needed)"
 echo "[4] - Install dependencies only"
-echo "[5] - Backup Ignition wallet and settings"
-echo "[6] - Uninstall Ignition"
+echo "[5] - Backup MoneyByte wallet and settings"
+echo "[6] - Uninstall MoneyByte"
 
 read choice1
 
 case $choice1 in
-    "1") install_ignition;;
+    "1") install_moneybyte;;
     "2") compile_only;;
     "3") setup_masternode;;
     "4") install_dependencies_only;;

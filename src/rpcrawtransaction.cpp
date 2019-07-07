@@ -43,7 +43,7 @@ void ScriptPubKeyToJSON(const CScript& scriptPubKey, Object& out, bool fIncludeH
 
     Array a;
     BOOST_FOREACH(const CTxDestination& addr, addresses)
-        a.push_back(CIgnitioncoinAddress(addr).ToString());
+        a.push_back(CMoneyBytecoinAddress(addr).ToString());
     out.push_back(Pair("addresses", a));
 }
 
@@ -162,15 +162,15 @@ Value listunspent(const Array& params, bool fHelp)
     if (params.size() > 1)
         nMaxDepth = params[1].get_int();
 
-    set<CIgnitioncoinAddress> setAddress;
+    set<CMoneyBytecoinAddress> setAddress;
     if (params.size() > 2)
     {
         Array inputs = params[2].get_array();
         BOOST_FOREACH(Value& input, inputs)
         {
-            CIgnitioncoinAddress address(input.get_str());
+            CMoneyBytecoinAddress address(input.get_str());
             if (!address.IsValid())
-                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid Ignition address: ")+input.get_str());
+                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid MoneyByte address: ")+input.get_str());
             if (setAddress.count(address))
                 throw JSONRPCError(RPC_INVALID_PARAMETER, string("Invalid parameter, duplicated address: ")+input.get_str());
            setAddress.insert(address);
@@ -204,7 +204,7 @@ Value listunspent(const Array& params, bool fHelp)
         CTxDestination address;
         if (ExtractDestination(out.tx->vout[out.i].scriptPubKey, address))
         {
-            entry.push_back(Pair("address", CIgnitioncoinAddress(address).ToString()));
+            entry.push_back(Pair("address", CMoneyBytecoinAddress(address).ToString()));
             if (pwalletMain->mapAddressBook.count(address))
                 entry.push_back(Pair("account", pwalletMain->mapAddressBook[address]));
         }
@@ -271,12 +271,12 @@ Value createrawtransaction(const Array& params, bool fHelp)
         rawTx.vin.push_back(in);
     }
 
-    set<CIgnitioncoinAddress> setAddress;
+    set<CMoneyBytecoinAddress> setAddress;
     BOOST_FOREACH(const Pair& s, sendTo)
     {
-        CIgnitioncoinAddress address(s.name_);
+        CMoneyBytecoinAddress address(s.name_);
         if (!address.IsValid())
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid Ignition address: ")+s.name_);
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid MoneyByte address: ")+s.name_);
 
         if (setAddress.count(address))
             throw JSONRPCError(RPC_INVALID_PARAMETER, string("Invalid parameter, duplicated address: ")+s.name_);
@@ -339,7 +339,7 @@ Value decodescript(const Array& params, bool fHelp)
     }
     ScriptPubKeyToJSON(script, r, false);
 
-    r.push_back(Pair("p2sh", CIgnitioncoinAddress(script.GetID()).ToString()));
+    r.push_back(Pair("p2sh", CMoneyBytecoinAddress(script.GetID()).ToString()));
     return r;
 }
 
@@ -419,7 +419,7 @@ Value signrawtransaction(const Array& params, bool fHelp)
         Array keys = params[2].get_array();
         BOOST_FOREACH(Value k, keys)
         {
-            CIgnitioncoinSecret vchSecret;
+            CMoneyBytecoinSecret vchSecret;
             bool fGood = vchSecret.SetString(k.get_str());
             if (!fGood)
                 throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid private key");
@@ -605,7 +605,7 @@ Value searchrawtransactions(const Array &params, bool fHelp)
         throw runtime_error(
             "searchrawtransactions <address> [verbose=1] [skip=0] [count=100]\n");
 
-    CIgnitioncoinAddress address(params[0].get_str());
+    CMoneyBytecoinAddress address(params[0].get_str());
     if (!address.IsValid())
         throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Bitcoin address");
     CTxDestination dest = address.Get();

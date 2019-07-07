@@ -3,22 +3,22 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Ignition</source>
-        <translation>Sobre Ignition</translation>
+        <source>About MoneyByte</source>
+        <translation>Sobre MoneyByte</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Ignition&lt;/b&gt; version</source>
-        <translation>versió &lt;b&gt;Ignition&lt;/b&gt;</translation>
+        <source>&lt;b&gt;MoneyByte&lt;/b&gt; version</source>
+        <translation>versió &lt;b&gt;MoneyByte&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2017-2018 The Ignition developers</source>
+Copyright © 2017-2018 The MoneyByte developers</source>
         <translation>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2017-2018 The Ignition developers</translation>
+Copyright © 2017-2018 The MoneyByte developers</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -60,8 +60,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your Ignition addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Aquestes són les teves adreces de Ignition per rebre els pagaments. És possible que vulgueu donar una diferent a cada remitent per a poder realitzar un seguiment de qui li está pagant.</translation>
+        <source>These are your MoneyByte addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Aquestes són les teves adreces de MoneyByte per rebre els pagaments. És possible que vulgueu donar una diferent a cada remitent per a poder realitzar un seguiment de qui li está pagant.</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -75,8 +75,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a Ignition address</source>
-        <translation>Signar un missatge per demostrar que és propietari d&apos;una adreça Ignition</translation>
+        <source>Sign a message to prove you own a MoneyByte address</source>
+        <translation>Signar un missatge per demostrar que és propietari d&apos;una adreça MoneyByte</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -90,8 +90,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified Ignition address</source>
-        <translation>Comproveu el missatge per assegurar-se que es va signar amb una adreça Ignition especificada.</translation>
+        <source>Verify a message to ensure it was signed with a specified MoneyByte address</source>
+        <translation>Comproveu el missatge per assegurar-se que es va signar amb una adreça MoneyByte especificada.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -258,8 +258,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+82"/>
-        <source>Ignition will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Ignition tancarà ara per acabar el procés de xifrat. Recordeu que l&apos;encriptació del seu moneder no pot protegir completament les seves monedes de ser robades pel malware que pugui infectar al seu equip.</translation>
+        <source>MoneyByte will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>MoneyByte tancarà ara per acabar el procés de xifrat. Recordeu que l&apos;encriptació del seu moneder no pot protegir completament les seves monedes de ser robades pel malware que pugui infectar al seu equip.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -352,8 +352,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Ignition</source>
-        <translation>Mostra informació sobre Ignition</translation>
+        <source>Show information about MoneyByte</source>
+        <translation>Mostra informació sobre MoneyByte</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -392,13 +392,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-55"/>
-        <source>Send coins to a Ignition address</source>
-        <translation>Enviar monedes a una adreça Ignition</translation>
+        <source>Send coins to a MoneyByte address</source>
+        <translation>Enviar monedes a una adreça MoneyByte</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>Modify configuration options for Ignition</source>
-        <translation>Modificar les opcions de configuració per a Ignition</translation>
+        <source>Modify configuration options for MoneyByte</source>
+        <translation>Modificar les opcions de configuració per a MoneyByte</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -438,8 +438,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-214"/>
         <location line="+551"/>
-        <source>Ignition</source>
-        <translation>Ignition</translation>
+        <source>MoneyByte</source>
+        <translation>MoneyByte</translation>
     </message>
     <message>
         <location line="-551"/>
@@ -448,8 +448,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+193"/>
-        <source>&amp;About Ignition</source>
-        <translation>&amp;Sobre Ignition</translation>
+        <source>&amp;About MoneyByte</source>
+        <translation>&amp;Sobre MoneyByte</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -500,13 +500,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <location line="+58"/>
-        <source>Ignition client</source>
-        <translation>Client Ignition</translation>
+        <source>MoneyByte client</source>
+        <translation>Client MoneyByte</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to Ignition network</source>
-        <translation><numerusform>%n conexió activa a la xarxa Ignition</numerusform><numerusform>%n conexions actives a la xarxa Ignition</numerusform></translation>
+        <source>%n active connection(s) to MoneyByte network</source>
+        <translation><numerusform>%n conexió activa a la xarxa MoneyByte</numerusform><numerusform>%n conexions actives a la xarxa MoneyByte</numerusform></translation>
     </message>
     <message>
         <location line="+488"/>
@@ -596,8 +596,8 @@ Address: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Ignition address or malformed URI parameters.</source>
-        <translation>l&apos;URI no es pot analitzar! Això pot ser causat per una adreça Ignition no vàlida o paràmetres URI malformats.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid MoneyByte address or malformed URI parameters.</source>
+        <translation>l&apos;URI no es pot analitzar! Això pot ser causat per una adreça MoneyByte no vàlida o paràmetres URI malformats.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -719,8 +719,8 @@ Address: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. Ignition can no longer continue safely and will quit.</source>
-        <translation>S&apos;ha produït un error fatal. Ignition ja no pot continuar de forma segura i es tancarà.</translation>
+        <source>A fatal error occurred. MoneyByte can no longer continue safely and will quit.</source>
+        <translation>S&apos;ha produït un error fatal. MoneyByte ja no pot continuar de forma segura i es tancarà.</translation>
     </message>
 </context>
 <context>
@@ -1053,8 +1053,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Ignition address.</source>
-        <translation>La direcció introduïda &quot;%1&quot; no és una adreça Ignition vàlida.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid MoneyByte address.</source>
+        <translation>La direcció introduïda &quot;%1&quot; no és una adreça MoneyByte vàlida.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1072,8 +1072,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     <message>
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
-        <source>Ignition-Qt</source>
-        <translation>Ignition-Qt</translation>
+        <source>MoneyByte-Qt</source>
+        <translation>MoneyByte-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1145,13 +1145,13 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Ignition after logging in to the system.</source>
-        <translation>Inicia automàticament Ignition després d&apos;entrar en el sistema.</translation>
+        <source>Automatically start MoneyByte after logging in to the system.</source>
+        <translation>Inicia automàticament MoneyByte després d&apos;entrar en el sistema.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Ignition on system login</source>
-        <translation>&amp;Iniciar Ignition amb l&apos;inici de sessió</translation>
+        <source>&amp;Start MoneyByte on system login</source>
+        <translation>&amp;Iniciar MoneyByte amb l&apos;inici de sessió</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1160,8 +1160,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Ignition client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Obrir automàticament el port de client Ignition en el router. Això només funciona quan el router és compatible amb UPnP i està habilitat.</translation>
+        <source>Automatically open the MoneyByte client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Obrir automàticament el port de client MoneyByte en el router. Això només funciona quan el router és compatible amb UPnP i està habilitat.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1170,8 +1170,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Ignition network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Connecteu-vos a la xarxa Ignition través d&apos;un proxy SOCKS (per exemple, quan es connecta a través de Tor).</translation>
+        <source>Connect to the MoneyByte network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Connecteu-vos a la xarxa MoneyByte través d&apos;un proxy SOCKS (per exemple, quan es connecta a través de Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1245,8 +1245,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Ignition.</source>
-        <translation>L&apos;idioma de la interfície d&apos;usuari es pot configurar aquí. Aquesta configuració s&apos;aplicarà després de reiniciar Ignition.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting MoneyByte.</source>
+        <translation>L&apos;idioma de la interfície d&apos;usuari es pot configurar aquí. Aquesta configuració s&apos;aplicarà després de reiniciar MoneyByte.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1312,8 +1312,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Ignition.</source>
-        <translation>Aquesta configuració s&apos;aplicarà després de reiniciar Ignition.</translation>
+        <source>This setting will take effect after restarting MoneyByte.</source>
+        <translation>Aquesta configuració s&apos;aplicarà després de reiniciar MoneyByte.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1331,8 +1331,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     <message>
         <location line="+46"/>
         <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Ignition network after a connection is established, but this process has not completed yet.</source>
-        <translation>La informació mostrada pot estar fora de data. El seu moneder es sincronitza automàticament amb la xarxa Ignition després d&apos;establir una connexió, però aquest procés no s&apos;ha completat encara.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the MoneyByte network after a connection is established, but this process has not completed yet.</source>
+        <translation>La informació mostrada pot estar fora de data. El seu moneder es sincronitza automàticament amb la xarxa MoneyByte després d&apos;establir una connexió, però aquest procés no s&apos;ha completat encara.</translation>
     </message>
     <message>
         <location line="-173"/>
@@ -1573,8 +1573,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Ignition-Qt help message to get a list with possible Ignition command-line options.</source>
-        <translation>Mostra el missatge d&apos;ajuda de Ignition-Qt per obtenir una llista amb les possibles opcions de línia d&apos;ordres Ignition.</translation>
+        <source>Show the MoneyByte-Qt help message to get a list with possible MoneyByte command-line options.</source>
+        <translation>Mostra el missatge d&apos;ajuda de MoneyByte-Qt per obtenir una llista amb les possibles opcions de línia d&apos;ordres MoneyByte.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1593,13 +1593,13 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>Ignition - Debug window</source>
-        <translation>Ignition - Finestra Depuració</translation>
+        <source>MoneyByte - Debug window</source>
+        <translation>MoneyByte - Finestra Depuració</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Ignition Core</source>
-        <translation>Nucli Ignition</translation>
+        <source>MoneyByte Core</source>
+        <translation>Nucli MoneyByte</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1608,8 +1608,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Ignition debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Obriu el fitxer de registre de depuració Ignition des del directori de dades actual. Això pot trigar uns segons en els arxius de registre de grans dimensions.</translation>
+        <source>Open the MoneyByte debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Obriu el fitxer de registre de depuració MoneyByte des del directori de dades actual. Això pot trigar uns segons en els arxius de registre de grans dimensions.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1618,8 +1618,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the Ignition RPC console.</source>
-        <translation>Benvingut a la consola RPC de Ignition.</translation>
+        <source>Welcome to the MoneyByte RPC console.</source>
+        <translation>Benvingut a la consola RPC de MoneyByte.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1727,8 +1727,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
         <location line="+86"/>
         <location line="+86"/>
         <location line="+32"/>
-        <source>0.00 IC</source>
-        <translation>123.456 IC {0.00 ?}</translation>
+        <source>0.00 MON</source>
+        <translation>123.456 MON {0.00 ?}</translation>
     </message>
     <message>
         <location line="-191"/>
@@ -1797,8 +1797,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>123.456 IC</source>
-        <translation>123.456 IC</translation>
+        <source>123.456 MON</source>
+        <translation>123.456 MON</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -1812,8 +1812,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a Ignition address (e.g. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Introdueix una adreça Ignition (p.ex. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a MoneyByte address (e.g. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Introdueix una adreça MoneyByte (p.ex. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1912,8 +1912,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+247"/>
-        <source>WARNING: Invalid Ignition address</source>
-        <translation>ADVERTÈNCIA: Direcció Ignition invàlida</translation>
+        <source>WARNING: Invalid MoneyByte address</source>
+        <translation>ADVERTÈNCIA: Direcció MoneyByte invàlida</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1986,8 +1986,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Ignition address (e.g. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Introdueix una adreça Ignition (p.ex. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a MoneyByte address (e.g. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Introdueix una adreça MoneyByte (p.ex. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
 </context>
 <context>
@@ -2047,8 +2047,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Ignition address</source>
-        <translation>Signar un missatge per demostrar que és propietari d&apos;aquesta adreça Ignition</translation>
+        <source>Sign the message to prove you own this MoneyByte address</source>
+        <translation>Signar un missatge per demostrar que és propietari d&apos;aquesta adreça MoneyByte</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2079,8 +2079,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Ignition address</source>
-        <translation>Comproveu el missatge per assegurar-se que es va signar amb l&apos;adreça Ignition especificada.</translation>
+        <source>Verify the message to ensure it was signed with the specified MoneyByte address</source>
+        <translation>Comproveu el missatge per assegurar-se que es va signar amb l&apos;adreça MoneyByte especificada.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2090,8 +2090,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Ignition address (e.g. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Introdueix una adreça Ignition (p.ex. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a MoneyByte address (e.g. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Introdueix una adreça MoneyByte (p.ex. H8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2100,8 +2100,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Ignition signature</source>
-        <translation>Introduïu la signatura Ignition</translation>
+        <source>Enter MoneyByte signature</source>
+        <translation>Introduïu la signatura MoneyByte</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2679,8 +2679,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+173"/>
-        <source>Ignition version</source>
-        <translation>versió Ignition</translation>
+        <source>MoneyByte version</source>
+        <translation>versió MoneyByte</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2689,8 +2689,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or Ignitiond</source>
-        <translation>Enviar comandes a -server o Ignitiond</translation>
+        <source>Send command to -server or MoneyByted</source>
+        <translation>Enviar comandes a -server o MoneyByted</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2709,13 +2709,13 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: Ignition.conf)</source>
-        <translation>Especifiqueu el fitxer de configuració (per defecte: Ignition.conf)</translation>
+        <source>Specify configuration file (default: MoneyByte.conf)</source>
+        <translation>Especifiqueu el fitxer de configuració (per defecte: MoneyByte.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: Ignitiond.pid)</source>
-        <translation>Especificar arxiu pid (per defecte: Ignitiond.pid)</translation>
+        <source>Specify pid file (default: MoneyByted.pid)</source>
+        <translation>Especificar arxiu pid (per defecte: MoneyByted.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2732,13 +2732,13 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=ICrpc
+rpcuser=MONrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Ignition Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;MoneyByte Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2844,8 +2844,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Ignition Alert&quot; admin@foo
     </message>
     <message>
         <location line="-103"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Ignition will not work properly.</source>
-        <translation>Avís: Comproveu que la data i hora de l&apos;equip siguin correctes! Si el seu rellotge és erroni Ignition no funcionarà correctament.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong MoneyByte will not work properly.</source>
+        <translation>Avís: Comproveu que la data i hora de l&apos;equip siguin correctes! Si el seu rellotge és erroni MoneyByte no funcionarà correctament.</translation>
     </message>
     <message>
         <location line="+132"/>
@@ -3152,7 +3152,7 @@ Executar una ordre quan es rep un avís rellevant (%s en cmd es substitueix per 
     </message>
     <message>
         <location line="+10"/>
-        <source>Initialization sanity check failed. Ignition is shutting down.</source>
+        <source>Initialization sanity check failed. MoneyByte is shutting down.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3217,13 +3217,13 @@ Executar una ordre quan es rep un avís rellevant (%s en cmd es substitueix per 
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Ignition</source>
-        <translation>Error en carregar wallet.dat: El moneder requereix la versió més recent de Ignition</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of MoneyByte</source>
+        <translation>Error en carregar wallet.dat: El moneder requereix la versió més recent de MoneyByte</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Ignition to complete</source>
-        <translation>El moneder necessita ser reescrita: reiniciar Ignition per completar</translation>
+        <source>Wallet needed to be rewritten: restart MoneyByte to complete</source>
+        <translation>El moneder necessita ser reescrita: reiniciar MoneyByte per completar</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3287,8 +3287,8 @@ Executar una ordre quan es rep un avís rellevant (%s en cmd es substitueix per 
     </message>
     <message>
         <location line="+125"/>
-        <source>Unable to bind to %s on this computer. Ignition is probably already running.</source>
-        <translation>No es pot enllaçar a %s en aquest equip. Ignition probablement ja estigui en funcionament.</translation>
+        <source>Unable to bind to %s on this computer. MoneyByte is probably already running.</source>
+        <translation>No es pot enllaçar a %s en aquest equip. MoneyByte probablement ja estigui en funcionament.</translation>
     </message>
     <message>
         <location line="-101"/>
@@ -3327,7 +3327,7 @@ Executar una ordre quan es rep un avís rellevant (%s en cmd es substitueix per 
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Ignition is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. MoneyByte is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>

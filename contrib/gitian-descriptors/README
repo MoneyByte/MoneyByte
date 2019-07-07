@@ -24,8 +24,8 @@ Once you've got the right hardware and software:
     cd ..
 
     # To build
-    cd Ignition
+    cd MoneyByte
     git pull
     cd ../gitian-builder
     git pull
-    ./bin/gbuild --commit bitcoin=HEAD ../Ignition/contrib/gitian-descriptors/gitian.yml
+    ./bin/gbuild --commit bitcoin=HEAD ../MoneyByte/contrib/gitian-descriptors/gitian.yml
