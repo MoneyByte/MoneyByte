@@ -71,7 +71,7 @@ public:
 		// Build the genesis block. Note that the output of the genesis coinbase cannot
 		// be spent as it did not originally exist in the database.
 
-		const char* pszTimestamp = "Here July _ 2019 we start the MoneyByte";
+		const char* pszTimestamp = "Here 18 Dec 2017 we start the Ignition";
 		std::vector<CTxIn> vin;
 		vin.resize(1);
 		vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -90,33 +90,8 @@ public:
 
 
 		hashGenesisBlock = genesis.GetHash();
-		consensus.hashGenesisBlock = uint256S("0x");
-		if(genesis.GetHash() != uint256("0x"))
-		{
-		      printf("MSearching for genesis block...\n");
-		      uint256 hashTarget;
-		      hashTarget.SetCompact(genesis.nBits);
-		      while(uint256(genesis.GetHash()) > uint256(hashTarget))
-		      {
-		          ++genesis.nNonce;
-		          if (genesis.nNonce == 0)
-		          {
-		              printf("Mainnet NONCE WRAPPED, incrementing time");
-		              std::cout << std::string("Mainnet NONCE WRAPPED, incrementing time:\n");
-		              ++genesis.nTime;
-		          }
-		          if (genesis.nNonce % 10000 == 0)
-		          {
-		              printf("Mainnet: nonce %08u: hash = %s \n", genesis.nNonce, genesis.GetHash().ToString().c_str());
-		          }
-		      }
-		      printf("Mainnet block.nTime = %u \n", genesis.nTime);
-		      printf("Mainnet block.nNonce = %u \n", genesis.nNonce);
-		      printf("Mainnet block.hashMerkleRoot: %s\n", genesis.hashMerkleRoot.ToString().c_str());
-		      printf("Mainnet block.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-		}
-		assert(genesis.hashMerkleRoot == uint256("0x"));
-		assert(hashGenesisBlock == uint256("0x"));
+		assert(genesis.hashMerkleRoot == uint256("0x2d960352c0162362a744b23a639a657fc8050ffba450f49a634166d7e4790b58"));
+		assert(hashGenesisBlock == uint256("0x000088660811c8469e191c629657e36b6d339b9b76ce494cd9f957d59552bb3c"));
 
 
 		base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 50); // i
