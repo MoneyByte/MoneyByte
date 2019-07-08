@@ -91,33 +91,17 @@ public:
 
 		hashGenesisBlock = genesis.GetHash();
 		consensus.hashGenesisBlock = uint256S("0x");
-		                std::cout << std::string("Begin calculating Mainnet Genesis Block:\n");
-		                if (true && (genesis.GetHash() != consensus.hashGenesisBlock)) {
-		                    LogPrintf("Calculating Mainnet Genesis Block:\n");
-		                    arith_uint256 hashTarget = arith_uint256().SetCompact(genesis.nBits);
-		                    uint256 hash;
-		                    genesis.nNonce = 0;
-		                    while (UintToArith256(genesis.GetHash()) > hashTarget)
-		                    {
-		                        ++genesis.nNonce;
-		                        if (genesis.nNonce == 0)
-		                        {
-		                            LogPrintf("NONCE WRAPPED, incrementing time");
-		                            std::cout << std::string("NONCE WRAPPED, incrementing time:\n");
-		                            ++genesis.nTime;
-		                        }
-		                        if (genesis.nNonce % 10000 == 0)
-		                        {
-		                            LogPrintf("Mainnet: nonce %08u: hash = %s \n", genesis.nNonce, genesis.GetHash().ToString().c_str());
-		                        }
-		                    }
-		                    std::cout << "Mainnet ---\n";
-		                    std::cout << "  nonce: " << genesis.nNonce <<  "\n";
-		                    std::cout << "   time: " << genesis.nTime << "\n";
-		                    std::cout << "   hash: " << genesis.GetHash().ToString().c_str() << "\n";
-		                    std::cout << "   merklehash: "  << genesis.hashMerkleRoot.ToString().c_str() << "\n";
-		                }
-		                std::cout << std::string("Finished calculating Mainnet Genesis Block:\n");
+		if (genesis.nNonce != 0) {
+
+}
+
+if (genesis.nNonce == 0) {
+for(genesis.nNonce == 0; genesis.GetHash() > bnProofOfWorkLimit; genesis.nNonce++){ }
+printf("  nTime: %u\n", genesis.nTime);
+printf("  nNonce: %u\n", genesis.nNonce);
+printf("  Hash: %s\n", genesis.GetHash().ToString().c_str());
+printf("  hashMerkleRoot: %s\n", genesis.hashMerkleRoot.ToString().c_str());
+}
 		assert(genesis.hashMerkleRoot == uint256("0x"));
 		assert(hashGenesisBlock == uint256("0x"));
 
