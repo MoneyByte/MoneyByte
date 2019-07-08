@@ -94,7 +94,7 @@ public:
 		assert(hashGenesisBlock == uint256("0x000088660811c8469e191c629657e36b6d339b9b76ce494cd9f957d59552bb3c"));
 
 
-		base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 50); // i
+		base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 50); // M
 		base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 39); // G
 		base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 138); // x
 		base58Prefixes[STEALTH_ADDRESS] = std::vector<unsigned char>(1, 76); // X
@@ -154,7 +154,7 @@ public:
 		genesis.nBits = 520159231;
 		genesis.nNonce = 47950;
 
-		assert(hashGenesisBlock == uint256("0x"));
+		assert(hashGenesisBlock == uint256("0x000088660811c8469e191c629657e36b6d339b9b76ce494cd9f957d59552bb3c"));
 
 		vFixedSeeds.clear();
 		vSeeds.clear();
