@@ -4,7 +4,7 @@ if [ ! -d "./node1" ]; then
     do
       rpcportoffset=$((44155+$i))
       portoffset=$((44144+$i))
-      #connectOffset=$((33133+$i))
+      #connectOffset=$((18333+$i))
       mkdir "node$i"
       printf "rpcuser=rpc\nrpcpassword=12410516051fd5fsd4rsd3\nrpcallowip=127.0.0.1\nmaxconnections=125\nport=$portoffset\nrpcport=$rpcportoffset\ndaemon=1\nserver=1\nlisten=1\n" >> "node$i"/MoneyByte.conf
       printf "cd ../ && ./minerd --algo=scrypt --url=127.0.0.1:$rpcportoffset --userpass=rpc:12410516051fd5fsd4rsd3 --threads=1" >> "node$i"/mine-scrypt.sh
@@ -18,7 +18,7 @@ else
     do
       rpcportoffset=$((44155+$i))
       portoffset=$((44144+$i))
-      #connectOffset=$((33133+$i))
+      #connectOffset=$((18333+$i))
       mkdir "node$i"
       printf "rpcuser=MONrpc\nrpcpassword=12410516051fd5fsd4rsd3\nrpcallowip=127.0.0.1\nmaxconnections=125\ndaemon=1\nserver=1\nlisten=1\n" >> "node$i"/MoneyByte.conf
       printf "cd ../ && ./minerd --algo=scrypt --url=127.0.0.1:$rpcportoffset --userpass=rpc:12410516051fd5fsd4rsd3 --threads=1" >> "node$i"/mine-scrypt.sh

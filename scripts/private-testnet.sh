@@ -4,7 +4,7 @@ if [ ! -d "./test1" ]; then
     do
       rpcportoffset=$((33154+$i))
       portoffset=$((33132+$i))
-      connectOffset=$((33133+$i))
+      connectOffset=$((18333+$i))
       mkdir "test$i"
       printf "rpcuser=rpc\nrpcpassword=123\nrpcallowip=127.0.0.1\nport=$portoffset\nrpcport=$rpcportoffset\ntestnet=1\ndaemon=1\nserver=1\nlisten=1\nconnect=127.0.0.1:$connectOffset\n" >> "test$i"/MoneyByte.conf
       printf "cd ../ && ./minerd --algo=scrypt --url=127.0.0.1:$rpcportoffset --userpass=rpc:123 --threads=1" >> "test$i"/mine-scrypt.sh
@@ -18,7 +18,7 @@ else
     do
       rpcportoffset=$((33154+$i))
       portoffset=$((33132+$i))
-      connectOffset=$((33133+$i))
+      connectOffset=$((18333+$i))
       mkdir "test$i"
       printf "rpcuser=MONrpc\nrpcpassword=123\nrpcallowip=127.0.0.1\ntestnet=1\ndaemon=1\nserver=1\nlisten=1\nconnect=127.0.0.1:$connectOffset\n" >> "test$i"/MoneyByte.conf
       printf "cd ../ && ./minerd --algo=scrypt --url=127.0.0.1:$rpcportoffset --userpass=rpc:123 --threads=1" >> "test$i"/mine-scrypt.sh
