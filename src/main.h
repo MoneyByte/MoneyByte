@@ -24,7 +24,7 @@ class CValidationState;
 static const int64_t DARKSEND_COLLATERAL = (0.01*COIN);
 static const int64_t DARKSEND_POOL_MAX = (4999.99*COIN);
 
-static const int64_t STATIC_POS_REWARD = 0.3 * COIN; //Constant reward of 3.4 MON per block has been ignored
+static const int64_t STATIC_POS_REWARD = 3 * COIN;
 static const int64_t TARGET_SPACING = 1 * 60; // 1 min per Block
 //static const int64_t TARGET_SPACING2 = 53; // 53 sec per Block
 //static const int64_t STAKE_TIMESPAN_SWITCH_TIME = 1508858115;
@@ -84,12 +84,12 @@ static const unsigned char REJECT_INVALID = 0x10;
 /** Forks **/
 /* IMPORTANT: fork one should never be before block 17 */
 /* Livenet hard forks */
-static const int nForkOne = 1000;
-static const int nForkTwo = 521352;
+static const int nForkOne = 100;
+static const int nForkTwo = 200;
 
 /* Testnet hard forks */
-static const int nTestnetForkOne = 250;
-static const int nTestnetForkTwo = 700;
+static const int nTestnetForkOne = 100;
+static const int nTestnetForkTwo = 200;
 
 /* Fork testing function */
 const int GetForkHeightOne();

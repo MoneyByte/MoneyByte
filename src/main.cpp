@@ -1444,13 +1444,29 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
     }
     else if(nHeight == 2)
     {
-      nSubsidy = 100000000 * COIN;
+      nSubsidy = 5000000 * COIN;
     }
     else if(nHeight < 200) // live test before launch = 198 coin
     {
       nSubsidy = 1 * COIN;
     }
-    else if(nHeight < 262800) // 1st year aproximatly = (262800 - 200 )*4 =  892,840 coins + 100198 = total 993,038 coins
+    else if(nHeight < 10000) // 1st year aproximatly = (262800 - 200 )*4 =  892,840 coins + 100198 = total 993,038 coins
+    {
+      nSubsidy = 2.5 * COIN;
+    }
+    else if(nHeight < 20000) // 1st year aproximatly = (262800 - 200 )*4 =  892,840 coins + 100198 = total 993,038 coins
+    {
+      nSubsidy = 2 * COIN;
+    }
+    else if(nHeight < 30000) // 1st year aproximatly = (262800 - 200 )*4 =  892,840 coins + 100198 = total 993,038 coins
+    {
+      nSubsidy = 1.5 * COIN;
+    }
+    else if(nHeight < 40000) // 1st year aproximatly = (262800 - 200 )*4 =  892,840 coins + 100198 = total 993,038 coins
+    {
+      nSubsidy = 1 * COIN;
+    }
+    else if(nHeight < 50000) // 1st year aproximatly = (262800 - 200 )*4 =  892,840 coins + 100198 = total 993,038 coins
     {
       nSubsidy = 0.5 * COIN;
     }
@@ -1472,25 +1488,25 @@ int64_t GetProofOfStakeReward(int nHeight, int64_t nCoinAge, int64_t nFees)
     {
       nSubsidy = 1 * COIN;
     }
-    else if(nHeight < 1000)
+    else if(nHeight < 10000)
     {
-      nSubsidy = 4 * COIN;
+      nSubsidy = 0.5 * COIN;
     }
-    else if(nHeight < 1000000)
-    {
-      nSubsidy = 2 * COIN;
-    }
-    else if(nHeight < 2000000)
+    else if(nHeight < 20000)
     {
       nSubsidy = 1 * COIN;
     }
-    else if(nHeight < 5000000)
+    else if(nHeight < 30000)
     {
-      nSubsidy = 0.6 * COIN;
+      nSubsidy = 1.5 * COIN;
     }
-    else if(nHeight < 8000000)
+    else if(nHeight < 40000)
     {
-      nSubsidy = 0.3 * COIN;
+      nSubsidy = 2 * COIN;
+    }
+    else if(nHeight < 50000)
+    {
+      nSubsidy = 2.5 * COIN;
     }
 
     return nSubsidy + nFees;
@@ -4923,10 +4939,10 @@ bool SendMessages(CNode* pto, bool fSendTrickle)
 
 int64_t GetMasternodePayment(int nHeight, int64_t blockValue)
 {
-    int64_t ret = blockValue * 70/100; // 70%
+    int64_t ret = blockValue * 75/100; // 75%
 
     if(nHeight >= GetForkHeightTwo())
-        ret = blockValue * 70/100; //70%
+        ret = blockValue * 75/100; // 75%
 
     return ret;
 }
