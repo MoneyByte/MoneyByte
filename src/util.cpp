@@ -1105,49 +1105,6 @@ boost::filesystem::path GetDefaultDataDir()
 static boost::filesystem::path pathCached[CChainParams::MAX_NETWORK_TYPES+1];
 static CCriticalSection csPathCached;
 
-static std::string GenerateRandomString(unsigned int len) {
-    if (len == 0){
-        len = 24;
-    }
-    srand(time(NULL) + len); //seed srand before using
-    std::vector<unsigned char> vchRandString;
-    static const unsigned char alphanum[] =
-        "0123456789"
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        "abcdefghijklmnopqrstuvwxyz";
-
-    for (unsigned int i = 0; i < len; ++i) {
-        vchRandString.push_back(alphanum[rand() % (sizeof(alphanum) - 1)]);
-    }
-    std::string strPassword(vchRandString.begin(), vchRandString.end());
-    return strPassword;
-}
-
-static unsigned int RandomIntegerRange(unsigned int nMin, unsigned int nMax)
-{
-  srand(time(NULL) + nMax); //seed srand before using
-  return nMin + rand() % (nMax - nMin) + 1;
-}
-
-void WriteConfigFile(FILE* configFile)
-{
-    std::string sRPCpassword = "rpcpassword=" + GenerateRandomString(RandomIntegerRange(18, 24)) + "\n";
-    std::string sUserID = "rpcuser=" + GenerateRandomString(RandomIntegerRange(7, 11)) + "\n";
-    fputs (sUserID.c_str(), configFile);
-    fputs (sRPCpassword.c_str(), configFile);
-    fputs ("rpcport=18335\n", configFile);
-    fputs ("port=18333\n", configFile);
-    fputs ("daemon=1\n", configFile);
-    fputs ("listen=1\n", configFile);
-    fputs ("maxconnections=24\n", configFile);
-    fputs ("server=1\n", configFile);
-    fputs ("addnode=46.101.203.85:18333\n", configFile);
-    fputs ("addnode=46.101.205.47:18333\n", configFile);
-    fputs ("addnode=207.154.225.242:18333\n", configFile);
-    fclose(configFile);
-    ReadConfigFile(mapArgs, mapMultiArgs);
-}
-
 
 const boost::filesystem::path &GetDataDir(bool fNetSpecific)
 {
@@ -1206,18 +1163,13 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
                     map<string, vector<string> >& mapMultiSettingsRet)
 {
   boost::filesystem::ifstream streamConfig(GetConfigFile());
-  if (!streamConfig.good()){
-// Create empty moneybyte.conf if it does not excist
-     FILE* configFile = fopen(GetConfigFile().string().c_str(), "a");
-     if (configFile != NULL) {
-         WriteConfigFile(configFile);
-         fclose(configFile);
-         ReadConfigFile(mapSettingsRet, mapMultiSettingsRet);
-    } else {
-      LogPrintf("moneybyte.conf file could not be found or can't be created");
-     return; // Nothing to read, so just return
-  }
-}
+    if (!streamConfig.good()){
+        // Create empty moneybyte.conf if it does not excist
+        FILE* configFile = fopen(GetConfigFile().string().c_str(), "a");
+        if (configFile != NULL)
+            fclose(configFile);
+        return; // Nothing to read, so just return
+    }
 
     set<string> setOptions;
     setOptions.insert("*");
