@@ -2738,7 +2738,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=MONrpc
+rpcuser=ICrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2749,7 +2749,7 @@ for example: alertnotify=echo %%s | mail -s &quot;MoneyByte Alert&quot; admin@fo
         <translation>%s, 必须在配置文件里设置rpc密码:
  %s
 建议使用如下的随机密码:
-rpcuser=MONrpc
+rpcuser=ICrpc
 rpcpassword=%s
 (不需要记住该密码)
 用户名和密码不能重复。

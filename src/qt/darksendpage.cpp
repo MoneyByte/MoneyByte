@@ -32,7 +32,7 @@ DarksendPage::DarksendPage(QWidget *parent) :
     if (fLiteMode)
     {
         ui->frameDarksend->setVisible(false);
-    }
+    } 
     else
     {
         if (fMasterNode)
@@ -157,7 +157,7 @@ void DarksendPage::toggleDarksend()
     QSettings settings;
     // Popup some information on first mixing
     QString hasMixed = settings.value("hasMixed").toString();
-    if (hasMixed.isEmpty())
+    if (hasMixed.isEmpty()) 
     {
         QMessageBox::information(this, tr("Darksend"),
                 tr("If you don't want to see internal Darksend fees/transactions select \"Received By\" as Type on the \"Transactions\" tab."),
@@ -165,11 +165,11 @@ void DarksendPage::toggleDarksend()
         settings.setValue("hasMixed", "hasMixed");
     }
 
-    if (!fEnableDarksend)
+    if (!fEnableDarksend) 
     {
         int64_t balance = currentBalance;
         float minAmount = 1.49 * COIN;
-        if (balance < minAmount)
+        if (balance < minAmount) 
         {
             QString strMinAmount(BitcoinUnits::formatWithUnit(nDisplayUnit, minAmount));
             QMessageBox::warning(this, tr("Darksend"),
@@ -203,12 +203,12 @@ void DarksendPage::toggleDarksend()
     {
         ui->toggleDarksend->setText(tr("Start Mixing"));
         darkSendPool.UnlockCoins();
-    }
-    else
+    } 
+    else 
     {
         ui->toggleDarksend->setText(tr("Stop Mixing"));
 
-        // show darksend configuration if client has defaults set
+        // show darksend configuration if client has defaults set 
 
         if (nAnonymizeMoneyByteAmount == 0)
         {

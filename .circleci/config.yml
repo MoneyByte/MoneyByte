@@ -41,7 +41,7 @@ jobs:
         name: Test daemon
         command: |
           cd bin
-          printf "rpcuser=MONrpc\nrpcpassword=x1y2z3\n" > ~/.MoneyByte/MoneyByte.conf
+          printf "rpcuser=ICrpc\nrpcpassword=x1y2z3\n" > ~/.MoneyByte/MoneyByte.conf
           ./moneybyted --datadir=/root/.MoneyByte -daemon && sleep 5s
           ./moneybyted --datadir=/root/.MoneyByte getinfo |& tee -a ~/logs/daemon/daemon-test.log
           ./moneybyted --datadir=/root/.MoneyByte stop |& tee -a ~/logs/daemon/daemon-test.log

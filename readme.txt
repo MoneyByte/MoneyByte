@@ -26,7 +26,7 @@ White Paper: https://moneybytecoin.org/wp-content/uploads/2018/01/MoneyByte-Coin
 
 CoinMarketCap: https://coinmarketcap.com/currencies/moneybyte/
 
-Exchanges MON is available on (as of 5/30/2018): Cryptopia, CoinExchange, CryptoBridge, Wadax and CryptalDash Exchange
+Exchanges IC is available on (as of 5/30/2018): Cryptopia, CoinExchange, CryptoBridge, Wadax and CryptalDash Exchange
 
 For compiling on different architectures, see the docs/build-*os* documents. Otherwise, view releases page for windows qt-wallets.
 

@@ -2,6 +2,7 @@
 compile-blk.sh
 .DS_Store
 bin/
+moneybyte.pro
 moneybyted
 MoneyByte-qt
 qrc_bitcoin\.cpp

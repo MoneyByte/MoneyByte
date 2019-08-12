@@ -13,7 +13,7 @@ NC='\033[0m'
 NC_READ=$'\e[0m'
 
 if [ ! -e checkswap.sh ] ; then
-    wget https://raw.githubusercontent.com/moneybytecoin/moneybytecoin/master/scripts/checkswap.sh
+    wget https://raw.githubusercontent.com/CircuitBreaker88/ignitioncoin/scripts/checkswap.sh
 fi
 ./checkswap.sh
 

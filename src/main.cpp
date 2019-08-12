@@ -48,10 +48,10 @@ set<pair<COutPoint, unsigned int> > setStakeSeen;
 
 CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 
-unsigned int nStakeMinAge = 3 * 30 * 60; // 3 hours
+unsigned int nStakeMinAge = 30 * 60; // 30 minutes
 unsigned int nModifierInterval = 8 * 60; // time to elapse before new modifier is computed
 
-int nCoinbaseMaturity = 200;
+int nCoinbaseMaturity = 30;
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 
@@ -1430,6 +1430,7 @@ void static PruneOrphanBlocks()
 }
 
 // miner's coin base reward
+// the yr1 1Mil, yr2-5 1Mil 5-10 1Mil 10-20 1Mil 20-50 1Mil distribution
 int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
 {
 
@@ -1444,32 +1445,33 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
     }
     else if(nHeight == 2)
     {
-      nSubsidy = 5000000 * COIN;
+      nSubsidy = 100000 * COIN;
     }
     else if(nHeight < 200) // live test before launch = 198 coin
     {
       nSubsidy = 1 * COIN;
     }
-    else if(nHeight < 10000) // 1st year aproximatly = (262800 - 200 )*4 =  892,840 coins + 100198 = total 993,038 coins
+    else if(nHeight < 262800) // 1st year aproximatly = (262800 - 200 )*4 =  892,840 coins + 100198 = total 993,038 coins
     {
-      nSubsidy = 2.5 * COIN;
+      nSubsidy = 3.4 * COIN;
     }
-    else if(nHeight < 20000) // 1st year aproximatly = (262800 - 200 )*4 =  892,840 coins + 100198 = total 993,038 coins
+    else if(nHeight < 1314000) // 5th year aproximatly = (1314000 - 262800)* 0.95 = 998,640 coins
     {
-      nSubsidy = 2 * COIN;
+      nSubsidy = 0.95 * COIN;
     }
-    else if(nHeight < 30000) // 1st year aproximatly = (262800 - 200 )*4 =  892,840 coins + 100198 = total 993,038 coins
+    else if(nHeight < 2628000) // 10th year aproximatly = (2628000 - 1314000)* 0.75 = 985,500 coins
     {
-      nSubsidy = 1.5 * COIN;
+      nSubsidy = 0.75 * COIN;
     }
-    else if(nHeight < 40000) // 1st year aproximatly = (262800 - 200 )*4 =  892,840 coins + 100198 = total 993,038 coins
+    else if(nHeight < 5256000) // 20th year aproximatly = (5256000 - 2628000)* 0.4 = 1,051,200 coins
     {
-      nSubsidy = 1 * COIN;
+      nSubsidy = 0.4 * COIN;
     }
-    else if(nHeight < 50000) // 1st year aproximatly = (262800 - 200 )*4 =  892,840 coins + 100198 = total 993,038 coins
+    else if(nHeight < 13140000) // 50th year aproximatly = (13140000 - 5256000)* 0.12 = 946,080 coins
     {
-      nSubsidy = 0.5 * COIN;
+      nSubsidy = 0.12 * COIN;
     }
+
     return nSubsidy + nFees;
 
 }
@@ -1488,25 +1490,25 @@ int64_t GetProofOfStakeReward(int nHeight, int64_t nCoinAge, int64_t nFees)
     {
       nSubsidy = 1 * COIN;
     }
-    else if(nHeight < 10000)
+    else if(nHeight < 262800) // 1st year aproximatly = (262800 - 200 )*4 =  892,840 coins + 100198 = total 993,038 coins
     {
-      nSubsidy = 0.5 * COIN;
+      nSubsidy = 3.4 * COIN;
     }
-    else if(nHeight < 20000)
+    else if(nHeight < 1314000) // 5th year aproximatly = (1314000 - 262800)* 0.95 = 998,640 coins
     {
-      nSubsidy = 1 * COIN;
+      nSubsidy = 0.95 * COIN;
     }
-    else if(nHeight < 30000)
+    else if(nHeight < 2628000) // 10th year aproximatly = (2628000 - 1314000)* 0.75 = 985,500 coins
     {
-      nSubsidy = 1.5 * COIN;
+      nSubsidy = 0.75 * COIN;
     }
-    else if(nHeight < 40000)
+    else if(nHeight < 5256000) // 20th year aproximatly = (5256000 - 2628000)* 0.4 = 1,051,200 coins
     {
-      nSubsidy = 2 * COIN;
+      nSubsidy = 0.4 * COIN;
     }
-    else if(nHeight < 50000)
+    else if(nHeight < 13140000) // 50th year aproximatly = (13140000 - 5256000)* 0.12 = 946,080 coins
     {
-      nSubsidy = 2.5 * COIN;
+      nSubsidy = 0.12 * COIN;
     }
 
     return nSubsidy + nFees;
@@ -1600,7 +1602,7 @@ unsigned int GetNextTargetRequired(const CBlockIndex *pindexLast, bool fProofOfS
         else
         {
             // Alternate PoW and PoS Blocks
-            nTargetSpacing = 2 * TARGET_SPACING; // Keep Note Here
+            nTargetSpacing = 2 * TARGET_SPACING;
         }
         nTargetSpacing = 2 * TARGET_SPACING;
 
@@ -4939,10 +4941,10 @@ bool SendMessages(CNode* pto, bool fSendTrickle)
 
 int64_t GetMasternodePayment(int nHeight, int64_t blockValue)
 {
-    int64_t ret = blockValue * 75/100; // 75%
+    int64_t ret = blockValue * 1/2; // 50%
 
     if(nHeight >= GetForkHeightTwo())
-        ret = blockValue * 75/100; // 75%
+        ret = blockValue * 55/100; //55%
 
     return ret;
 }

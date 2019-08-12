@@ -83,18 +83,19 @@ public:
 		genesis.hashPrevBlock = 0;
 		genesis.hashMerkleRoot = genesis.BuildMerkleTree();
 		genesis.nVersion = 1;
-		genesis.nTime = 1513634048;
+		genesis.nTime = 1513634048; //
 		genesis.nBits = 520159231;
 		genesis.nNonce = 47950;
 
 
 
 		hashGenesisBlock = genesis.GetHash();
+
 		assert(genesis.hashMerkleRoot == uint256("0x2d960352c0162362a744b23a639a657fc8050ffba450f49a634166d7e4790b58"));
 		assert(hashGenesisBlock == uint256("0x000088660811c8469e191c629657e36b6d339b9b76ce494cd9f957d59552bb3c"));
 
 
-		base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 50); // M
+		base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 51); // M
 		base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 39); // G
 		base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 138); // x
 		base58Prefixes[STEALTH_ADDRESS] = std::vector<unsigned char>(1, 76); // X
@@ -102,17 +103,20 @@ public:
 		base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
 
 		vSeeds.push_back(CDNSSeedData("", ""));
-		vSeeds.push_back(CDNSSeedData("", ""));
-		vSeeds.push_back(CDNSSeedData("",  ""));
-		vSeeds.push_back(CDNSSeedData("",  ""));
+//		vSeeds.push_back(CDNSSeedData("", ""));
+//		vSeeds.push_back(CDNSSeedData("", ""));
+//		vSeeds.push_back(CDNSSeedData("", ""));
+//		vSeeds.push_back(CDNSSeedData("", ""));
+//		vSeeds.push_back(CDNSSeedData("", ""));
+
 		convertSeeds(vFixedSeeds, pnSeed, ARRAYLEN(pnSeed), nDefaultPort);
 
 		nPoolMaxTransactions = 3;
 		//strSporkKey = "046f78dcf911fbd61910136f7f0f8d90578f68d0b3ac973b5040fb7afb501b5939f39b108b0569dca71488f5bbf498d92e4d1194f6f941307ffd95f75e76869f0e";
 		//strMasternodePaymentsPubKey = "046f78dcf911fbd61910136f7f0f8d90578f68d0b3ac973b5040fb7afb501b5939f39b108b0569dca71488f5bbf498d92e4d1194f6f941307ffd95f75e76869f0e";
-		strDarksendPoolDummyAddress = "";
-		nLastPOWBlock = 50000;
-		nPOSStartBlock = 200;
+		strDarksendPoolDummyAddress = "i7FBJNGDmEsU5wx2m3xw85N8kRgCqA8S7L";
+		nLastPOWBlock = nForkTwo + 200;
+		nPOSStartBlock = 25;
 	}
 
 
@@ -146,8 +150,8 @@ public:
 		bnProofOfWorkLimit = CBigNum(~uint256(0) >> 16);
 		bnNeoScryptFirstTarget = CBigNum(~uint256(0) >> 20);
 		vAlertPubKey = ParseHex("042a4acc6f2c09d425e45c73b11e8f5c2afefdab644689948dbe3e7efbd32bfe8a810ed0532359f42f6a15830137c28d10504056cb64539e5fea5f9ed1dc62aa2b");
-		nDefaultPort = 18333;
-		nRPCPort = 18335;
+		nDefaultPort = 33133;
+		nRPCPort = 33155;
 		strDataDir = "testnet";
 
 		// Modify the testnet genesis block so the timestamp is valid for a later start.

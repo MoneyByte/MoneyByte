@@ -6,8 +6,8 @@ CONFIG_FOLDER='"$HOME"/.MoneyByte'
 BACKUP_FOLDER="$HOME/MoneyByteBackups"
 COIN_DAEMON='moneybyted'
 COIN_PATH='/usr/bin/'
-COIN_REPO='https://github.com/moneybytecoin/moneybytecoin.git'
-#COIN_TGZ='http://github.com/moneybytecoin/moneybytecoin/releases/XXX.zip'
+COIN_REPO='https://github.com/CircuitBreaker88/ignitioncoin.git'
+#COIN_TGZ='http://github.com/CircuitBreaker88/ignitioncoin/releases/XXX.zip'
 #COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='MoneyByte'
 COIN_PORT=44144
@@ -108,7 +108,7 @@ function update_config() {
   echo -e "${BLUE}================================================================================================================================"
   echo -e "${GREEN}Important: To complete the Masternode setup, you must set up your controller wallet"
   echo -e "${BLUE}================================================================================================================================${NC}"
-  echo -e "${PURPLE}Please follow this guide to setup the controller wallet, then return here to input your the genkey output: https://github.com/moneybytecoin/moneybytecoin/wiki/Setup-Manager---Masternode-Asisstant-Setup-Script-Guide${NC}"
+  echo -e "${PURPLE}Please follow this guide to setup the controller wallet, then return here to input your the genkey output: https://github.com/CircuitBreaker88/ignitioncoin/wiki/Setup-Manager---Masternode-Asisstant-Setup-Script-Guide${NC}"
   echo -e "${BLUE}================================================================================================================================${NC}"
   read -p "${PURPLE}Please enter the ${NC}${GREEN}genkey${NC}:" COINKEY
   systemctl stop moneybyte
@@ -252,10 +252,10 @@ function install_moneybyte() {
             mv ../bin/moneybyted /usr/bin
         else
             echo "Cloning github repository.."
-            git clone https://github.com/moneybytecoin/moneybytecoin
-            chmod +x ./moneybytecoin/scripts
-            ./moneybytecoin/scripts/build-unix.sh
-            mv ./moneybytecoin/bin/moneybyted /usr/bin
+            git clone https://github.com/CircuitBreaker88/ignitioncoin
+            chmod +x ./ignitioncoin/scripts
+            ./ignitioncoin/scripts/build-unix.sh
+            mv ./ignitioncoin/bin/moneybyted /usr/bin
             if [ -e "$HOME"/moneybyte-swap ]; then
                 echo "Removing temporary swap file"
                 swapoff "$HOME"/moneybyte-swap
@@ -266,7 +266,7 @@ function install_moneybyte() {
         echo "Download Executable Binary For Install"
         mkdir ./tmp
         cd tmp
-        wget https://github.com/$(wget https://github.com/moneybytecoin/moneybytecoin/releases/latest -O - | egrep '/.*/.*/.*tar.gz' -o)
+        wget https://github.com/$(wget https://github.com/CircuitBreaker88/ignitioncoin/releases/latest -O - | egrep '/.*/.*/.*tar.gz' -o)
         tar -xvf *.tar.gz
         mv ./moneybyted /usr/bin
         cd ..
@@ -284,10 +284,10 @@ function compile_linux_daemon() {
     prepare_system
     if [ ! -e ../MoneyByte.pro ] ; then
         echo "Cloning MoneyByte Coin github repository to this directory."
-        git clone https://github.com/moneybytecoin/moneybytecoin
-        ./moneybytecoin/scripts/build-unix.sh
+        git clone https://github.com/CircuitBreaker88/ignitioncoin
+        ./ignitioncoin/scripts/build-unix.sh
         clear
-        echo "Compile is complete, you can find the binary file in ./moneybytecoin/bin/"
+        echo "Compile is complete, you can find the binary file in ./ignitioncoin/bin/"
     else
         echo "Compiling Source Code"
         ./build-unix.sh
@@ -302,10 +302,10 @@ function compile_linux_gui() {
     prepare_system
     if [ ! -e ../MoneyByte.pro ] ; then
         echo "Cloning MoneyByte Coin Github Repository"
-        git clone https://github.com/moneybytecoin/moneybytecoin
-        ./moneybytecoin/scripts/build-unix.sh --with-gui
+        git clone https://github.com/CircuitBreaker88/ignitioncoin
+        ./ignitioncoin/scripts/build-unix.sh --with-gui
         clear
-        echo "Compile is complete, you can find the binary file in ./moneybytecoin/bin/"
+        echo "Compile is complete, you can find the binary file in ./ignitioncoin/bin/"
     else
         echo "Compiling Source Code"
         ./build-unix.sh --with-gui
@@ -320,11 +320,11 @@ function compile_windows_exe() {
     prepare_system
     if [ ! -e ../MoneyByte.pro ] ; then
         echo "Cloning MoneyByte Coin Github Repository"
-        git clone https://github.com/moneybytecoin/moneybytecoin
-        chmod +x ./moneybytecoin/scripts/*
-        ./moneybytecoin/scripts/clean.sh
-        ./moneybytecoin/scripts/configure-mxe.sh
-        ./moneybytecoin/scripts/build-win-mxe.sh
+        git clone https://github.com/CircuitBreaker88/ignitioncoin
+        chmod +x ./ignitioncoin/scripts/*
+        ./ignitioncoin/scripts/clean.sh
+        ./ignitioncoin/scripts/configure-mxe.sh
+        ./ignitioncoin/scripts/build-win-mxe.sh
     else
         echo "Compiling Source Code"
         chmod +x ./*

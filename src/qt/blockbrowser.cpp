@@ -384,15 +384,15 @@ void BlockBrowser::updateExplorer(bool block)
     }
 
     if(block == false) {
-        // Check if the transaction exists
+        // Check if the transaction exists 
         std::string txid = ui->txBox->text().toUtf8().constData();
-        uint256 hash;
-        hash.SetHex(txid);
-
-        CTransaction tx;
-        uint256 hashBlock = 0;
-        if (GetTransaction(hash, tx, hashBlock))
-        {
+        uint256 hash; 
+        hash.SetHex(txid); 
+         
+        CTransaction tx; 
+        uint256 hashBlock = 0; 
+        if (GetTransaction(hash, tx, hashBlock)) 
+        { 
             ui->txID->show();
             ui->txLabel->show();
             ui->valueLabel->show();
