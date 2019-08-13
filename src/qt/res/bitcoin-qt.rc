@@ -22,7 +22,7 @@ BEGIN
             VALUE "FileDescription",    "MoneyByte-Qt (OSS GUI client for MoneyByte)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "MoneyByte-qt"
-            VALUE "LegalCopyright",     "2009-2014 The Bitcoin developers, 2012-2014 The NovaCoin & PPCoin developers, 2017-2018 The MoneyByte developers"
+            VALUE "LegalCopyright",     "2009-2014 The Bitcoin developers, 2012-2014 The NovaCoin & PPCoin developers, 2017-2019 The MoneyByte developers"
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
             VALUE "OriginalFilename",   "MoneyByte-qt.exe"
             VALUE "ProductName",        "MoneyByte-Qt"
