@@ -2231,8 +2231,6 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
         if (nStakeReward > nCalculatedStakeReward)
             return DoS(100, error("ConnectBlock() : coinstake pays too much(actual=%d vs calculated=%d)", nStakeReward, nCalculatedStakeReward));
 
-        }
-
         if (pindex->nHeight >= GetForkHeightOne())
         {
             int64_t masternodePaymentShouldMax = GetMasternodePayment(pindex->nHeight, nCalculatedStakeReward);
@@ -2377,6 +2375,7 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
                 return DoS(100, error("ConnectBlock() : Couldn't find masternode payment or payee"));
             }
         }
+    }
 
     // ppcoin: track money supply and mint amount info
 #ifndef LOWMEM
