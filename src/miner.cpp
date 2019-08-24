@@ -18,6 +18,8 @@ using namespace std;
 //
 
 extern unsigned int nMinerSleep;
+extern int64_t nDevFee;
+extern bool fDevFee(int nHeight);
 
 // Some explaining would be appreciated
 class COrphan
@@ -129,22 +131,28 @@ CBlock* CreateNewBlock(CReserveKey& reservekey, bool fProofOfStake, int64_t* pFe
     CTransaction txNew;
     txNew.vin.resize(1);
     txNew.vin[0].prevout.SetNull();
-    txNew.vout.resize(1);
+    CBitcoinAddress address(!TestNet() ? FOUNDATION : FOUNDATION_TEST);
+    if (fDevFee(nHeight))
+      {txNew.vout.resize(2);}
+    else {txNew.vout.resize(1);}
 
     if (!fProofOfStake)
     {
         CPubKey pubkey;
         if (!reservekey.GetReservedKey(pubkey))
             return NULL;
-        txNew.vout[0].scriptPubKey.SetDestination(pubkey.GetID());
-    }
-    else
+            txNew.vout[0].scriptPubKey.SetDestination(pubkey.GetID());
+          if (fDevFee(nHeight))
+          	txNew.vout[1].scriptPubKey.SetDestination(address.Get());
+      } else
     {
         // Height first in coinbase required for block.version=2
         txNew.vin[0].scriptSig = (CScript() << nHeight) + COINBASE_FLAGS;
         assert(txNew.vin[0].scriptSig.size() <= 100);
 
         txNew.vout[0].SetEmpty();
+        if (fDevFee(nHeight))
+			  txNew.vout[1].scriptPubKey.SetDestination(address.Get());
     }
 
     // Add our coinbase tx as first transaction
@@ -368,6 +376,9 @@ CBlock* CreateNewBlock(CReserveKey& reservekey, bool fProofOfStake, int64_t* pFe
 // >IC<
         if (!fProofOfStake)
             pblock->vtx[0].vout[0].nValue = GetProofOfWorkReward(pindexPrev->nHeight + 1, nFees);
+
+        if (fDevFee(nHeight))
+            pblock->vtx[0].vout[1].nValue = nDevFee;    
 
         if (pFees)
             *pFees = nFees;

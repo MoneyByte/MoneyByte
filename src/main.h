@@ -200,6 +200,10 @@ uint256 WantedByOrphan(const COrphanBlock* pblockOrphan);
 const CBlockIndex *GetPrevBlockIndex(const CBlockIndex *pindex, uint nRange, bool fProofOfStake);
 void ThreadStakeMiner(CWallet *pwallet);
 
+extern int64_t nDevFee;
+extern bool fDevFee(int nHeight);
+#define FOUNDATION ""
+#define FOUNDATION_TEST ""
 
 /** (try to) add transaction to memory pool **/
 bool AcceptToMemoryPool(CTxMemPool& pool, CTransaction &tx, bool fLimitFree,

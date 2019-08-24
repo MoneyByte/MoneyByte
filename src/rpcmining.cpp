@@ -18,6 +18,9 @@ using namespace json_spirit;
 using namespace std;
 using namespace boost::assign;
 
+extern bool fDevFee(int nHeight);
+extern int64_t nDevFee;
+
 // Key used by getwork/getblocktemplate miners.
 // Allocated in InitRPCMining, free'd in ShutdownRPCMining
 static CReserveKey* pMiningKey = NULL;
@@ -662,7 +665,11 @@ Value getblocktemplate(const Array& params, bool fHelp)
     result.push_back(Pair("curtime", (int64_t)pblock->nTime));
     result.push_back(Pair("bits", strprintf("%08x", pblock->nBits)));
     result.push_back(Pair("height", (int64_t)(pindexPrev->nHeight+1)));
-
+    if (fDevFee((int64_t)(pindexPrev->nHeight+1))) {
+	    CBitcoinAddress address(!TestNet() ? FOUNDATION : FOUNDATION_TEST);
+    	result.push_back(Pair("payee", address.ToString()));
+    	result.push_back(Pair("payee_amount", (int64_t)pblock->vtx[0].vout[1].nValue));
+    	}
     return result;
 }
 
