@@ -2219,7 +2219,7 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
               return error("ConnectBlock() : PoW coinbase does not pay to correct amount to Developer address");
       } else {
         if (vtx[0].GetValueOut())
-          return DoS(50, error("ConnectBlock() : PoW coinbase reward exceeded (actual=%d vs calculated=%d)", nReward));
+          return DoS(50, error("ConnectBlock() : PoW coinbase reward exceeded (actual=%d vs calculated=%d)"));
       }
     }
     if (IsProofOfStake())
