@@ -2377,7 +2377,6 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
                 return DoS(100, error("ConnectBlock() : Couldn't find masternode payment or payee"));
             }
         }
-    }
 
     // devFee adds a 2nd coinbase transaction
     int64_t nHeight = pindex->nHeight;
