@@ -2218,7 +2218,7 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
             if (vtx[0].vout[1].nValue != nDevFee)
               return error("ConnectBlock() : PoW coinbase does not pay to correct amount to Developer address");
       }
-    }
+      
     if (IsProofOfStake())
     {
         // ppcoin: coin stake tx earns reward instead of paying fee
