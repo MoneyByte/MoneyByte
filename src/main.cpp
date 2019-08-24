@@ -2218,7 +2218,7 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
             if (vtx[0].vout[1].nValue != nDevFee)
               return error("ConnectBlock() : PoW coinbase does not pay to correct amount to Developer address");
       }
-      
+
     if (IsProofOfStake())
     {
         // ppcoin: coin stake tx earns reward instead of paying fee
@@ -2374,6 +2374,19 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
                 }
                 return DoS(100, error("ConnectBlock() : Couldn't find masternode payment or payee"));
             }
+        }
+    int64_t nHeight = pindex->nHeight;
+		if (fDevFee(nHeight))
+		{
+			if (vtx[0].GetValueOut() > nDevFee)
+            	return DoS(50, error("ConnectBlock() : coinbase pays too much (actual=%d vs calculated=%d)", vtx[0].GetValueOut(), nDevFee));
+            CBitcoinAddress address(!TestNet() ? FOUNDATION : FOUNDATION_TEST);
+        	CScript scriptPubKey;
+		    scriptPubKey.SetDestination(address.Get());
+        	if (vtx[0].vout[1].scriptPubKey != scriptPubKey)
+            	return error("ConnectBlock() : coinbase does not pay to the dev address)");
+        	if (vtx[0].vout[1].nValue != nDevFee)
+            	return error("ConnectBlock() : PoS coinbase does not pay enough to dev addresss");
         }
     }
 
