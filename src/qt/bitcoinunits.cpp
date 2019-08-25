@@ -41,9 +41,9 @@ QString BitcoinUnits::name(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("IC");
-    case mBTC: return QString("mIC");
-    case uBTC: return QString::fromUtf8("μIC");
+    case BTC: return QString("MON");
+    case mBTC: return QString("mMON");
+    case uBTC: return QString::fromUtf8("μMON");
     default: return QString("???");
     }
 }
@@ -74,9 +74,9 @@ int BitcoinUnits::amountDigits(int unit)
 {
     switch(unit)
     {
-    case BTC: return 8; // 21,000,000 (# digits, without commas)
-    case mBTC: return 11; // 21,000,000,000
-    case uBTC: return 14; // 21,000,000,000,000
+    case BTC: return 8; //
+    case mBTC: return 11; //
+    case uBTC: return 14; // 
     default: return 0;
     }
 }

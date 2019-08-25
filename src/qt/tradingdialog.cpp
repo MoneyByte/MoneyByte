@@ -150,7 +150,7 @@ void tradingDialog::UpdaterFunction(){
 
 QString tradingDialog::GetMarketSummary(){
 
-     QString Response = sendRequest("https://bittrex.com/api/v1.1/public/GetMarketSummary?market=btc-IC");
+     QString Response = sendRequest("https://bittrex.com/api/v1.1/public/GetMarketSummary?market=btc-MON");
      return Response;
 }
 
@@ -228,7 +228,7 @@ QString tradingDialog::Withdraw(double Amount, QString Address, QString Coin){
 QString tradingDialog::GetOpenOrders(){
     QString URL = "https://bittrex.com/api/v1.1/market/getopenorders?apikey=";
             URL += this->ApiKey;
-            URL += "&nonce=12345434&market=BTC-IC";
+            URL += "&nonce=12345434&market=BTC-MON";
 
     QString Response = sendRequest(URL);
     return Response;
@@ -249,7 +249,7 @@ QString tradingDialog::GetDepositAddress(){
 
     QString URL = "https://bittrex.com/api/v1.1/account/getdepositaddress?apikey=";
             URL += this->ApiKey;
-            URL += "&nonce=12345434&currency=IC";
+            URL += "&nonce=12345434&currency=MON";
 
     QString Response = sendRequest(URL);
     return Response;
@@ -562,7 +562,7 @@ void tradingDialog::ActionsOnSwitch(int index = -1){
                 case 0:    //buy tab is active
 
                     Response = GetBalance("BTC");
-                    Response2 = GetBalance("IC");
+                    Response2 = GetBalance("MON");
                     Response3 = GetOrderBook();
 
                     if((Response.size() > 0 && Response != "Error") && (Response2.size() > 0 && Response2 != "Error")){
@@ -575,7 +575,7 @@ void tradingDialog::ActionsOnSwitch(int index = -1){
                 break;
 
                 case 1: //Cross send tab active
-                    Response = GetBalance("IC");
+                    Response = GetBalance("MON");
                     Response2 = GetBalance("BTC");
                     if((Response.size() > 0 && Response != "Error") && (Response2.size() > 0 && Response2 != "Error")){
                         DisplayBalance(*ui->BittrexHMLabel, *ui->BittrexBTCLabel, Response, Response2);
@@ -611,9 +611,9 @@ void tradingDialog::ActionsOnSwitch(int index = -1){
                         DisplayBalance(*ui->BitcoinBalanceLabel,*ui->BitcoinAvailableLabel,*ui->BitcoinPendingLabel, QString::fromUtf8("BTC"),Response);
                     }
 
-                    Response = GetBalance("IC");
+                    Response = GetBalance("MON");
                     if(Response.size() > 0 && Response != "Error"){
-                        DisplayBalance(*ui->HMBalanceLabel,*ui->HMAvailableLabel_2,*ui->HMPendingLabel, QString::fromUtf8("IC"),Response);
+                        DisplayBalance(*ui->HMBalanceLabel,*ui->HMAvailableLabel_2,*ui->HMPendingLabel, QString::fromUtf8("MON"),Response);
                     }
                 break;
 
@@ -714,7 +714,7 @@ void tradingDialog::CalculateSellCostLabel(){
 void tradingDialog::CalculateCSReceiveLabel(){
 
     //calculate amount of currency than can be transferred to bitcoin
-    QString balance = GetBalance("IC");
+    QString balance = GetBalance("MON");
     QString buyorders = GetOrderBook();
 
     QJsonObject BuyObject = GetResultObjectFromJSONObject(buyorders);
@@ -915,7 +915,7 @@ void tradingDialog::on_GenDepositBTN_clicked()
 void tradingDialog::on_Sell_Max_Amount_clicked()
 {
     //calculate amount of BTC that can be gained from selling IC available balance
-    QString responseA = GetBalance("IC");
+    QString responseA = GetBalance("MON");
     QString str;
     QJsonObject ResultObject =  GetResultObjectFromJSONObject(responseA);
 
@@ -993,7 +993,7 @@ void tradingDialog::on_CS_Max_Amount_clicked()
 void tradingDialog::on_Withdraw_Max_Amount_clicked()
 {
     //calculate amount of currency than can be brought with the BTC balance available
-    QString responseA = GetBalance("IC");
+    QString responseA = GetBalance("MON");
     QString str;
 
     QJsonObject ResultObject =  GetResultObjectFromJSONObject(responseA);
@@ -1285,7 +1285,7 @@ void tradingDialog::on_WithdrawUnitsBtn_clicked()
 {
     double Quantity = ui->WithdrawUnitsInput->text().toDouble();
     QString Qstr;
-    QString Coin = "IC";
+    QString Coin = "MON";
     QString Msg = "Are you sure you want to Withdraw ";
             Msg += Qstr.number((Quantity - 0.02),'i',8);
             Msg += " IC to ";
