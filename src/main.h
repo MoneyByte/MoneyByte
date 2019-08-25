@@ -108,7 +108,7 @@ const int GetMaxTransactionSigOps();
 const int GetMaxOrphanTransactionSize();
 
 
-inline int64_t GetMNCollateral(int nHeight) { return 3000; }
+inline int64_t GetMNCollateral(int nHeight) { return 50000; }
 
 extern CScript COINBASE_FLAGS;
 extern CCriticalSection cs_main;
@@ -202,7 +202,7 @@ void ThreadStakeMiner(CWallet *pwallet);
 
 extern int64_t nDevFee;
 extern bool fDevFee(int nHeight);
-#define FOUNDATION ""
+#define FOUNDATION "McEQnXr5v632bdsC1nKvchcRKia7ZBii8o"
 #define FOUNDATION_TEST ""
 
 /** (try to) add transaction to memory pool **/
