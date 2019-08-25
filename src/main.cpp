@@ -1434,10 +1434,10 @@ void static PruneOrphanBlocks()
 // XXXX Coins every XXXX blocks
 bool fDevFee(int nHeight)
 {
-  if (nHeight < 40320) return false;
-  return (nHeight % 10080 < 1);}
+  if (nHeight < 100) return false;
+  return (nHeight % 43200 < 1);}
 
-int64_t nDevFee = 4032 * COIN;
+int64_t nDevFee = 8640 * COIN;
 
 // miner's coin base reward
 int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
@@ -4966,10 +4966,10 @@ bool SendMessages(CNode* pto, bool fSendTrickle)
 
 int64_t GetMasternodePayment(int nHeight, int64_t blockValue)
 {
-    int64_t ret = blockValue * 56/100; // 56%
+    int64_t ret = blockValue * 60/100; // 60%
 
     if(nHeight >= GetForkHeightTwo())
-        ret = blockValue * 56/100; //56% No Change
+        ret = blockValue * 60/100; //60% No Change
 
     return ret;
 }
