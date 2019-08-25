@@ -57,13 +57,13 @@ public:
 		// The message start string is designed to be unlikely to occur in normal data.
 		// The characters are rarely used upper ASCII, not valid as UTF-8, and produce
 		// a large 4-byte int at any alignment.
-		pchMessageStart[0] = 0x5f;
-		pchMessageStart[1] = 0x79;
-		pchMessageStart[2] = 0x64;
-		pchMessageStart[3] = 0xc9;
+		pchMessageStart[0] = 0x21;
+		pchMessageStart[1] = 0xf2;
+		pchMessageStart[2] = 0x32;
+		pchMessageStart[3] = 0xa5;
 		vAlertPubKey = ParseHex("047d56dfe4da604d86552a456c8e40b8a56f979e73508851521d043b279301f32139ccc9f1475f3fc661b97138f0b49f65eff4deb025b23862075fadcd3538cc39");
-		nDefaultPort = 44144;
-		nRPCPort = 44155;
+		nDefaultPort = 7777;
+		nRPCPort = 7778;
 		bnProofOfWorkLimit = CBigNum(~uint256(0) >> 16);
 		/* The initial difficulty after switching to NeoScrypt (0.0625) */
 		bnNeoScryptFirstTarget = CBigNum(~uint256(0) >> 28);
@@ -71,7 +71,7 @@ public:
 		// Build the genesis block. Note that the output of the genesis coinbase cannot
 		// be spent as it did not originally exist in the database.
 
-		const char* pszTimestamp = "Here 18 Dec 2017 we start the Ignition";
+		const char* pszTimestamp = "Here 25 Aug 2019 we start the MoneyByte";
 		std::vector<CTxIn> vin;
 		vin.resize(1);
 		vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));

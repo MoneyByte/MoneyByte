@@ -11,8 +11,8 @@ Maturity: 15 Blocks
 Stake Minimum Age: 30 Minutes
 
 Default Main-Net Network Ports:
-Port: 44144
-RPC Port: 44155
+Port: 7777
+RPC Port: 7778
 
 Website: https://MoneyByteCoin.org
 

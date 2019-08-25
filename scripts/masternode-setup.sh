@@ -10,8 +10,8 @@ COIN_REPO='https://github.com/moneybytecoin/moneybytecoin.git'
 #COIN_TGZ='http://www.mastermasternode.com/moneybytecoin/XXX.zip'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='MoneyByte'
-COIN_PORT=44144
-RPC_PORT=44155
+COIN_PORT=7777
+RPC_PORT=7778
 
 NODEIP=$(curl -s4 icanhazip.com)
 

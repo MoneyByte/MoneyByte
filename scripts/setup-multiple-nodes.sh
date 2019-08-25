@@ -2,8 +2,8 @@
 if [ ! -d "./node1" ]; then
   for i in {1..7}
     do
-      rpcportoffset=$((44155+$i))
-      portoffset=$((44144+$i))
+      rpcportoffset=$((7778+$i))
+      portoffset=$((7777+$i))
       #connectOffset=$((33133+$i))
       mkdir "node$i"
       printf "rpcuser=rpc\nrpcpassword=12410516051fd5fsd4rsd3\nrpcallowip=127.0.0.1\nmaxconnections=125\nport=$portoffset\nrpcport=$rpcportoffset\ndaemon=1\nserver=1\nlisten=1\n" >> "node$i"/MoneyByte.conf
@@ -16,8 +16,8 @@ else
   rm -r node1 && rm -r node2 && rm -r node3 && rm -r node4 && rm -r node5 && rm -r node6 && rm -r node7
   for i in {1..7}
     do
-      rpcportoffset=$((44155+$i))
-      portoffset=$((44144+$i))
+      rpcportoffset=$((7778+$i))
+      portoffset=$((7777+$i))
       #connectOffset=$((33133+$i))
       mkdir "node$i"
       printf "rpcuser=ICrpc\nrpcpassword=12410516051fd5fsd4rsd3\nrpcallowip=127.0.0.1\nmaxconnections=125\ndaemon=1\nserver=1\nlisten=1\n" >> "node$i"/MoneyByte.conf
