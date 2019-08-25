@@ -1518,6 +1518,8 @@ int64_t GetProofOfStakeReward(int nHeight, int64_t nCoinAge, int64_t nFees)
     {
       nSubsidy = 2.5 * COIN;
     }
+    return nSubsidy + nFees;
+  }
 
 /* Locate a block meeting the range and type specified down the block index;
  * for example, PoW distance 1 means nRange set to 1 and fProofOfStake set to 0,
