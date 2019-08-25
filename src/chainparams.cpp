@@ -102,11 +102,11 @@ public:
 		base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x88)(0x06)(0x2D).convert_to_container<std::vector<unsigned char> >();
 		base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
 
-		vSeeds.push_back(CDNSSeedData("", ""));
-//		vSeeds.push_back(CDNSSeedData("", ""));
-//		vSeeds.push_back(CDNSSeedData("", ""));
-//		vSeeds.push_back(CDNSSeedData("", ""));
-//		vSeeds.push_back(CDNSSeedData("", ""));
+		vSeeds.push_back(CDNSSeedData("46.101.203.85", "46.101.203.85"));
+		vSeeds.push_back(CDNSSeedData("46.101.205.47", "46.101.205.47"));
+		vSeeds.push_back(CDNSSeedData("207.154.225.242", "207.154.225.242"));
+		vSeeds.push_back(CDNSSeedData("207.154.229.185", "207.154.229.185"));
+		vSeeds.push_back(CDNSSeedData("139.59.208.102", "139.59.208.102"));
 //		vSeeds.push_back(CDNSSeedData("", ""));
 
 		convertSeeds(vFixedSeeds, pnSeed, ARRAYLEN(pnSeed), nDefaultPort);
@@ -116,7 +116,7 @@ public:
 		//strMasternodePaymentsPubKey = "046f78dcf911fbd61910136f7f0f8d90578f68d0b3ac973b5040fb7afb501b5939f39b108b0569dca71488f5bbf498d92e4d1194f6f941307ffd95f75e76869f0e";
 		strDarksendPoolDummyAddress = "i7FBJNGDmEsU5wx2m3xw85N8kRgCqA8S7L";
 		nLastPOWBlock = nForkTwo + 200;
-		nPOSStartBlock = 25;
+		nPOSStartBlock = 100;
 	}
 
 
