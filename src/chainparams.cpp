@@ -85,9 +85,9 @@ public:
 		genesis.nVersion = 1;
 		genesis.nTime = 1513634048; //
 		genesis.nBits = 520159231;
-		genesis.nNonce = 0;
+		genesis.nNonce = 240486;
 
- if (true && genesis.GetHash() != hashGenesisBlock)
+ /* if (true && genesis.GetHash() != hashGenesisBlock)
                 {
                     printf("Searching for genesis block...\n");
                     uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
@@ -115,12 +115,12 @@ public:
                     printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
                     printf("genesis.hashMerkleRoot = %s \n", genesis.hashMerkleRoot.ToString().c_str());
 
-                }
+                } */
 
 		hashGenesisBlock = genesis.GetHash();
 
-		assert(genesis.hashMerkleRoot == uint256("0x2d960352c0162362a744b23a639a657fc8050ffba450f49a634166d7e4790b58"));
-		assert(hashGenesisBlock == uint256("0x000088660811c8469e191c629657e36b6d339b9b76ce494cd9f957d59552bb3c"));
+		assert(genesis.hashMerkleRoot == uint256("0xfc33355fd2dad66c6b6abace6d8066bdee354888b548f3f35f34b80cb083ef86"));
+		assert(hashGenesisBlock == uint256("0x0000e160a904c615256490439791ecbb6fe8aa575cb749334753840943be5aed"));
 
 
 		base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 51); // M

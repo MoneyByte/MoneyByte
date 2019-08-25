@@ -26,7 +26,7 @@ namespace Checkpoints
     // + Contains no strange transactions
     //
     static MapCheckpoints mapCheckpoints = boost::assign::map_list_of
-            (0, uint256("0x000088660811c8469e191c629657e36b6d339b9b76ce494cd9f957d59552bb3c"))
+            (0, uint256("0x0000e160a904c615256490439791ecbb6fe8aa575cb749334753840943be5aed"))
     ;
 
     // TestNet has no checkpoints
