@@ -2202,8 +2202,11 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
 
     if (IsProofOfWork())
     {
-        int64_t nReward = GetProofOfWorkReward(pindex->nHeight, nFees);
+        int64_t nReward = GetProofOfWorkReward(nFees);
         // Check coinbase reward
+        int64_t nHeight = pindex->nHeight;
+        if (fDevFee(nHeight))
+        {
         nReward += nDevFee;
         if (vtx[0].GetValueOut() > nReward)
             return DoS(50, error("ConnectBlock() : coinbase reward exceeded (actual=%d vs calculated=%d)", vtx[0].GetValueOut(), nReward));
@@ -2214,7 +2217,11 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
               return error("ConnectBlock() : PoW coinbase does not pay to the Developer address)");
             if (vtx[0].vout[1].nValue != nDevFee)
               return error("ConnectBlock() : PoW coinbase does not pay to correct amount to Developer address");
+      } else {
+        if (vtx[0].GetValueOut() > nReward)
+            return DoS(50, error("ConnectBlock() : PoW coinbase reward exceeded (actual=%d vs calculated=%d)", vtx[0].GetValueOut(), nReward));
       }
+    }
 
     if (IsProofOfStake())
     {
