@@ -1430,14 +1430,14 @@ void static PruneOrphanBlocks()
 }
 
 
-//Developer Fee based on 5% PoW block paid weekly
+//Developer Fee based on % PoW block paid weekly
 // XXXX Coins every XXXX blocks
 bool fDevFee(int nHeight)
 {
-  if (nHeight < 100) return false;
-  return (nHeight % 43200 < 1);}
+  if (nHeight < 10) return false;
+  return (nHeight % 10 < 1);}
 
-int64_t nDevFee = 8640 * COIN;
+int64_t nDevFee = 1 * COIN;
 
 // miner's coin base reward
 int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
@@ -2240,6 +2240,20 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
         if (nStakeReward > nCalculatedStakeReward)
             return DoS(100, error("ConnectBlock() : coinstake pays too much(actual=%d vs calculated=%d)", nStakeReward, nCalculatedStakeReward));
 
+        int64_t nHeight = pindex->nHeight;
+    		if (fDevFee(nHeight))
+      		{
+      	if (vtx[0].GetValueOut() > nDevFee)
+        	return DoS(50, error("ConnectBlock() : coinbase pays too much (actual=%d vs calculated=%d)", vtx[0].GetValueOut(), nDevFee));
+        CBitcoinAddress address(!TestNet() ? FOUNDATION : FOUNDATION_TEST);
+      	CScript scriptPubKey;
+        		    scriptPubKey.SetDestination(address.Get());
+       if (vtx[0].vout[1].scriptPubKey != scriptPubKey)
+          return error("ConnectBlock() : coinbase does not pay to the dev address)");
+       if (vtx[0].vout[1].nValue != nDevFee)
+          return error("ConnectBlock() : PoS coinbase does not pay enough to dev addresss");
+          }
+
         if (pindex->nHeight >= GetForkHeightOne())
         {
             int64_t masternodePaymentShouldMax = GetMasternodePayment(pindex->nHeight, nCalculatedStakeReward);
@@ -2383,19 +2397,6 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
                 }
                 return DoS(100, error("ConnectBlock() : Couldn't find masternode payment or payee"));
             }
-        }
-    int64_t nHeight = pindex->nHeight;
-		if (fDevFee(nHeight))
-		{
-			if (vtx[0].GetValueOut() > nDevFee)
-            	return DoS(50, error("ConnectBlock() : coinbase pays too much (actual=%d vs calculated=%d)", vtx[0].GetValueOut(), nDevFee));
-            CBitcoinAddress address(!TestNet() ? FOUNDATION : FOUNDATION_TEST);
-        	CScript scriptPubKey;
-		    scriptPubKey.SetDestination(address.Get());
-        	if (vtx[0].vout[1].scriptPubKey != scriptPubKey)
-            	return error("ConnectBlock() : coinbase does not pay to the dev address)");
-        	if (vtx[0].vout[1].nValue != nDevFee)
-            	return error("ConnectBlock() : PoS coinbase does not pay enough to dev addresss");
         }
     }
 
