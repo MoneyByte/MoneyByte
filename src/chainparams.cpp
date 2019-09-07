@@ -1,5 +1,7 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
+// Copyright (c) 2018-2019 The Ignitioncoin Developers
+// Copyright (c) 2019 The MoneyByte Developer - CircuitBreaker
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -71,7 +73,7 @@ public:
 		// Build the genesis block. Note that the output of the genesis coinbase cannot
 		// be spent as it did not originally exist in the database.
 
-		const char* pszTimestamp = "Here 25 Aug 2019 we start the MoneyByte";
+		const char* pszTimestamp = "Here 25 Aug 2019 we start the MoneyByte"; // On **Date & Epoch** The MoneyByte Chain Officially starts!
 		std::vector<CTxIn> vin;
 		vin.resize(1);
 		vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -83,39 +85,9 @@ public:
 		genesis.hashPrevBlock = 0;
 		genesis.hashMerkleRoot = genesis.BuildMerkleTree();
 		genesis.nVersion = 1;
-		genesis.nTime = 1513634048; //
+		genesis.nTime = 1513634048;
 		genesis.nBits = 520159231;
 		genesis.nNonce = 240486;
-
- /* if (true && genesis.GetHash() != hashGenesisBlock)
-                {
-                    printf("Searching for genesis block...\n");
-                    uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
-                    uint256 thash;
-
-                    while (true)
-                    {
-                        thash = genesis.GetHash();
-                        if (thash <= hashTarget)
-                            break;
-                        if ((genesis.nNonce & 0xFFF) == 0)
-                        {
-                            printf("nonce %08X: hash = %s (target = %s)\n", genesis.nNonce, thash.ToString().c_str(), hashTarget.ToString().c_str());
-                        }
-                        ++genesis.nNonce;
-                        if (genesis.nNonce == 0)
-                        {
-                            printf("NONCE WRAPPED, incrementing time\n");
-                            ++genesis.nTime;
-                        }
-                    }
-                    printf("genesis.nTime = %u \n", genesis.nTime);
-                    printf("genesis.nNonce = %u \n", genesis.nNonce);
-                    printf("genesis.nVersion = %u \n", genesis.nVersion);
-                    printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-                    printf("genesis.hashMerkleRoot = %s \n", genesis.hashMerkleRoot.ToString().c_str());
-
-                } */
 
 		hashGenesisBlock = genesis.GetHash();
 
@@ -135,15 +107,13 @@ public:
 		vSeeds.push_back(CDNSSeedData("207.154.225.242", "207.154.225.242"));
 		vSeeds.push_back(CDNSSeedData("207.154.229.185", "207.154.229.185"));
 		vSeeds.push_back(CDNSSeedData("139.59.208.102", "139.59.208.102"));
-//		vSeeds.push_back(CDNSSeedData("", ""));
+	//vSeeds.push_back(CDNSSeedData("", ""));
 
 		convertSeeds(vFixedSeeds, pnSeed, ARRAYLEN(pnSeed), nDefaultPort);
 
 		nPoolMaxTransactions = 3;
-		//strSporkKey = "046f78dcf911fbd61910136f7f0f8d90578f68d0b3ac973b5040fb7afb501b5939f39b108b0569dca71488f5bbf498d92e4d1194f6f941307ffd95f75e76869f0e";
-		//strMasternodePaymentsPubKey = "046f78dcf911fbd61910136f7f0f8d90578f68d0b3ac973b5040fb7afb501b5939f39b108b0569dca71488f5bbf498d92e4d1194f6f941307ffd95f75e76869f0e";
-		strDarksendPoolDummyAddress = "i7FBJNGDmEsU5wx2m3xw85N8kRgCqA8S7L";
-		nLastPOWBlock = 50000;
+		strDarksendPoolDummyAddress = "McUca9iVZ5eo8Ha79FfWz1ub5i36tJ2Gz7";
+		nLastPOWBlock = 6000;
 		nPOSStartBlock = 100;
 	}
 
