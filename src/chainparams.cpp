@@ -73,7 +73,7 @@ public:
 		// Build the genesis block. Note that the output of the genesis coinbase cannot
 		// be spent as it did not originally exist in the database.
 
-		const char* pszTimestamp = "Here 25 Aug 2019 we start the MoneyByte"; // On **Date & Epoch** The MoneyByte Chain Officially starts!
+		const char* pszTimestamp = "Here 25 Aug 2019 we start the MoneyByte Chain"; // On **Date & Epoch** The MoneyByte Chain Officially starts!
 		std::vector<CTxIn> vin;
 		vin.resize(1);
 		vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -87,12 +87,12 @@ public:
 		genesis.nVersion = 1;
 		genesis.nTime = 1513634048;
 		genesis.nBits = 520159231;
-		genesis.nNonce = 240486;
+		genesis.nNonce = 3520;
 
 		hashGenesisBlock = genesis.GetHash();
 
-		assert(genesis.hashMerkleRoot == uint256("0xfc33355fd2dad66c6b6abace6d8066bdee354888b548f3f35f34b80cb083ef86"));
-		assert(hashGenesisBlock == uint256("0x0000e160a904c615256490439791ecbb6fe8aa575cb749334753840943be5aed"));
+		assert(genesis.hashMerkleRoot == uint256("0x5b31fa3ba47882b3236d478364e23da894bd114819c922d59430c0b32168f038"));
+		assert(hashGenesisBlock == uint256("0x00006ee1fbbf719d74c4fdf0d885291fafecfb2d1fc7bcd091669f2e0c8dfe84"));
 
 
 		base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 51); // M
