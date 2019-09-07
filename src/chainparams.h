@@ -73,8 +73,7 @@ public:
     int POSStartBlock() const { return nPOSStartBlock; }
     int PoolMaxTransactions() const { return nPoolMaxTransactions; }
     std::string DarksendPoolDummyAddress() const { return strDarksendPoolDummyAddress; }
-    //std::string SporkKey() const { return strSporkKey; }
-    //std::string MasternodePaymentPubKey() const { return strMasternodePaymentsPubKey; }
+
 protected:
     CChainParams() {};
 
@@ -94,8 +93,7 @@ protected:
     int nPOSStartBlock;
     int nPoolMaxTransactions;
     std::string strDarksendPoolDummyAddress;
-    //std::string strSporkKey;
-    //std::string strMasternodePaymentsPubKey;
+
 };
 
 /**
