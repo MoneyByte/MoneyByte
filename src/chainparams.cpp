@@ -114,7 +114,7 @@ public:
 		nPoolMaxTransactions = 3;
 		strDarksendPoolDummyAddress = "McUca9iVZ5eo8Ha79FfWz1ub5i36tJ2Gz7";
 		nLastPOWBlock = nForkTwo + 200;
-		nPOSStartBlock = 100;
+		nPOSStartBlock = 1;
 	}
 
 

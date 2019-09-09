@@ -1,4 +1,5 @@
 MoneyByte 1.0.0 Release
+Copyright (c) 2017-2019 Ignitioncoin Developers
 Copyright (c) 2019 MoneyByte Developers
 *Note* Other Developers were likely here and lost in doc updates
 Copyright (c) 2013 NovaCoin Developers

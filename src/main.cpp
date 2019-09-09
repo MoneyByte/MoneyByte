@@ -1,5 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
+//Copyright (c) 2017-2019 Ignitioncoin Developers
+//Copyright (c) 2019 MoneyByte Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -48,10 +50,10 @@ set<pair<COutPoint, unsigned int> > setStakeSeen;
 
 CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 
-unsigned int nStakeMinAge = 10 * 60; // 8 hours
+unsigned int nStakeMinAge = 5 * 60; // 8 hours
 unsigned int nModifierInterval = 8 * 60; // time to elapse before new modifier is computed
 
-int nCoinbaseMaturity = 15;
+int nCoinbaseMaturity = 1;
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 
