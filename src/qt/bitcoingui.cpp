@@ -652,9 +652,6 @@ void BitcoinGUI::createTrayIcon()
     trayIconMenu->addAction(openRPCConsoleAction);
     trayIconMenu->addAction(showBackupsAction);
 #ifndef Q_OS_MAC // This is built-in on Mac
-cd src
-
-make -f makefile.unix
 
     trayIconMenu->addSeparator();
     trayIconMenu->addAction(quitAction);
