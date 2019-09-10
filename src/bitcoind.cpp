@@ -34,7 +34,6 @@ bool AppInit(int argc, char* argv[])
     boost::thread_group threadGroup;
 
     bool fRet = false;
-    fHaveGUI = false;
     try
     {
         //

@@ -125,9 +125,11 @@ void DebugMessageHandler(QtMsgType type, const QMessageLogContext& context, cons
 #ifndef BITCOIN_QT_TEST
 int main(int argc, char *argv[])
 {
-	fHaveGUI = true;
     // Command-line options take precedence:
     ParseParameters(argc, argv);
+
+    // User language is set up: pick a data directory
+    Intro::pickDataDirectory();
 
 #if QT_VERSION < 0x050000
     // Internal string conversion is all UTF-8
@@ -155,6 +157,9 @@ int main(int argc, char *argv[])
 
     // Command-line options take precedence:
     ParseParameters(argc, argv);
+
+    // User language is set up: pick a data directory
+    Intro::pickDataDirectory();
 
     // ... then bitcoin.conf:
     if (!boost::filesystem::is_directory(GetDataDir(false)))
