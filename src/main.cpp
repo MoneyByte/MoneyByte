@@ -50,10 +50,10 @@ set<pair<COutPoint, unsigned int> > setStakeSeen;
 
 CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 
-unsigned int nStakeMinAge = 5 * 60; // 8 hours
+unsigned int nStakeMinAge = 8 * 60 * 60; // 8 hours
 unsigned int nModifierInterval = 8 * 60; // time to elapse before new modifier is computed
 
-int nCoinbaseMaturity = 1;
+int nCoinbaseMaturity = 75;
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 
@@ -1436,10 +1436,10 @@ void static PruneOrphanBlocks()
 // XXXX Coins every XXXX blocks
 bool fDevFee(int nHeight)
 {
-  if (nHeight < 10) return false;
-  return (nHeight % 10 < 1);}
+  if (nHeight < 2) return false;
+  return (nHeight % 43800 < 1);}
 
-int64_t nDevFee = 1 * COIN;
+int64_t nDevFee = 8760 * COIN;
 
 // miner's coin base reward
 int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
