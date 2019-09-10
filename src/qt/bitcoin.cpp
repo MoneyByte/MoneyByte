@@ -11,6 +11,7 @@
 #include "messagemodel.h"
 #include "guiutil.h"
 #include "guiconstants.h"
+#include "intro.h"
 #include "init.h"
 #include "util.h"
 #include "wallet.h"

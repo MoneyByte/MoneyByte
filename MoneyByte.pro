@@ -189,6 +189,7 @@ macx:QMAKE_CXXFLAGS_WARN_ON += -Wno-deprecated-declarations
 # Input
 DEPENDPATH += src src/json src/qt
 HEADERS += src/qt/bitcoingui.h \
+    src/qt/intro.h \
     src/qt/transactiontablemodel.h \
     src/qt/addresstablemodel.h \
     src/qt/bantablemodel.h \
@@ -320,6 +321,7 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/darksendpage.h
 
 SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
+    src/qt/intro.cpp \
     src/qt/transactiontablemodel.cpp \
     src/qt/addresstablemodel.cpp \
     src/qt/bantablemodel.cpp \
