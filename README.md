@@ -6,7 +6,7 @@ The block production is 2.3 MON each block, divided into 30% PoS and 70% MN
 
 Block Spacing: 60 Seconds
 
-Maturity: 15 Blocks
+Maturity: 75 Blocks
 
 Stake Minimum Age: 480 Minutes
 
