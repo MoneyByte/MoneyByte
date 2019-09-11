@@ -1,36 +1,29 @@
-MoneyByte Release Tree [![GitHub version](https://img.shields.io/badge/Version-1.2.0.0-brightgreen.svg)](https://github.com/moneybytecoin/moneybytecoin)
+MoneyByte Release Tree [![GitHub version](https://img.shields.io/badge/Version-1.2.0.0-brightgreen.svg)](https://github.com/moneybyte/moneybyte)
 
-MoneyByte is a PoW (NeoScrypt) / PoS / Master Node hybrid cryptocurrency, with a 5 million coin maximum supply, which is generated at a slower rate every 1 Million MON, until it's limit is reached. Master Node cost 50,000 MON, block size is 20MB, and block time is ~2Minutes.
+MoneyByte is a Proof of Stake + Master Node hybrid cryptocurrency, with a 32.2 million coin maximum supply. Master Node cost 50,000 MON, block size is 20MB, and block time is ~60 seconds.
 
-The block production is 50% PoW and 50% PoS, of which each PoS block is split between Masternode and Staker evenly.
+The block production is 2.3 MON each block, divided into 30% PoS and 70% MN
 
-Block Spacing: 120 Seconds
+Block Spacing: 60 Seconds
 
 Maturity: 15 Blocks
 
-Stake Minimum Age: 30 Minutes
+Stake Minimum Age: 480 Minutes
 
 Default Main-Net Network Ports:
 Port: 7777
 RPC Port: 7778
 
-Website: https://MoneyByteCoin.org
+Website: https://moneybyte.org/
 
-LiveNet Explorer: http://explorer.moneybytecoin.org/  -- https://blockchain.moneybytecoin.org
+LiveNet Explorer: https://explorer.moneybytecorg/
 
-Alternative (3rd party explorer): Chainz -- https://chainz.cryptoid.info/ic/
+BitcoinTalk Announcement: https://bitcointalk.org/index.php?topic=5183735.0
 
-BitcoinTalk Announcement: https://bitcointalk.org/index.php?topic=2612608.0
+White Paper: https://www.moneybyte.org/about/whitepaper/
 
-White Paper: https://moneybytecoin.org/wp-content/uploads/2018/01/MoneyByte-Coin-White-Paper.pdf
+CoinGecko: https://www.coingecko.com/en/coins/moneybyte
 
-CoinMarketCap: https://coinmarketcap.com/currencies/moneybyte/
+Exchanges MON is available on (as of 1/10/2019): GravieX, TradeCX, ihostmn.com, Nortexchange, SouthXchange
 
-Exchanges MON is available on (as of 5/30/2018): CoinExchange, CryptoBridge, NovaExchange, BTCPOP, BiteBTC, SatoWallet Exchange, Wadax and CryptalDash Exchange
-
-For compiling on different architectures, see the docs/build-*os* documents. Otherwise, view releases page for windows qt-wallets.
-
-****
-IC is dependent upon libsecp256k1 by sipa, the sources for which can be found here:
-https://github.com/bitcoin/secp256k1
-****
+For compiling on different architectures, see the docs/build-os documents. Otherwise, view releases page for windows qt-wallets.
