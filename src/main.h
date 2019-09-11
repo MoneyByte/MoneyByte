@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
-// Copyright (c) 2019 The MoneyByte Developers 
+// Copyright (c) 2019 The MoneyByte Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #ifndef BITCOIN_MAIN_H
@@ -203,7 +203,7 @@ void ThreadStakeMiner(CWallet *pwallet);
 
 extern int64_t nDevFee;
 extern bool fDevFee(int nHeight);
-#define FOUNDATION "McEQnXr5v632bdsC1nKvchcRKia7ZBii8o"
+#define FOUNDATION "Mm9h5uNyrEqZ5kRpCcZuQXWyXpQ5Kr3H5P"
 #define FOUNDATION_TEST ""
 
 /** (try to) add transaction to memory pool **/
