@@ -4985,7 +4985,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue)
     int64_t ret = blockValue * 60/100; // 60%
 
     if(nHeight >= GetForkHeightTwo())
-        ret = blockValue * 60/100; //60% No Change
+        ret = blockValue * 70/100; //70%
 
     return ret;
 }
