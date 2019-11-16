@@ -34,22 +34,12 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 	// Seed nodes are given a random 'last seen time' of between one and two
 	// weeks ago.
 	const int64_t nOneWeek = 7 * 24 * 60 * 60;
-	for (unsigned int k = 0; k < count; ++k)
-	{
-		struct in_addr ip;
-		unsigned int i = data[k], t;
-
-		// -- convert to big endian
-		t = (i & 0x000000ff) << 24u
-			| (i & 0x0000ff00) << 8u
-			| (i & 0x00ff0000) >> 8u
-			| (i & 0xff000000) >> 24u;
-
-		memcpy(&ip, &t, sizeof(ip));
-
-		CAddress addr(CService(ip, port));
-		addr.nTime = GetTime() - GetRand(nOneWeek) - nOneWeek;
-		vSeedsOut.push_back(addr);
+	for (unsigned int i = 0; i < count; i++) {
+			struct in6_addr ip;
+			memcpy(&ip, data[i].addr, sizeof(ip));
+			CAddress addr(CService(ip, data[i].port));
+			addr.nTime = GetTime() - GetRand(nOneWeek) - nOneWeek;
+			vSeedsOut.push_back(addr);
 	}
 }
 
