@@ -27,7 +27,7 @@ struct SeedSpec6 {
 //
 
 // Convert the pnSeeds6 array into usable address objects.
-static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data, unsigned int count)
+static void convertSeed(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data, unsigned int count)
 {
 	// It'll only connect to one or two seed nodes because once it connects,
 	// it'll get a pile of addresses with newer timestamps.
@@ -99,7 +99,7 @@ public:
 		vSeeds.push_back(CDNSSeedData("139.59.208.102", "139.59.208.102"));
 	//vSeeds.push_back(CDNSSeedData("", ""));
 
-		convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
+		convertSeed(vFixedSeeds, pnSeed_main, ARRAYLEN(pnSeed_main));
 
 		nPoolMaxTransactions = 3;
 		strDarksendPoolDummyAddress = "McUca9iVZ5eo8Ha79FfWz1ub5i36tJ2Gz7";
@@ -158,7 +158,7 @@ public:
 		base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
 		base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
 
-		convertSeed6(vFixedSeeds, pnSeed6_test, ARRAYLEN(pnSeed6_test));
+		convertSeed(vFixedSeeds, pnSeed_test, ARRAYLEN(pnSeed_test));
 
 		nLastPOWBlock = nTestnetForkTwo + 20;
 	}
