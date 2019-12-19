@@ -1,4 +1,4 @@
-MoneyByte Release Tree [![GitHub version](https://img.shields.io/badge/Version-1.3.0.0-brightgreen.svg)](https://github.com/moneybyte/moneybyte)
+# MoneyByte Release Tree [![GitHub version](https://img.shields.io/badge/Version-1.3.0.0-brightgreen.svg)](https://github.com/moneybyte/moneybyte)
 
 MoneyByte is a Proof of Stake + Master Node hybrid cryptocurrency, with a 32.2 million coin maximum supply. Master Node cost 50,000 MON, block size is 20MB, and block time is ~60 seconds.
 
@@ -13,6 +13,8 @@ Stake Minimum Age: 480 Minutes
 Default Main-Net Network Ports:
 Port: 7777
 RPC Port: 7778
+
+# Social Links:
 
 Website: https://moneybyte.org/
 
