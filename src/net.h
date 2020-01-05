@@ -42,10 +42,10 @@ namespace boost {
 /** Time between pings automatically sent out for latency probing and keepalive (in seconds). */
 static const int PING_INTERVAL = 1 * 60;
 /** Time after which to disconnect, after waiting for a ping response (or inactivity). */
-static const int TIMEOUT_INTERVAL = 20 * 60;
-/** Time between cycles to check for idle nodes, force disconnect (seconds) **/ 
+static const int TIMEOUT_INTERVAL = 5 * 60;
+/** Time between cycles to check for idle nodes, force disconnect (seconds) **/
 static const int IDLE_TIMEOUT = 4 * 60;
-/** Time between cycles to check for idle nodes, force disconnect (seconds) **/ 
+/** Time between cycles to check for idle nodes, force disconnect (seconds) **/
 static const int DATA_TIMEOUT = 3 * 60;
 /** Maximum length of strSubVer in `version` message */
 static const unsigned int MAX_SUBVERSION_LENGTH = 256;
@@ -251,7 +251,7 @@ public:
         SetNull();
         nCreateTime = nCreateTimeIn;
     }
-  
+
     IMPLEMENT_SERIALIZE
     (
         READWRITE(this->nVersion);
@@ -281,7 +281,7 @@ public:
         }
     }
 };
-  
+
 typedef std::map<CSubNet, CBanEntry> banmap_t;
 
 class SecMsgNode
@@ -296,9 +296,9 @@ public:
         nPeerId         = 0;
         fEnabled        = false;
     };
-    
+
     ~SecMsgNode() {};
-    
+
     CCriticalSection            cs_smsg_net;
     int64_t                     lastSeen;
     int64_t                     lastMatched;
@@ -306,7 +306,7 @@ public:
     uint32_t                    nWakeCounter;
     uint32_t                    nPeerId;
     bool                        fEnabled;
-    
+
 };
 
 
@@ -489,7 +489,7 @@ public:
     unsigned int GetTotalRecvSize()
     {
         unsigned int total = 0;
-        BOOST_FOREACH(const CNetMessage &msg, vRecvMsg) 
+        BOOST_FOREACH(const CNetMessage &msg, vRecvMsg)
             total += msg.vRecv.size() + 24;
         return total;
     }
