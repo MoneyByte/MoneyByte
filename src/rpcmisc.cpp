@@ -243,7 +243,7 @@ Value verifymessage(const Array& params, bool fHelp)
 /*
     Used for updating/reading spork settings on the network
 */
-Value spork(const Array& params, bool fHelp)
+Value spork(const Array& params)
 {
     if(params.size() == 1 && params[0].get_str() == "show"){
         std::map<int, CSporkMessage>::iterator it = mapSporksActive.begin();
@@ -278,4 +278,3 @@ Value spork(const Array& params, bool fHelp)
         "<value> is a epoch datetime to enable or disable spork"
         + HelpRequiringPassphrase());
 }
-
