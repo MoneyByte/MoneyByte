@@ -1048,8 +1048,8 @@ bool AppInit2(boost::thread_group& threadGroup)
         activeMasternode.ManageStatus();
     }
 
-    if(GetBoolArg("-mnconflock", false)) {
-        LogPrintf("Locking Masternodes:\n");
+    if(GetBoolArg("-mnconflock", true) && pwalletMain) {
+        LOCK(pwalletMain->cs_wallet);
         uint256 mnTxHash;
         BOOST_FOREACH(CMasternodeConfig::CMasternodeEntry mne, masternodeConfig.getEntries()) {
             LogPrintf("  %s %s\n", mne.getTxHash(), mne.getOutputIndex());
