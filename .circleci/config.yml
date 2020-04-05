@@ -6,23 +6,23 @@ jobs:
     docker:
       # Ubuntu 16.04 base image
       - image: ubuntu:16.04
-        
-    working_directory: moneybyte/src/github.com/moneybytecoin/moneybytecoin
+
+    working_directory: moneybyte/src/github.com/MoneyByte/MoneyByteBlockchain
 
     steps:
     # Dependencies & setup
     - run:
         name: Install base dependencies
-        command: | 
+        command: |
           apt-get -y update && apt-get -y upgrade
           apt-get -y install git
-          apt-get -y install build-essential libssl-dev libdb++-dev libboost-all-dev libcrypto++-dev libqrencode-dev libminiupnpc-dev libgmp-dev libgmp3-dev autoconf autogen automake libtool 
+          apt-get -y install build-essential libssl-dev libdb++-dev libboost-all-dev libcrypto++-dev libqrencode-dev libminiupnpc-dev libgmp-dev libgmp3-dev autoconf autogen automake libtool
     - run:
         name: Install QT dependencies
         command: apt-get -y install qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools
     - run:
         name: Set up test directories
-        command: | 
+        command: |
           mkdir ~/logs
           mkdir ~/bins
           mkdir ~/logs/daemon
@@ -34,8 +34,8 @@ jobs:
     - checkout
     - run:
         name: Build daemon
-        command: | 
-          cd src  
+        command: |
+          cd src
           make -j6 -f makefile.unix USE_UPNP=1 |& tee ~/logs/daemon/daemon-make.log
     - run:
         name: Test daemon
@@ -45,7 +45,7 @@ jobs:
           ./moneybyted --datadir=/root/.MoneyByte -daemon && sleep 5s
           ./moneybyted --datadir=/root/.MoneyByte getinfo |& tee -a ~/logs/daemon/daemon-test.log
           ./moneybyted --datadir=/root/.MoneyByte stop |& tee -a ~/logs/daemon/daemon-test.log
-    
+
     - run:
         name: Build QT
         command: |
@@ -62,7 +62,7 @@ jobs:
         path: bin/moneybyted
         destination: /root/bins/ubuntu-16.04/moneybyted
 
-    - store_artifacts: 
+    - store_artifacts:
         path: ~/logs/daemon/daemon-test.log
     - store_artifacts:
         path: ~/logs/qt/qt-qmake.log
