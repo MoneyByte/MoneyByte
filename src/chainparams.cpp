@@ -99,7 +99,7 @@ public:
 		vSeeds.push_back(CDNSSeedData("139.59.208.102", "139.59.208.102"));
 	//vSeeds.push_back(CDNSSeedData("", ""));
 
-		convertSeed(vFixedSeeds, pnSeed_main, ARRAYLEN(pnSeed_main));
+		convertSeed(vFixedSeeds, pnSeed, ARRAYLEN(pnSeed));
 
 		nPoolMaxTransactions = 3;
 		strDarksendPoolDummyAddress = "McUca9iVZ5eo8Ha79FfWz1ub5i36tJ2Gz7";

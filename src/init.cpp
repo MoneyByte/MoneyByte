@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
-// Copyright (c) 2019 The MoneyByte Developers 
+// Copyright (c) 2019 The MoneyByte Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -1048,7 +1048,8 @@ bool AppInit2(boost::thread_group& threadGroup)
         activeMasternode.ManageStatus();
     }
 
-    if(GetBoolArg("-mnconflock", false)) {
+    if(GetBoolArg("-mnconflock", true) && pwalletMain) {
+        LOCK(pwalletMain->cs_wallet);
         LogPrintf("Locking Masternodes:\n");
         uint256 mnTxHash;
         BOOST_FOREACH(CMasternodeConfig::CMasternodeEntry mne, masternodeConfig.getEntries()) {
