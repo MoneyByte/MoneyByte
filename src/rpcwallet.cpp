@@ -2216,7 +2216,7 @@ Value resendtx(const Array& params, bool fHelp)
 }
 
 // ppcoin: make a public-private key pair
-Value makekeypair(const Array& params)
+Value makekeypair(const Array& params, bool fHelp)
 {
     if (params.size() > 1)
         throw runtime_error(
