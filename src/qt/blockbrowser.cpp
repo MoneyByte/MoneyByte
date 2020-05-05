@@ -52,8 +52,8 @@ const CBlockIndex* getBlockIndex(int height)
 
 std::string getBlockHash(int Height)
 {
-    if(Height > pindexBest->nHeight) { return "351c6703813172725c6d660aa539ee6a3d7a9fe784c87fae7f36582e3b797058"; }
-    if(Height < 0) { return "351c6703813172725c6d660aa539ee6a3d7a9fe784c87fae7f36582e3b797058"; }
+    if(Height > pindexBest->nHeight) { return "000015f3db3555810163ed676759c73e21be211ed3dcfda4454c29796abc2e37"; }
+    if(Height < 0) { return "000015f3db3555810163ed676759c73e21be211ed3dcfda4454c29796abc2e37"; }
     int desiredheight;
     desiredheight = Height;
     if (desiredheight < 0 || desiredheight > nBestHeight)
@@ -384,15 +384,15 @@ void BlockBrowser::updateExplorer(bool block)
     }
 
     if(block == false) {
-        // Check if the transaction exists 
+        // Check if the transaction exists
         std::string txid = ui->txBox->text().toUtf8().constData();
-        uint256 hash; 
-        hash.SetHex(txid); 
-         
-        CTransaction tx; 
-        uint256 hashBlock = 0; 
-        if (GetTransaction(hash, tx, hashBlock)) 
-        { 
+        uint256 hash;
+        hash.SetHex(txid);
+
+        CTransaction tx;
+        uint256 hashBlock = 0;
+        if (GetTransaction(hash, tx, hashBlock))
+        {
             ui->txID->show();
             ui->txLabel->show();
             ui->valueLabel->show();
