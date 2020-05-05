@@ -1,6 +1,6 @@
 TEMPLATE = app
 TARGET = MoneyByte-qt
-VERSION = 1.3.0.2
+VERSION = 1.3.0.3
 INCLUDEPATH += src src/json src/qt src/qt/plugins/mrichtexteditor
 QT += network printsupport
 DEFINES += ENABLE_WALLET
