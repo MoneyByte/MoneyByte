@@ -26,6 +26,6 @@ White Paper: https://www.moneybyte.org/about/whitepaper/
 
 CoinGecko: https://www.coingecko.com/en/coins/moneybyte
 
-Exchanges MON is available on (as of 1/10/2019): GravieX, SouthXchange, NLexch, TradeCX, UnnamedExchange, ZEON exchange, Bastion, Nortexchange, ihostmn.com
+Exchanges MON is available on (as of 21/04/2020): GravieX, SouthXchange, NLexch, TradeCX, UnnamedExchange, ZEON exchange, Bastion, Nortexchange, ihostmn.com, Asymetrex.
 
 For compiling on different architectures, see the docs/build-os documents. Otherwise, view releases page for windows qt-wallets.
