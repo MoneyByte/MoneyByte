@@ -15,10 +15,10 @@ Now, you can delete the data directory,
 `cd ~/ && rm -r ~/.MoneyByte`
 
 The folder that contained your data is now deleted. Now, you can compile MoneyByteCoin like usual,
-`mkdir ~/moneybytecoinsource && cd ~/moneybytecoinsource && git clone https://github.com/moneybytecoin/moneybytecoin && cd moneybytecoin/src && make -f makefile.unix`
+`mkdir ~/MoneyByteCoinsource && cd ~/MoneyByteBlockchainsource && git clone https://github.com/MoneyByte/MoneyByteBlockchain && cd MoneyByteBlockchain/src && make -f makefile.unix`
 
-Then, you want to copy your compiled moneybyted from ~/moneybytecoinsource/moneybytecoin/bin to /usr/local/bin, make sure you remove it if it was already there first, by doing:
-`sudo rm /usr/local/bin/moneybyted && cp ~/moneybytecoinsource/moneybytecoin/bin/moneybyted /usr/local/bin`
+Then, you want to copy your compiled moneybyted from ~/Msource/MoneyByteBlockchain/bin to /usr/local/bin, make sure you remove it if it was already there first, by doing:
+`sudo rm /usr/local/bin/moneybyted && cp ~/MoneyByteBlockchainsource/MoneyByteBlockchain/bin/moneybyted /usr/local/bin`
 
 Once it is compiled and installed, you can then restore the data directory. Run moneybyted to initialize the directory,
 `moneybyted`

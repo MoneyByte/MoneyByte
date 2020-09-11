@@ -9,7 +9,7 @@ do
 done
 
 if [ ! -e checkswap.sh ] ; then
-    wget https://raw.githubusercontent.com/moneybytecoin/moneybytecoin/master/scripts/checkswap.sh
+    wget https://raw.githubusercontent.com/MoneyByte/MoneyByteBlockchain/master/scripts/checkswap.sh
 fi
 chmod +x checkswap.sh
 ./checkswap.sh

@@ -2,7 +2,7 @@ MoneyByte-qt: Qt5 GUI for MoneyByte
 ===============================
 
 Build instructions
-=================== 
+===================
 
 Debian
 -------
@@ -61,8 +61,8 @@ Mac OS X
 - Open the .pro file in Qt Creator and build as normal (cmd-B)
 
 It is recommended to build from CLI
-::    
-    cd moneybytecoin
+::
+    cd MoneyByteBlockchain
     /usr/local/Cellar/qt/5.9.1/bin/qmake USE_UPNP=1 MoneyByte.pro
     make
 
@@ -109,8 +109,8 @@ FreeDesktop notification interface through DBUS using the following qmake option
 Generation of QR codes
 -----------------------
 
-libqrencode may be used to generate QRCode images for payment requests. 
-It can be downloaded from http://fukuchi.org/works/qrencode/index.html.en, or installed via your package manager. Pass the USE_QRCODE 
+libqrencode may be used to generate QRCode images for payment requests.
+It can be downloaded from http://fukuchi.org/works/qrencode/index.html.en, or installed via your package manager. Pass the USE_QRCODE
 flag to qmake to control this:
 
 +--------------+--------------------------------------------------------------------------+

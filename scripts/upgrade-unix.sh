@@ -18,12 +18,12 @@ readYesNo()
 
 # Options
 SOURCES_PATH_DEFAULT=$HOME
-SOURCES_PATH="$SOURCES_PATH_DEFAULT/moneybytecoin"
-BACKUP_PATH_DEFAULT=$HOME/moneybytebackup
+SOURCES_PATH="$SOURCES_PATH_DEFAULT/MoneyByteBlockchain"
+BACKUP_PATH_DEFAULT=$HOME/MoneyBytebackup
 BACKUP_PATH=$BACKUP_PATH_DEFAULT
-REPO="https://github.com/moneybytecoin/moneybytecoin"
+REPO="https://github.com/MoneyByte/MoneyByteBlockchain"
 BRANCH="master"
-SWAP_FILE="$HOME/moneybytecoin-swap"
+SWAP_FILE="$HOME/MoneyByteBlockchain-swap"
 
 # Useful variables
 RED='\033[0;31m'
@@ -65,7 +65,7 @@ else
 
 	# Ask for the install path
 	read -e -p "${BLUE_READ}Install to directory [$SOURCES_PATH_DEFAULT]: ${NC_READ}" SOURCES_PATH
-	SOURCES_PATH="${SOURCES_PATH:-$SOURCES_PATH_DEFAULT}/moneybytecoin"
+	SOURCES_PATH="${SOURCES_PATH:-$SOURCES_PATH_DEFAULT}/MoneyByteBlockchain"
 	# Replace ~ with $HOME if needed
 	SOURCES_PATH="${SOURCES_PATH/[~]/$HOME}"
 
@@ -109,7 +109,7 @@ echo -e "\n${GREEN}Cleaning repo${NC}"
 ./clean.sh
 
 if [ ! -e checkswap.sh ] ; then
-    wget https://raw.githubusercontent.com/moneybytecoin/moneybytecoin/master/scripts/checkswap.sh
+    wget https://raw.githubusercontent.com/MoneyByte/MoneyByteBlockchain/master/scripts/checkswap.sh
 fi
 ./checkswap.sh
 
@@ -167,7 +167,7 @@ if [ -d "$HOME/.MoneyByte/" ]; then
 		exit -1
 	fi
 
-	cd $HOME/.MoneyByte/  
+	cd $HOME/.MoneyByte/
 	rm -rf smsgStore
 	rm -rf smsgDB
 	rm -f *.log
@@ -182,4 +182,3 @@ fi
 
 # Done
 echo -e "\n${GREEN}Upgrade Complete - You can now run moneybyted or fill out the config file in ~/MoneyByte${NC}"
-

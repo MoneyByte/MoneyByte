@@ -90,13 +90,13 @@ sudo ln -s /usr/local/BerkeleyDB.4.8/lib/libdb_cxx-4.8.so /usr/lib/libdb_cxx-4.8
 ## Build daemon
 Skip this if you only want the QT build
 ```
-git clone https://github.com/moneybytecoin/moneybytecoin
+git clone https://github.com/MoneyByte/MoneyByteBlockchain
 cd src
 make -f makefile.unix xCPUARCH=arm CPPFLAGS="-I/usr/local/BerkeleyDB.4.8/include -O2" LDFLAGS="-L/usr/local/BerkeleyDB.4.8/lib"
 ```
 ## Build QT
 ```
-git clone https://github.com/moneybytecoin/moneybytecoin
+git clone https://github.com/MoneyByte/MoneyByteBlockchain
 qmake INCLUDEPATH="/usr/local/BerkeleyDB.4.8/include" LIBS="-L/usr/local/BerkeleyDB.4.8/lib" xCPUARCH=arm
 make
 ```

@@ -1,4 +1,4 @@
-MoneyByte Release Tree [![GitHub version](https://img.shields.io/badge/Version-1.1.2.0-brightgreen.svg)](https://github.com/moneybytecoin/moneybytecoin)
+MoneyByte Release Tree [![GitHub version](https://img.shields.io/badge/Version-1.1.2.0-brightgreen.svg)](https://github.com/MoneyByte/MoneyByteBlockchain)
 
 MoneyByte is a PoW (NeoScrypt) / PoS / Master Node hybrid cryptocurrency, with a 5 million coin maximum supply, which is generated at a slower rate every 1 Million MON, until it's limit is reached. Master Node cost 50,000 MON, block size is 20MB, and block time is ~2Minutes.
 
@@ -14,15 +14,15 @@ Default Main-Net Network Ports:
 Port: 7777
 RPC Port: 7778
 
-Website: https://MoneyByteCoin.org
+Website: https://moneybyte.org
 
-LiveNet Explorer: http://explorer.moneybytecoin.org/  -- https://blockchain.moneybytecoin.org
+LiveNet Explorer: http://explorer.moneybyte.org/  -- https://openchains.info/coin/moneybyte/blocks
 
 Alternative (3rd party explorer): Chainz -- https://chainz.cryptoid.info/ic/
 
 BitcoinTalk Announcement: https://bitcointalk.org/index.php?topic=2612608.0
 
-White Paper: https://moneybytecoin.org/wp-content/uploads/2018/01/MoneyByte-Coin-White-Paper.pdf
+White Paper: https://moneybyte.org/wp-content/uploads/2018/01/MoneyByte-Coin-White-Paper.pdf
 
 CoinMarketCap: https://coinmarketcap.com/currencies/moneybyte/
 

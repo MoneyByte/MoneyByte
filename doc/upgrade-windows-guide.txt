@@ -13,7 +13,7 @@ Now, you can delete the data directory. Click the Folder ^up button or type %app
 delete the MoneyByte folder. (Make sure you have backed up your wallet.dat or you WILL LOSE YOUR COINS!!)
 
 Now that your data directory is deleted, you can run the latest wallet. It is a `.exe` file and you can get the latest here:
-https://github.com/moneybytecoin/moneybytecoin/releases  (use the one with the highest version number)
+https://github.com/MoneyByte/MoneyByteBlockchain/releases  (use the one with the highest version number)
 
 When you run it, it will then sync, this may take a while. Once fully synced, shut it down. You can check if it is
 synced using the explorer, https://chainz.cryptoid.info/ic/

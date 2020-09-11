@@ -191,7 +191,7 @@ function prepare_system() {
         ./install-dependencies.sh
     else
         echo "Downloading latest install-dependencies script."
-        wget https://raw.githubusercontent.com/moneybytecoin/moneybytecoin/master/scripts/install-dependencies.sh
+        wget https://raw.githubusercontent.com/MoneyByte/MoneyByteBlockchain/master/scripts/install-dependencies.sh
         chmod +x install-dependencies.sh
         ./install-dependencies.sh
     fi

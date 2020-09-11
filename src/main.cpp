@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2017-2019 Ignitioncoin Developers
-// Copyright (c) 2019 MoneyByte Developers
+// Copyright (c) 2019-2020 MoneyByte Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -1436,9 +1436,24 @@ void static PruneOrphanBlocks()
 bool fDevFee(int nHeight)
 {
   if (nHeight < 2) return false;
-  return (nHeight % 43800 < 1);}
+  return (nHeight % 43800 < 1);
+}
 
-int64_t nDevFee = 8760 * COIN;
+int64_t nDevFee(int nHeight)
+{
+
+    int64_t nSubsidy = 0;
+
+    if (PROTOCOL_VERSION >= DEV_FEE_REMOVAL_VERSION && IsSporkActive(SPORK_14_NO_DEV_FEE)) {
+        // Keep this as 0 to still show old payment address
+        nSubsidy = 0 * COIN;
+    }
+    else if (PROTOCOL_VERSION < DEV_FEE_REMOVAL_VERSION) {
+        nSubsidy = 8760 * COIN;
+    }
+    return nSubsidy;
+}
+
 
 // miner's coin base reward
 int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
@@ -1519,6 +1534,35 @@ int64_t GetProofOfStakeReward(int nHeight, int64_t nCoinAge, int64_t nFees)
     {
       nSubsidy = 2.5 * COIN;
     }
+    else if(nHeight < 1101201)
+    {
+      nSubsidy = 2.1 * COIN;
+    }
+    else if(nHeight < 2152401)
+    {
+      nSubsidy = 1.9 * COIN;
+    }
+    else if(nHeight < 3203601)
+    {
+      nSubsidy = 1.7 * COIN;
+    }
+    else if(nHeight < 4254801)
+    {
+      nSubsidy = 1.5 * COIN;
+    }
+    else if(nHeight < 5306001)
+    {
+      nSubsidy = 1.3 * COIN;
+    }
+    else if(nHeight < 6257201)
+    {
+      nSubsidy = 1.1 * COIN;
+    }
+    else if(nHeight < 7408401)
+    {
+      nSubsidy = 1 * COIN;
+    }
+
     return nSubsidy + nFees;
   }
 
@@ -2253,7 +2297,6 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
           return error("ConnectBlock() : coinbase does not pay to the dev address)");
        if (vtx[0].vout[1].nValue != nDevFee)
           return error("ConnectBlock() : PoS coinbase does not pay enough to dev addresss");
-          }
 
         if (pindex->nHeight >= GetForkHeightOne())
         {

@@ -30,7 +30,10 @@ static const int DATABASE_VERSION = 70509;
 // network protocol versioning
 //
 
-static const int PROTOCOL_VERSION = 60066;
+static const int PROTOCOL_VERSION = 60067;
+
+// Dev Fee removal version
+static const int DEV_FEE_REMOVAL_VERSION = 60067
 
 // intial proto version, to be increased after version/verack negotiation
 static const int INIT_PROTO_VERSION = 209;
@@ -38,17 +41,17 @@ static const int INIT_PROTO_VERSION = 209;
 // disconnect from peers older than this proto version
 static const int MIN_PEER_PROTO_VERSION_1 = 60064;
 static const int MIN_PEER_PROTO_VERSION_2 = 60065;
-static const int MIN_PEER_PROTO_VERSION_3 = 60066;
+static const int MIN_PEER_PROTO_VERSION_3 = 60067;
 
 // minimum peer version accepted by DarkSendPool
 static const int MIN_POOL_PEER_PROTO_VERSION_1 = 60064;
 static const int MIN_POOL_PEER_PROTO_VERSION_2 = 60065;
-static const int MIN_POOL_PEER_PROTO_VERSION_3 = 60066;
+static const int MIN_POOL_PEER_PROTO_VERSION_3 = 60067;
 
 // minimum peer version accepted for InstantX
 static const int MIN_INSTANTX_PROTO_VERSION_1 = 60064;
 static const int MIN_INSTANTX_PROTO_VERSION_2 = 60065;
-static const int MIN_INSTANTX_PROTO_VERSION_3 = 60066;
+static const int MIN_INSTANTX_PROTO_VERSION_3 = 60067;
 
 //! minimum peer version that can receive masternode payments
 // V1 - Last protocol version before update

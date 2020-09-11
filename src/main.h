@@ -25,9 +25,9 @@ class CValidationState;
 static const int64_t DARKSEND_COLLATERAL = (0.01*COIN);
 static const int64_t DARKSEND_POOL_MAX = (4999.99*COIN);
 
-static const int64_t STATIC_POS_REWARD = 2.3 * COIN; //
-static const int64_t TARGET_SPACING = 60; // 60 seconds per Block
-//static const int64_t TARGET_SPACING2 = 53; // 53 sec per Block
+static const int64_t STATIC_POS_REWARD = 1 * COIN; //
+static const int64_t TARGET_SPACING = 60; // 120 seconds per Block
+//static const int64_t TARGET_SPACING2 = 30; // 60 sec per Block
 //static const int64_t STAKE_TIMESPAN_SWITCH_TIME = 1508858115;
 //static const int64_t STAKE_TIMESPAN_SWITCH_TIME1 = 1509555600; //1 Nov 2017 17:00:00 GMT
 //static const int64_t FORK_TIME = 1510059600;  //November 7, 2017 1:00:00 PM GMT
@@ -201,7 +201,7 @@ uint256 WantedByOrphan(const COrphanBlock* pblockOrphan);
 const CBlockIndex *GetPrevBlockIndex(const CBlockIndex *pindex, uint nRange, bool fProofOfStake);
 void ThreadStakeMiner(CWallet *pwallet);
 
-extern int64_t nDevFee;
+extern int64_t nDevFee(int nHeight);
 extern bool fDevFee(int nHeight);
 #define FOUNDATION "Mm9h5uNyrEqZ5kRpCcZuQXWyXpQ5Kr3H5P"
 #define FOUNDATION_TEST ""

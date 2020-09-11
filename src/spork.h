@@ -33,6 +33,7 @@ using namespace boost;
 #define SPORK_11_RESET_BUDGET                                 10010
 #define SPORK_12_RECONSIDER_BLOCKS                            10011
 #define SPORK_13_ENABLE_SUPERBLOCKS                           10012
+#define SPORK_14_NO_DEV_FEE                                   10013
 
 #define SPORK_1_MASTERNODE_PAYMENTS_ENFORCEMENT_DEFAULT       1588617641  // 2020-05-04 18:40:41 GMT // NOT USED
 #define SPORK_2_INSTANTX_DEFAULT                              978307200   //2001-1-1 23:59:59 GMT
@@ -46,6 +47,7 @@ using namespace boost;
 #define SPORK_11_RESET_BUDGET_DEFAULT                         4070908800   //OFF
 #define SPORK_12_RECONSIDER_BLOCKS_DEFAULT                    4070908800   //OFF
 #define SPORK_13_ENABLE_SUPERBLOCKS_DEFAULT                   4070908800   //OFF
+#define SPORK_14_NO_DEV_FEE_DEFAULT                           4070908800   //OFF
 
 class CSporkMessage;
 class CSporkManager;

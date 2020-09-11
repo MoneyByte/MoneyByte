@@ -9,7 +9,7 @@ BLUE='\033[0;34m'
 BLUE_READ=$'\e[34m'
 NC='\033[0m'
 NC_READ=$'\e[0m'
-SWAP_FILE="$HOME/moneybytecoin-swap"
+SWAP_FILE="$HOME/MoneyByteBlockchain-swap"
 MEMORY_SIZE=`grep MemTotal /proc/meminfo | awk '{print $2}'`
 
 if [ "$MEMORY_SIZE" -lt "2000000" ]; then
