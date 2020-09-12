@@ -1,10 +1,10 @@
-MoneyByte Release Tree [![GitHub version](https://img.shields.io/badge/Version-1.3.0.0-brightgreen.svg)](https://github.com/moneybyte/moneybyte)
+MoneyByte Release Tree [![GitHub version](https://img.shields.io/badge/Version-1.4.0.0-brightgreen.svg)](https://github.com/moneybyte/moneybyte)
 
 MoneyByte is a Proof of Stake + Master Node hybrid cryptocurrency, with a 32.2 million coin maximum supply. Master Node cost 50,000 MON, block size is 20MB, and block time is ~60 seconds.
 
 The block production is 2.3 MON each block, divided into 30% PoS and 70% MN
 
-Block Spacing: 60 Seconds
+Block Spacing: 120 Seconds
 
 Maturity: 75 Blocks
 
