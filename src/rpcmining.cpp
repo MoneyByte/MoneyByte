@@ -19,7 +19,7 @@ using namespace std;
 using namespace boost::assign;
 
 extern bool fDevFee(int nHeight);
-extern int64_t nDevFee;
+extern int64_t nDevFee(int nHeight);
 
 // Key used by getwork/getblocktemplate miners.
 // Allocated in InitRPCMining, free'd in ShutdownRPCMining
@@ -670,7 +670,7 @@ Value getblocktemplate(const Array& params, bool fHelp)
     	result.push_back(Pair("payee", address.ToString()));
     	result.push_back(Pair("payee_amount", (int64_t)pblock->vtx[0].vout[1].nValue));
     }
-    
+
     return result;
 }
 

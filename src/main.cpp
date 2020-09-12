@@ -2297,6 +2297,7 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
           return error("ConnectBlock() : coinbase does not pay to the dev address)");
        if (vtx[0].vout[1].nValue != nDevFee)
           return error("ConnectBlock() : PoS coinbase does not pay enough to dev addresss");
+        }
 
         if (pindex->nHeight >= GetForkHeightOne())
         {
@@ -2528,8 +2529,7 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
     return true;
 }
 
-bool static Reorganize(CTxDB& txdb, CBlockIndex* pindexNew)
-{
+bool static Reorganize(CTxDB& txdb, CBlockIndex* pindexNew){
     LogPrintf("REORGANIZE\n");
 
     // Find the fork
