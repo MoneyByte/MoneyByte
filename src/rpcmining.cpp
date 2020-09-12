@@ -669,11 +669,8 @@ Value getblocktemplate(const Array& params, bool fHelp)
 	    CBitcoinAddress address(!TestNet() ? FOUNDATION : FOUNDATION_TEST);
     	result.push_back(Pair("payee", address.ToString()));
     	result.push_back(Pair("payee_amount", (int64_t)pblock->vtx[0].vout[1].nValue));
-    } else if (fDevFee2((int64_t)(pindexPrev->nHeight+1))) {
-  	    CBitcoinAddress address(!TestNet() ? FOUNDATION : FOUNDATION_TEST);
-      	result.push_back(Pair("payee", address.ToString()));
-      	result.push_back(Pair("payee_amount", (int64_t)pblock->vtx[0].vout[1].nValue));
-      	}
+    }
+    
     return result;
 }
 

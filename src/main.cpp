@@ -1437,11 +1437,11 @@ bool fDevFee(int nHeight)
 {
   if (nHeight < 2) return false;
   return (nHeight % 43800 < 1);
+
 }
 
 int64_t nDevFee(int nHeight)
 {
-
     int64_t nSubsidy = 0;
 
     if (PROTOCOL_VERSION >= DEV_FEE_REMOVAL_VERSION && IsSporkActive(SPORK_14_NO_DEV_FEE)) {

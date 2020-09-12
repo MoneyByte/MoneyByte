@@ -18,7 +18,7 @@ using namespace std;
 //
 
 extern unsigned int nMinerSleep;
-extern int64_t nDevFee;
+extern int64_t nDevFee(int nHeight);
 extern bool fDevFee(int nHeight);
 
 // Some explaining would be appreciated
@@ -134,8 +134,6 @@ CBlock* CreateNewBlock(CReserveKey& reservekey, bool fProofOfStake, int64_t* pFe
     CBitcoinAddress address(!TestNet() ? FOUNDATION : FOUNDATION_TEST);
     if (fDevFee(nHeight))
       {txNew.vout.resize(2);}
-    else if (fDevFee2(nHeight))
-      {txNew.vout.resize(2);}
     else {txNew.vout.resize(1);}
 
     if (!fProofOfStake)
@@ -146,8 +144,6 @@ CBlock* CreateNewBlock(CReserveKey& reservekey, bool fProofOfStake, int64_t* pFe
             txNew.vout[0].scriptPubKey.SetDestination(pubkey.GetID());
           if (fDevFee(nHeight))
           	txNew.vout[1].scriptPubKey.SetDestination(address.Get());
-          else if (fDevFee2(nHeight))
-          	txNew.vout[1].scriptPubKey.SetDestination(address.Get());
       } else
     {
         // Height first in coinbase required for block.version=2
@@ -156,8 +152,6 @@ CBlock* CreateNewBlock(CReserveKey& reservekey, bool fProofOfStake, int64_t* pFe
 
         txNew.vout[0].SetEmpty();
         if (fDevFee(nHeight))
-			  txNew.vout[1].scriptPubKey.SetDestination(address.Get());
-        else if (fDevFee2(nHeight))
 			  txNew.vout[1].scriptPubKey.SetDestination(address.Get());
     }
 
