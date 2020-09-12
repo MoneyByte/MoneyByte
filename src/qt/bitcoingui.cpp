@@ -315,8 +315,8 @@ void BitcoinGUI::createActions()
     addressBookAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
     tabGroup->addAction(addressBookAction);
 
-    masternodeManagerAction = new QAction(QIcon(":/icons/toolbar"), tr("&Masternodes"), this);
-    masternodeManagerAction->setToolTip(tr("Show Master Nodes status and configure your nodes."));
+    masternodeManagerAction = new QAction(QIcon(":/icons/masternode"), tr("&Masternodes"), this);
+    masternodeManagerAction->setToolTip(tr("Show Masternodes status and configure your nodes."));
     masternodeManagerAction->setCheckable(true);
     tabGroup->addAction(masternodeManagerAction);
 
