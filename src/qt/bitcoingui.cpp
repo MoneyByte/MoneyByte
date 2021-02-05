@@ -301,7 +301,7 @@ void BitcoinGUI::createActions()
     darksendAction = new QAction(QIcon(":/icons/res/icons/darksend.png"), tr("&Darksend"), this);
     darksendAction->setToolTip(tr("Mix coins anonymously"));
     darksendAction->setCheckable(true);
-    tabGroup->addAction(darksendAction);
+    //tabGroup->addAction(darksendAction);
 
     historyAction = new QAction(QIcon(":/icons/history"), tr("&Transactions"), this);
     historyAction->setToolTip(tr("Browse transaction history"));
@@ -329,7 +329,7 @@ void BitcoinGUI::createActions()
     blockAction->setToolTip(tr("Explore the BlockChain"));
     blockAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_6));
     blockAction->setCheckable(true);
-    tabGroup->addAction(blockAction);
+    //tabGroup->addAction(blockAction);
 
     TradingAction = new QAction(QIcon(":/icons/trade"), tr("&Bittrex"), this);
     TradingAction ->setToolTip(tr("Start Trading"));
@@ -490,7 +490,7 @@ void BitcoinGUI::createToolBars()
     toolbar->addAction(overviewAction);
     toolbar->addAction(receiveCoinsAction);
     toolbar->addAction(sendCoinsAction);
-    toolbar->addAction(darksendAction);
+    //toolbar->addAction(darksendAction);
     toolbar->addAction(historyAction);
     toolbar->addAction(addressBookAction);
     toolbar->addAction(masternodeManagerAction);
@@ -499,7 +499,7 @@ void BitcoinGUI::createToolBars()
         toolbar->addAction(messageAction);
     }
 
-    toolbar->addAction(blockAction);
+    //toolbar->addAction(blockAction);
     //toolbar->addAction(TradingAction);
     netLabel = new QLabel();
 
