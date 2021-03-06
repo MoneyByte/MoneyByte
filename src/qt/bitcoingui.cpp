@@ -323,7 +323,7 @@ void BitcoinGUI::createActions()
     messageAction = new QAction(QIcon(":/icons/messages"), tr("&Messages"), this);
     messageAction->setToolTip(tr("View and Send Encrypted messages"));
     messageAction->setCheckable(true);
-    tabGroup->addAction(messageAction);
+    //tabGroup->addAction(messageAction);
 
     blockAction = new QAction(QIcon(":/icons/block"), tr("&Block Explorer"), this);
     blockAction->setToolTip(tr("Explore the BlockChain"));
@@ -496,7 +496,7 @@ void BitcoinGUI::createToolBars()
     toolbar->addAction(masternodeManagerAction);
 
     if (!fLiteMode){
-        toolbar->addAction(messageAction);
+        //toolbar->addAction(messageAction);
     }
 
     //toolbar->addAction(blockAction);
