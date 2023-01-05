@@ -124,11 +124,7 @@ T* alignup(T* p)
 
 inline void MilliSleep(int64_t n)
 {
-#if BOOST_VERSION >= 105000
-    boost::this_thread::sleep_for(boost::chrono::milliseconds(n));
-#else
     boost::this_thread::sleep(boost::posix_time::milliseconds(n));
-#endif
 }
 
 //Dark features
