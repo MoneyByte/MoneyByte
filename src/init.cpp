@@ -572,7 +572,7 @@ bool AppInit2(boost::thread_group& threadGroup)
         nWalletBackups = std::max(0, std::min(10, nWalletBackups));
         if(nWalletBackups > 0)
         {
-            if (boost::filesystem::exists(backupDir)
+            if (boost::filesystem::exists(backupDir))
             {
                 // Create backup of the wallet
                 std::string dateTimeStr = DateTimeStrFormat(".%Y-%m-%d-%H.%M", GetTime());
