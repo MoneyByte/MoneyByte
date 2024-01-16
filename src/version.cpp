@@ -56,5 +56,5 @@ const std::string CLIENT_NAME("MoneyByte");
 #    endif
 #endif
 
-const std::string CLIENT_BUILD(BUILD_DESC CLIENT_VERSION_SUFFIX);
+const std::string CLIENT_BUILD("v1.3.0.5-60030" CLIENT_VERSION_SUFFIX);
 const std::string CLIENT_DATE(BUILD_DATE);
