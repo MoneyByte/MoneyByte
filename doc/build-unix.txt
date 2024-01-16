@@ -42,7 +42,48 @@ moneybyted stop
 
 nano .MoneyByte/MoneyByte.conf
 
-#Paste all info and save control x - y - enter
+#Paste all info and save -> control x - y - enter
+
+#EXAMPLE:
+# Moneybyte Setup
+rpcuser=YOUR_USER_NAME
+rpcpassword=YOUR_PASSWORD
+rpcallowip=127.0.0.1
+rpcport=7778
+port=7777
+daemon=1
+listen=1
+server=1
+staking=0
+
+
+# MON Masternode Setup
+#masternode=1
+#externalip=YOUR_IP
+#masternodeaddr=YOUR_IP:7777
+#masternodeprivkey=YOUR-PKEY
+
+# Addnodes 
+addnode=207.112.18.86:7777
+addnode=217.229.230.186:7777
+addnode=173.212.197.15:7777
+addnode=199.247.23.51:7777
+addnode=24.115.13.182:7777
+addnode=46.33.252.174:7777
+addnode=94.173.168.218:7777
+addnode=46.101.203.85:7777
+addnode=46.101.205.47:7777
+addnode=207.154.225.242:7777
+addnode=207.154.229.185:7777
+addnode=139.59.208.102:7777
+addnode=195.154.146.17:7777
+addnode=62.210.251.30:7777
+addnode=62.210.90.59:7777
+addnode=51.15.174.178:7777
+
+#Start wallet
+moneybyted -daemon
+watch -n 600 moneybyted getinfo
 
 
 See readme-qt.rst for instructions on building MoneyByte QT,
