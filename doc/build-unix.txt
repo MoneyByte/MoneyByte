@@ -12,14 +12,38 @@ UNIX BUILD NOTES
 
 To Build
 --------
-#Installing Dependencies In One Line (For Debian/Ubuntu Based Distributions Only)
-sudo apt-get -y update && sudo apt-get -y install build-essential libssl-dev libdb++-dev libboost-all-dev libcrypto++-dev libqrencode-dev libminiupnpc-dev libgmp-dev libgmp3-dev autoconf autogen automake libtool
+#Installing Dependencies (For Debian/Ubuntu Based Distributions Only)
+sudo apt-get install -y libboost-all-dev
+sudo apt-get install -y libssl-dev
+sudo apt-get install -y qt5-default
+sudo apt-get install -y qttools5-dev-tools
+sudo apt-get install -y make
+sudo apt-get install -y g++
+sudo apt-get install -y libdb5.3++-dev
+sudo apt-get install -y libminiupnpc-dev
+sudo apt-get install -y libgmp-dev
 
 then run the following commands:
 
-cd src/
+cd src
 make -f makefile.unix            # Headless MoneyByte
-cd ../bins/                #Output of bins now goes to repo-root/bins folder
+cd ..
+cd bin
+cp moneybyted /usr/bin
+cd
+
+#Make sure timezone is set right
+sudo dpkg-reconfigure tzdata
+
+moneybyted -daemon
+moneybyted stop
+
+#change the MON config file and save
+
+nano .MoneyByte/MoneyByte.conf
+
+#Paste all info and save control x - y - enter
+
 
 See readme-qt.rst for instructions on building MoneyByte QT,
 the graphical MoneyByte.
