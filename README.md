@@ -36,6 +36,6 @@ White Paper: https://www.moneybyte.org/about/whitepaper/
 
 CoinGecko: https://www.coingecko.com/en/coins/moneybyte
 
-Exchanges MON is available on (as of 1/1/2023): GravieX, SouthXchange, and UnnamedExchange.
+Exchanges MON is available on (as of 1/1/2024): GravieX, Xeggex, and Stakecube.
 
 For compiling on different architectures, see the docs/build-os documents. Otherwise, view releases page for windows qt-wallets.
